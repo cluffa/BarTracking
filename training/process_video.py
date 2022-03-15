@@ -5,8 +5,11 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import json
 import os
+import itertools
 
 from PIL import Image
+real_path = os.path.realpath(__file__)
+dir_path = os.path.dirname(real_path)
 
 # %%
 def read_json(file):
@@ -14,7 +17,7 @@ def read_json(file):
     with open(file) as f:
         data = json.load(f)
     if len(data['regions']) > 1:
-        out['file'] = './video/' + data['asset']['parent']['name']
+        out['file'] = f'{dir_path}/video/' + data['asset']['parent']['name']
         out['time'] = data['asset']['timestamp']
         
         regions = []
@@ -27,11 +30,11 @@ def read_json(file):
     return out
 
 def load_all_json():
-    files = os.listdir('./output')
+    files = os.listdir(f'{dir_path}/output')
     annots = []
     for file in files:
         if file != 'wling.vott':
-            annot = read_json(f'./output/{file}')
+            annot = read_json(f'{dir_path}/output/{file}')
             if len(annot) > 0:
                 annots.append(annot)
     return annots
@@ -159,31 +162,33 @@ def vid_to_train_data(annotations: list, out_res = 720, color = True):
             # frame[:,j] = 255
             # frame[:,j+w] = 255
 
-            new_annotations.append({'id':id, 'label':label, 'box':(i, j, h, w)})
+            new_annotations.append({'id':id, 'label':label, 'box':{'row':i, 'column':j, 'height':h, 'width':w, 'point':'Top Left'}})
             output.append([id, frame])
 
     return output, new_annotations
 
 # %%
-def create_dataset():
-    for color in (True, False):
-        colorStr = 'RGB' if color else 'GRAY'
-        for res in (240, 360, 480, 720):
-            all_files = load_all_json()
-            images, new_annotations = vid_to_train_data(all_files, res, color)
-            try:
-                os.mkdir(f'./images{colorStr}{res}')
-                print(f'./images{colorStr}{res}/ created')
-            except FileExistsError:
-                print(f'./images{colorStr}{res}/ already exists')
+def create_dataset(color, res):
+    colorStr = 'RGB' if color else 'GRAY'
+    print(f'creating {colorStr} images with resolution {res}x{res} ...')
+    all_files = load_all_json()
+    images, new_annotations = vid_to_train_data(all_files, res, color)
+    try:
+        os.mkdir(f'{dir_path}/images{colorStr}{res}')
+        print(f'{dir_path}/images{colorStr}{res}/ created')
+    except FileExistsError:
+        #print(f'{dir_path}/images{colorStr}{res}/ already exists')
+        pass
 
-            with open(f'./annotations{colorStr}{res}.json', 'w') as fp:
-                json.dump(new_annotations, fp,  indent=4)
-            for id, array in images:
-                im = Image.fromarray(array)
+    with open(f'{dir_path}/annotations{colorStr}{res}.json', 'w') as fp:
+        json.dump(new_annotations, fp,  indent=4)
+    for id, array in images:
+        im = Image.fromarray(array)
 
-                im.save(f'./images{colorStr}{res}/{id}.jpg')
+        im.save(f'{dir_path}/images{colorStr}{res}/{id}.jpg')
         
 # %%
 if __name__ == "__main__":
-    create_dataset()
+    color = (True,)
+    res = (120, 240, 480, 720,)
+    [create_dataset(*config) for config in list(itertools.product(color, res))]
