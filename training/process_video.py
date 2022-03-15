@@ -162,7 +162,7 @@ def vid_to_train_data(annotations: list, out_res = 720, color = True):
             # frame[:,j] = 255
             # frame[:,j+w] = 255
 
-            new_annotations.append({'id':id, 'label':label, 'box':{'row':i, 'column':j, 'height':h, 'width':w, 'point':'Top Left'}})
+            new_annotations.append({'id':id, 'label':label, 'box':{'row':i, 'column':j, 'height':h, 'width':w, 'point':'Bottom Left'}})
             output.append([id, frame])
 
     return output, new_annotations
