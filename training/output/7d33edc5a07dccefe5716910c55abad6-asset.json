@@ -1,0 +1,16 @@
+{
+    "asset": {
+        "format": "mp4",
+        "id": "7d33edc5a07dccefe5716910c55abad6",
+        "name": "2793376344897401727_1706882495.mp4",
+        "path": "file://wsl.localhost/Debian/root/workspace/bar_tracking/training/video/2793376344897401727_1706882495.mp4",
+        "size": {
+            "width": 720,
+            "height": 1280
+        },
+        "state": 2,
+        "type": 2
+    },
+    "regions": [],
+    "version": "2.2.0"
+}

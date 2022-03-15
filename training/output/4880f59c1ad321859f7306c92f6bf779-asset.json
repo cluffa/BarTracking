@@ -1,0 +1,61 @@
+{
+    "asset": {
+        "id": "4880f59c1ad321859f7306c92f6bf779",
+        "format": "933333",
+        "state": 2,
+        "type": 3,
+        "name": "2727293717078835859_267650658.mp4#t=0.933333",
+        "path": "file://wsl.localhost/Debian/root/workspace/bar_tracking/training/video/2727293717078835859_267650658.mp4#t=0.933333",
+        "size": {
+            "width": 720,
+            "height": 720
+        },
+        "parent": {
+            "format": "mp4",
+            "id": "71cd5e3153aee18073ec1af7730b06b7",
+            "name": "2727293717078835859_267650658.mp4",
+            "path": "file://wsl.localhost/Debian/root/workspace/bar_tracking/training/video/2727293717078835859_267650658.mp4",
+            "size": {
+                "width": 720,
+                "height": 720
+            },
+            "state": 1,
+            "type": 2
+        },
+        "timestamp": 0.933333
+    },
+    "regions": [
+        {
+            "id": "v4gtWkbZX",
+            "type": "RECTANGLE",
+            "tags": [
+                "bar_end"
+            ],
+            "boundingBox": {
+                "height": 18.491171749598717,
+                "width": 16.179775280898877,
+                "left": 620.8988764044944,
+                "top": 622.9213483146068
+            },
+            "points": [
+                {
+                    "x": 620.8988764044944,
+                    "y": 622.9213483146068
+                },
+                {
+                    "x": 637.0786516853933,
+                    "y": 622.9213483146068
+                },
+                {
+                    "x": 637.0786516853933,
+                    "y": 641.4125200642055
+                },
+                {
+                    "x": 620.8988764044944,
+                    "y": 641.4125200642055
+                }
+            ]
+        }
+    ],
+    "version": "2.2.0"
+}
