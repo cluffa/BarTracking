@@ -132,7 +132,9 @@ def vid_to_train_data(annotations: list, out_res = 720, color = True):
             frame = img_transform(frame, max_width, max_width, scale = False)
             frame = img_transform(frame, out_res, out_res, scale = True)
         
-        region_num = 0
+        if not color:
+            frame = frame.reshape((out_res, out_res))
+
         for label, region, id in annot['regions']:
             i = region['top']
             j = region['left']
@@ -164,18 +166,24 @@ def vid_to_train_data(annotations: list, out_res = 720, color = True):
 
 # %%
 def create_dataset():
-    all_files = load_all_json()
-    images, new_annotations = vid_to_train_data(all_files)
-    with open('./annotations.json', 'w') as fp:
-        json.dump(new_annotations, fp,  indent=4)
+    for color in (True, False):
+        colorStr = 'RGB' if color else 'GRAY'
+        for res in (240, 360, 480, 720):
+            all_files = load_all_json()
+            images, new_annotations = vid_to_train_data(all_files, res, color)
+            try:
+                os.mkdir(f'./images{colorStr}{res}')
+                print(f'./images{colorStr}{res}/ created')
+            except FileExistsError:
+                print(f'./images{colorStr}{res}/ already exists')
 
-    for id, array in images:
-        im = Image.fromarray(array)
-        im.save(f'./images/{id}.jpg')
+            with open(f'./annotations{colorStr}{res}.json', 'w') as fp:
+                json.dump(new_annotations, fp,  indent=4)
+            for id, array in images:
+                im = Image.fromarray(array)
+
+                im.save(f'./images{colorStr}{res}/{id}.jpg')
         
-
-    
-
 # %%
 if __name__ == "__main__":
     create_dataset()
