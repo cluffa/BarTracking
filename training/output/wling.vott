@@ -5,7 +5,7 @@
         "name": "videos",
         "providerType": "localFileSystemProxy",
         "providerOptions": {
-            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiNGJjYjY5ZGI4ZWI0YTY2MjMyZDI3MWU1Y2NhNjBmZjkyZjViNDA2MzhlY2JjNTczMjFkNDE1MDlhYjhlODI3NzY2OTkxN2FmOTRmM2NiZmQ4NzNlNDc0OGQwOTMxZjQ3OTFiNGNlMzNhNjNkMWYwMzA2NzVkMTgwZjdmYThmZjBkZDk0ODI0NDhkYjY0MmRhNjI3ZDE5MDE4YTQ3MTUxNGI0M2I2ODJiYzlmYmE1YjE2YTEwMWFjNTYxM2QyM2M3IiwiaXYiOiIzYzE5Y2U3NGJhNWMzN2Y3NmI4ZTgyOWMzNWM0OTgxYWE2NWNlNTNlYTI2ZTY4NDMifQ=="
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiY2NjMjYyMDIyYzA0NDVkMjFkMzg4YWVhZTY0ZDBkNjg3NzhiZmMxOGZlMDUzMDk5ZGUyMjZjMGNkMTEwNmQzMjNmNWM2M2UyZjEyNjdlOGYzZDM5ODVmOTI0ZDRhZDQ4OGY4OGM0YzQzMjg2ZGI2ZjI3MGY2NzQxNWI3ODUwMTYyM2YxMWE3NDRhM2NhYjFiODU3MWRkNTY3NGJiMGMzYWRiNTYxMWI3ZWEwOThhNTNmMDYwOGYzOGRmNjI4YzY4IiwiaXYiOiJhZjY3MTNjZWNmNjAzMDZkOTk5ODNmZDZiMGFjZTY4NWFhYzcxODNkZDQ1NmZlYzAifQ=="
         },
         "id": "dIfDC4NcT"
     },
@@ -13,7 +13,7 @@
         "name": "out",
         "providerType": "localFileSystemProxy",
         "providerOptions": {
-            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiMmE2ZjQ1NGU4OTgxN2ZhMDFkNGRlZGQzODgwZWQ1YWVhOWI0ZGQ2NTFjZTI1ODBiMTBiMTczYjc2OGM4MDg3OTU0M2JkZWY1YWJiYTRlMDBjODYwZjliMTM0YTBiN2MzMjk0YjY1ZDMwNGM5Y2JlNjlmNzc4Y2NkNjc1ZmUwOTY0NzU0MmY1MDEzMzhiODY5NTRiMzRlZTZhYzJjNzBkOTY1ZDc1N2FhMjFhNDhiZDRmZmE2YjE2Njg4MWEzYjI2IiwiaXYiOiJjNTYyYTU2N2NmOGEwMGFlNWU4NWQ3NTNkMGNlM2M5NjY1YmRmYzcyNGI2YTcxNDQifQ=="
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiMjVhMGJmNWVmOGU3YmJmNDQyMTE3OTI5NDQ4YWZmMjdkOGZhMjc4N2NmZjMyOGQ2ZWVjMzI3ZGQ0ZWEzYjIwMzc0Y2FlY2ZiYWE2ZTdkNWMwMzUwOWQzYWY2ZDIwMDYxODk5ZGIwMzYxMWFmMzAyYmYyMzRiNzNiYmY5YTk1NmE3YjljOTQ4MjhhMjliZWIwOTBjNGZjYTFmZjI0NGRkYjJjODA0MmQ3ZDhhZGI4ZWRlNWVhOGJhMDkwZGJmMTczIiwiaXYiOiIzNjc0MjVkODRjYzUxOGI1NDE5ZjlmM2M2M2U0N2VhNGMzMzQ3OTlmM2U1ZWZkNjEifQ=="
         },
         "id": "vh-Ri1z3x"
     },
@@ -48,11 +48,11 @@
     "exportFormat": {
         "providerType": "vottJson",
         "providerOptions": {
-            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiZTU0NDg4ZjE3NDdjMDE4M2UwYTUwZWIyMjdiMjNkZjhjOGNjOTVhMjE0ZmE3NmY0MThhNzg3NjU3MDBhZTI2ZjRmZGEwNmRjMTE0ZDMwYWU1NGI4MjA1MWEzYTJmNTU5IiwiaXYiOiJkMzFmMjAxZDM2YWFlODI4NGNiNDNkMDAyY2MyNmQzMjY5MjlmYTc5OWJjYmUyYjMifQ=="
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiYmQ3Y2QwODhjZDQ3MzkwZjE0ZDk5MmNjMmQ2ZDIxOGY1NjY5MWI2NTMyYzk3ZDBjYmE4OWFjNDgwODg5M2UyZGQxYzA5NmJlYWViMGRmYzEwZDk5OWM3OWI0ZWUzOGIzIiwiaXYiOiJiMjE2YmMzM2QwYzZiZWE1YjNmYzRkMmY0Y2I2ZmI5NDQxZmQ3NjdkYzEwZjY3ODUifQ=="
         }
     },
     "version": "2.2.0",
-    "lastVisitedAssetId": "82d44c87fe8a461afcafe152edb56938",
+    "lastVisitedAssetId": "3120a1cdb5bef07ec72020d8cfb184dd",
     "assets": {
         "d161bb59987f655c8db7d0bec586560a": {
             "format": "mp4",
@@ -3325,7 +3325,7 @@
                     "width": 720,
                     "height": 720
                 },
-                "state": 1,
+                "state": 2,
                 "type": 2
             },
             "timestamp": 0
@@ -7957,7 +7957,7 @@
                     "width": 720,
                     "height": 720
                 },
-                "state": 1,
+                "state": 2,
                 "type": 2
             },
             "timestamp": 0
@@ -8172,6 +8172,331 @@
                 "type": 2
             },
             "timestamp": 0.733333
+        },
+        "3f16aae32ea45528ec3eae9e84e97542": {
+            "id": "3f16aae32ea45528ec3eae9e84e97542",
+            "format": "433333",
+            "state": 1,
+            "type": 3,
+            "name": "2606511563829571406_267650658.mp4#t=1.433333",
+            "path": "file://wsl.localhost/Debian/root/workspace/bar_tracking/training/video/2606511563829571406_267650658.mp4#t=1.433333",
+            "size": {
+                "width": 720,
+                "height": 720
+            },
+            "parent": {
+                "format": "mp4",
+                "id": "92d4ebfffba5c3c9bc48227d7df624e3",
+                "name": "2606511563829571406_267650658.mp4",
+                "path": "file://wsl.localhost/Debian/root/workspace/bar_tracking/training/video/2606511563829571406_267650658.mp4",
+                "size": {
+                    "width": 720,
+                    "height": 720
+                },
+                "state": 2,
+                "type": 2
+            },
+            "timestamp": 1.433333
+        },
+        "e41b0f46fa24ed43329000edc23a8eee": {
+            "id": "e41b0f46fa24ed43329000edc23a8eee",
+            "format": "866667",
+            "state": 2,
+            "type": 3,
+            "name": "2606511563829571406_267650658.mp4#t=1.866667",
+            "path": "file://wsl.localhost/Debian/root/workspace/bar_tracking/training/video/2606511563829571406_267650658.mp4#t=1.866667",
+            "size": {
+                "width": 720,
+                "height": 720
+            },
+            "parent": {
+                "format": "mp4",
+                "id": "92d4ebfffba5c3c9bc48227d7df624e3",
+                "name": "2606511563829571406_267650658.mp4",
+                "path": "file://wsl.localhost/Debian/root/workspace/bar_tracking/training/video/2606511563829571406_267650658.mp4",
+                "size": {
+                    "width": 720,
+                    "height": 720
+                },
+                "state": 2,
+                "type": 2
+            },
+            "timestamp": 1.866667
+        },
+        "ebf06b78ff21b965a7c1ab05792054b6": {
+            "id": "ebf06b78ff21b965a7c1ab05792054b6",
+            "format": "8",
+            "state": 1,
+            "type": 3,
+            "name": "2606511563829571406_267650658.mp4#t=4.8",
+            "path": "file://wsl.localhost/Debian/root/workspace/bar_tracking/training/video/2606511563829571406_267650658.mp4#t=4.8",
+            "size": {
+                "width": 720,
+                "height": 720
+            },
+            "parent": {
+                "format": "mp4",
+                "id": "92d4ebfffba5c3c9bc48227d7df624e3",
+                "name": "2606511563829571406_267650658.mp4",
+                "path": "file://wsl.localhost/Debian/root/workspace/bar_tracking/training/video/2606511563829571406_267650658.mp4",
+                "size": {
+                    "width": 720,
+                    "height": 720
+                },
+                "state": 2,
+                "type": 2
+            },
+            "timestamp": 4.8
+        },
+        "c7f5db58199a0cb4d96686fd8c8b0c66": {
+            "id": "c7f5db58199a0cb4d96686fd8c8b0c66",
+            "format": "533333",
+            "state": 1,
+            "type": 3,
+            "name": "2733871941559440208_267650658.mp4#t=1.533333",
+            "path": "file://wsl.localhost/Debian/root/workspace/bar_tracking/training/video/2733871941559440208_267650658.mp4#t=1.533333",
+            "size": {
+                "width": 720,
+                "height": 720
+            },
+            "parent": {
+                "format": "mp4",
+                "id": "3120a1cdb5bef07ec72020d8cfb184dd",
+                "name": "2733871941559440208_267650658.mp4",
+                "path": "file://wsl.localhost/Debian/root/workspace/bar_tracking/training/video/2733871941559440208_267650658.mp4",
+                "size": {
+                    "width": 720,
+                    "height": 720
+                },
+                "state": 2,
+                "type": 2
+            },
+            "timestamp": 1.533333
+        },
+        "d0c2cc0c214029481ca81e8ed56478d7": {
+            "id": "d0c2cc0c214029481ca81e8ed56478d7",
+            "format": "066667",
+            "state": 1,
+            "type": 3,
+            "name": "2733871941559440208_267650658.mp4#t=0.066667",
+            "path": "file://wsl.localhost/Debian/root/workspace/bar_tracking/training/video/2733871941559440208_267650658.mp4#t=0.066667",
+            "size": {
+                "width": 720,
+                "height": 720
+            },
+            "parent": {
+                "format": "mp4",
+                "id": "3120a1cdb5bef07ec72020d8cfb184dd",
+                "name": "2733871941559440208_267650658.mp4",
+                "path": "file://wsl.localhost/Debian/root/workspace/bar_tracking/training/video/2733871941559440208_267650658.mp4",
+                "size": {
+                    "width": 720,
+                    "height": 720
+                },
+                "state": 2,
+                "type": 2
+            },
+            "timestamp": 0.066667
+        },
+        "04df07ab5e21659956e14c9a6a657256": {
+            "id": "04df07ab5e21659956e14c9a6a657256",
+            "format": "133333",
+            "state": 1,
+            "type": 3,
+            "name": "2733871941559440208_267650658.mp4#t=0.133333",
+            "path": "file://wsl.localhost/Debian/root/workspace/bar_tracking/training/video/2733871941559440208_267650658.mp4#t=0.133333",
+            "size": {
+                "width": 720,
+                "height": 720
+            },
+            "parent": {
+                "format": "mp4",
+                "id": "3120a1cdb5bef07ec72020d8cfb184dd",
+                "name": "2733871941559440208_267650658.mp4",
+                "path": "file://wsl.localhost/Debian/root/workspace/bar_tracking/training/video/2733871941559440208_267650658.mp4",
+                "size": {
+                    "width": 720,
+                    "height": 720
+                },
+                "state": 2,
+                "type": 2
+            },
+            "timestamp": 0.133333
+        },
+        "46b4e5dd733d56bd1ce67ee8cc57bb3e": {
+            "id": "46b4e5dd733d56bd1ce67ee8cc57bb3e",
+            "format": "2",
+            "state": 1,
+            "type": 3,
+            "name": "2733871941559440208_267650658.mp4#t=0.2",
+            "path": "file://wsl.localhost/Debian/root/workspace/bar_tracking/training/video/2733871941559440208_267650658.mp4#t=0.2",
+            "size": {
+                "width": 720,
+                "height": 720
+            },
+            "parent": {
+                "format": "mp4",
+                "id": "3120a1cdb5bef07ec72020d8cfb184dd",
+                "name": "2733871941559440208_267650658.mp4",
+                "path": "file://wsl.localhost/Debian/root/workspace/bar_tracking/training/video/2733871941559440208_267650658.mp4",
+                "size": {
+                    "width": 720,
+                    "height": 720
+                },
+                "state": 2,
+                "type": 2
+            },
+            "timestamp": 0.2
+        },
+        "79c36b3a943bd11ed9cd422d9ffded70": {
+            "id": "79c36b3a943bd11ed9cd422d9ffded70",
+            "format": "266667",
+            "state": 1,
+            "type": 3,
+            "name": "2733871941559440208_267650658.mp4#t=0.266667",
+            "path": "file://wsl.localhost/Debian/root/workspace/bar_tracking/training/video/2733871941559440208_267650658.mp4#t=0.266667",
+            "size": {
+                "width": 720,
+                "height": 720
+            },
+            "parent": {
+                "format": "mp4",
+                "id": "3120a1cdb5bef07ec72020d8cfb184dd",
+                "name": "2733871941559440208_267650658.mp4",
+                "path": "file://wsl.localhost/Debian/root/workspace/bar_tracking/training/video/2733871941559440208_267650658.mp4",
+                "size": {
+                    "width": 720,
+                    "height": 720
+                },
+                "state": 2,
+                "type": 2
+            },
+            "timestamp": 0.266667
+        },
+        "333c0c7cabb4f297d409c2aac05e1bb4": {
+            "id": "333c0c7cabb4f297d409c2aac05e1bb4",
+            "format": "333333",
+            "state": 1,
+            "type": 3,
+            "name": "2733871941559440208_267650658.mp4#t=0.333333",
+            "path": "file://wsl.localhost/Debian/root/workspace/bar_tracking/training/video/2733871941559440208_267650658.mp4#t=0.333333",
+            "size": {
+                "width": 720,
+                "height": 720
+            },
+            "parent": {
+                "format": "mp4",
+                "id": "3120a1cdb5bef07ec72020d8cfb184dd",
+                "name": "2733871941559440208_267650658.mp4",
+                "path": "file://wsl.localhost/Debian/root/workspace/bar_tracking/training/video/2733871941559440208_267650658.mp4",
+                "size": {
+                    "width": 720,
+                    "height": 720
+                },
+                "state": 2,
+                "type": 2
+            },
+            "timestamp": 0.333333
+        },
+        "7739cdf7f3f4c958561e7038d6855755": {
+            "id": "7739cdf7f3f4c958561e7038d6855755",
+            "format": "4",
+            "state": 1,
+            "type": 3,
+            "name": "2733871941559440208_267650658.mp4#t=0.4",
+            "path": "file://wsl.localhost/Debian/root/workspace/bar_tracking/training/video/2733871941559440208_267650658.mp4#t=0.4",
+            "size": {
+                "width": 720,
+                "height": 720
+            },
+            "parent": {
+                "format": "mp4",
+                "id": "3120a1cdb5bef07ec72020d8cfb184dd",
+                "name": "2733871941559440208_267650658.mp4",
+                "path": "file://wsl.localhost/Debian/root/workspace/bar_tracking/training/video/2733871941559440208_267650658.mp4",
+                "size": {
+                    "width": 720,
+                    "height": 720
+                },
+                "state": 2,
+                "type": 2
+            },
+            "timestamp": 0.4
+        },
+        "c91ae6e3965d80e78f4e70a12028d089": {
+            "id": "c91ae6e3965d80e78f4e70a12028d089",
+            "format": "866667",
+            "state": 1,
+            "type": 3,
+            "name": "2733871941559440208_267650658.mp4#t=0.866667",
+            "path": "file://wsl.localhost/Debian/root/workspace/bar_tracking/training/video/2733871941559440208_267650658.mp4#t=0.866667",
+            "size": {
+                "width": 720,
+                "height": 720
+            },
+            "parent": {
+                "format": "mp4",
+                "id": "3120a1cdb5bef07ec72020d8cfb184dd",
+                "name": "2733871941559440208_267650658.mp4",
+                "path": "file://wsl.localhost/Debian/root/workspace/bar_tracking/training/video/2733871941559440208_267650658.mp4",
+                "size": {
+                    "width": 720,
+                    "height": 720
+                },
+                "state": 1,
+                "type": 2
+            },
+            "timestamp": 0.866667
+        },
+        "69a8ebc197219c97cb4b29227a592ed2": {
+            "id": "69a8ebc197219c97cb4b29227a592ed2",
+            "format": "933333",
+            "state": 1,
+            "type": 3,
+            "name": "2733871941559440208_267650658.mp4#t=0.933333",
+            "path": "file://wsl.localhost/Debian/root/workspace/bar_tracking/training/video/2733871941559440208_267650658.mp4#t=0.933333",
+            "size": {
+                "width": 720,
+                "height": 720
+            },
+            "parent": {
+                "format": "mp4",
+                "id": "3120a1cdb5bef07ec72020d8cfb184dd",
+                "name": "2733871941559440208_267650658.mp4",
+                "path": "file://wsl.localhost/Debian/root/workspace/bar_tracking/training/video/2733871941559440208_267650658.mp4",
+                "size": {
+                    "width": 720,
+                    "height": 720
+                },
+                "state": 1,
+                "type": 2
+            },
+            "timestamp": 0.933333
+        },
+        "0b4adb717c7ccb674a81d1491d49eea6": {
+            "id": "0b4adb717c7ccb674a81d1491d49eea6",
+            "format": "4",
+            "state": 1,
+            "type": 3,
+            "name": "2733871941559440208_267650658.mp4#t=3.4",
+            "path": "file://wsl.localhost/Debian/root/workspace/bar_tracking/training/video/2733871941559440208_267650658.mp4#t=3.4",
+            "size": {
+                "width": 720,
+                "height": 720
+            },
+            "parent": {
+                "format": "mp4",
+                "id": "3120a1cdb5bef07ec72020d8cfb184dd",
+                "name": "2733871941559440208_267650658.mp4",
+                "path": "file://wsl.localhost/Debian/root/workspace/bar_tracking/training/video/2733871941559440208_267650658.mp4",
+                "size": {
+                    "width": 720,
+                    "height": 720
+                },
+                "state": 2,
+                "type": 2
+            },
+            "timestamp": 3.4
         }
     }
 }
