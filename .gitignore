@@ -129,3 +129,5 @@ dmypy.json
 .pyre/
 
 venv_BarTracking/
+training/model.pth
+

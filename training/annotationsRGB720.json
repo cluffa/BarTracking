@@ -2,2432 +2,1769 @@
     {
         "id": "IalEupseX",
         "label": "inside_plate",
-        "box": {
-            "row": 194,
-            "column": 176,
-            "height": 134,
-            "width": 103,
-            "point": "Bottom Left"
-        }
+        "row": 194,
+        "column": 176,
+        "height": 134,
+        "width": 103
     },
     {
         "id": "CAOp77phC",
         "label": "outside_plate",
-        "box": {
-            "row": 115,
-            "column": 577,
-            "height": 162,
-            "width": 100,
-            "point": "Bottom Left"
-        }
+        "row": 115,
+        "column": 577,
+        "height": 162,
+        "width": 100
     },
     {
         "id": "Vg0Ar5XHu",
         "label": "outside_plate",
-        "box": {
-            "row": 206,
-            "column": 132,
-            "height": 173,
-            "width": 157,
-            "point": "Bottom Left"
-        }
+        "row": 206,
+        "column": 132,
+        "height": 173,
+        "width": 157
     },
     {
         "id": "Lburryy4U",
         "label": "inside_plate",
-        "box": {
-            "row": 273,
-            "column": 389,
-            "height": 159,
-            "width": 142,
-            "point": "Bottom Left"
-        }
+        "row": 273,
+        "column": 389,
+        "height": 159,
+        "width": 142
     },
     {
         "id": "a5X80-T7W",
         "label": "outside_plate",
-        "box": {
-            "row": 112,
-            "column": 67,
-            "height": 166,
-            "width": 139,
-            "point": "Bottom Left"
-        }
+        "row": 112,
+        "column": 67,
+        "height": 166,
+        "width": 139
     },
     {
         "id": "9sBZqaWOj",
         "label": "bar_end",
-        "box": {
-            "row": 178,
-            "column": 74,
-            "height": 22,
-            "width": 22,
-            "point": "Bottom Left"
-        }
+        "row": 178,
+        "column": 74,
+        "height": 22,
+        "width": 22
     },
     {
         "id": "0X_6PGPDb",
         "label": "inside_plate",
-        "box": {
-            "row": 171,
-            "column": 369,
-            "height": 145,
-            "width": 123,
-            "point": "Bottom Left"
-        }
+        "row": 171,
+        "column": 369,
+        "height": 145,
+        "width": 123
     },
     {
         "id": "nLWMWR6eV",
         "label": "outside_plate",
-        "box": {
-            "row": 500,
-            "column": 85,
-            "height": 217,
-            "width": 181,
-            "point": "Bottom Left"
-        }
+        "row": 500,
+        "column": 85,
+        "height": 217,
+        "width": 181
     },
     {
         "id": "Y708GqQtS",
         "label": "inside_plate",
-        "box": {
-            "row": 541,
-            "column": 418,
-            "height": 178,
-            "width": 158,
-            "point": "Bottom Left"
-        }
+        "row": 541,
+        "column": 418,
+        "height": 178,
+        "width": 158
     },
     {
         "id": "RCUSLTBTQ",
         "label": "bar_end",
-        "box": {
-            "row": 591,
-            "column": 103,
-            "height": 28,
-            "width": 28,
-            "point": "Bottom Left"
-        }
+        "row": 591,
+        "column": 103,
+        "height": 28,
+        "width": 28
     },
     {
         "id": "B2hqObGpB",
         "label": "outside_plate",
-        "box": {
-            "row": 499,
-            "column": 104,
-            "height": 194,
-            "width": 159,
-            "point": "Bottom Left"
-        }
+        "row": 499,
+        "column": 104,
+        "height": 194,
+        "width": 159
     },
     {
         "id": "pWf0hYNnk",
         "label": "inside_plate",
-        "box": {
-            "row": 508,
-            "column": 422,
-            "height": 173,
-            "width": 152,
-            "point": "Bottom Left"
-        }
+        "row": 508,
+        "column": 422,
+        "height": 173,
+        "width": 152
     },
     {
         "id": "IjieQzUs_",
         "label": "bar_end",
-        "box": {
-            "row": 373,
-            "column": 36,
-            "height": 29,
-            "width": 23,
-            "point": "Bottom Left"
-        }
+        "row": 373,
+        "column": 36,
+        "height": 29,
+        "width": 23
     },
     {
         "id": "chb6NX88u",
         "label": "outside_plate",
-        "box": {
-            "row": 293,
-            "column": 59,
-            "height": 195,
-            "width": 90,
-            "point": "Bottom Left"
-        }
+        "row": 293,
+        "column": 59,
+        "height": 195,
+        "width": 90
     },
     {
         "id": "MTSOq0fqm",
         "label": "inside_plate",
-        "box": {
-            "row": 353,
-            "column": 551,
-            "height": 157,
-            "width": 113,
-            "point": "Bottom Left"
-        }
+        "row": 353,
+        "column": 551,
+        "height": 157,
+        "width": 113
     },
     {
         "id": "0BzPFYYlz",
         "label": "outside_plate",
-        "box": {
-            "row": 518,
-            "column": 549,
-            "height": 200,
-            "width": 138,
-            "point": "Bottom Left"
-        }
+        "row": 518,
+        "column": 549,
+        "height": 200,
+        "width": 138
     },
     {
         "id": "fih9GS5Ob",
         "label": "inside_plate",
-        "box": {
-            "row": 539,
-            "column": 134,
-            "height": 174,
-            "width": 135,
-            "point": "Bottom Left"
-        }
+        "row": 539,
+        "column": 134,
+        "height": 174,
+        "width": 135
     },
     {
         "id": "D_ZDwqgO6",
         "label": "outside_plate",
-        "box": {
-            "row": 28,
-            "column": 81,
-            "height": 184,
-            "width": 150,
-            "point": "Bottom Left"
-        }
+        "row": 28,
+        "column": 81,
+        "height": 184,
+        "width": 150
     },
     {
         "id": "TcH0oDKXw",
         "label": "inside_plate",
-        "box": {
-            "row": 137,
-            "column": 414,
-            "height": 153,
-            "width": 135,
-            "point": "Bottom Left"
-        }
+        "row": 137,
+        "column": 414,
+        "height": 153,
+        "width": 135
     },
     {
         "id": "vj2AhW9QD",
         "label": "outside_plate",
-        "box": {
-            "row": 446,
-            "column": 593,
-            "height": 176,
-            "width": 125,
-            "point": "Bottom Left"
-        }
+        "row": 446,
+        "column": 593,
+        "height": 176,
+        "width": 125
     },
     {
         "id": "jcafsER8f",
         "label": "inside_plate",
-        "box": {
-            "row": 475,
-            "column": 202,
-            "height": 152,
-            "width": 119,
-            "point": "Bottom Left"
-        }
+        "row": 475,
+        "column": 202,
+        "height": 152,
+        "width": 119
     },
     {
         "id": "Fhqi_o_1Y",
         "label": "bar_end",
-        "box": {
-            "row": 521,
-            "column": 688,
-            "height": 27,
-            "width": 26,
-            "point": "Bottom Left"
-        }
+        "row": 521,
+        "column": 688,
+        "height": 27,
+        "width": 26
     },
     {
         "id": "VJwgDL3dh",
         "label": "outside_plate",
-        "box": {
-            "row": 474,
-            "column": 80,
-            "height": 165,
-            "width": 132,
-            "point": "Bottom Left"
-        }
+        "row": 474,
+        "column": 80,
+        "height": 165,
+        "width": 132
     },
     {
         "id": "enGxzaAbv",
         "label": "inside_plate",
-        "box": {
-            "row": 499,
-            "column": 390,
-            "height": 149,
-            "width": 126,
-            "point": "Bottom Left"
-        }
+        "row": 499,
+        "column": 390,
+        "height": 149,
+        "width": 126
     },
     {
         "id": "6TOeMNAQP",
         "label": "bar_end",
-        "box": {
-            "row": 547,
-            "column": 81,
-            "height": 23,
-            "width": 22,
-            "point": "Bottom Left"
-        }
+        "row": 547,
+        "column": 81,
+        "height": 23,
+        "width": 22
     },
     {
         "id": "FokUCcuy_",
         "label": "inside_plate",
-        "box": {
-            "row": 555,
-            "column": 217,
-            "height": 149,
-            "width": 133,
-            "point": "Bottom Left"
-        }
+        "row": 555,
+        "column": 217,
+        "height": 149,
+        "width": 133
     },
     {
         "id": "EqIlK4eA1",
         "label": "outside_plate",
-        "box": {
-            "row": 542,
-            "column": 494,
-            "height": 173,
-            "width": 145,
-            "point": "Bottom Left"
-        }
+        "row": 542,
+        "column": 494,
+        "height": 173,
+        "width": 145
     },
     {
         "id": "zR29gcFn9",
         "label": "bar_end",
-        "box": {
-            "row": 617,
-            "column": 601,
-            "height": 26,
-            "width": 22,
-            "point": "Bottom Left"
-        }
+        "row": 617,
+        "column": 601,
+        "height": 26,
+        "width": 22
     },
     {
         "id": "WSqE_5c9r",
         "label": "outside_plate",
-        "box": {
-            "row": 398,
-            "column": 16,
-            "height": 236,
-            "width": 184,
-            "point": "Bottom Left"
-        }
+        "row": 398,
+        "column": 16,
+        "height": 236,
+        "width": 184
     },
     {
         "id": "X43ZAlhwh",
         "label": "inside_plate",
-        "box": {
-            "row": 414,
-            "column": 471,
-            "height": 206,
-            "width": 171,
-            "point": "Bottom Left"
-        }
+        "row": 414,
+        "column": 471,
+        "height": 206,
+        "width": 171
     },
     {
         "id": "bWmWddgyY",
         "label": "bar_end",
-        "box": {
-            "row": 502,
-            "column": 2,
-            "height": 32,
-            "width": 28,
-            "point": "Bottom Left"
-        }
+        "row": 502,
+        "column": 2,
+        "height": 32,
+        "width": 28
     },
     {
         "id": "tnY1-q06h",
         "label": "outside_plate",
-        "box": {
-            "row": 102,
-            "column": 50,
-            "height": 132,
-            "width": 102,
-            "point": "Bottom Left"
-        }
+        "row": 102,
+        "column": 50,
+        "height": 132,
+        "width": 102
     },
     {
         "id": "To030-mj9",
         "label": "inside_plate",
-        "box": {
-            "row": 44,
-            "column": 374,
-            "height": 127,
-            "width": 100,
-            "point": "Bottom Left"
-        }
+        "row": 44,
+        "column": 374,
+        "height": 127,
+        "width": 100
     },
     {
         "id": "Z-1N7UBFS",
         "label": "bar_end",
-        "box": {
-            "row": 164,
-            "column": 63,
-            "height": 23,
-            "width": 27,
-            "point": "Bottom Left"
-        }
+        "row": 164,
+        "column": 63,
+        "height": 23,
+        "width": 27
     },
     {
         "id": "f77GWS5GQ",
         "label": "inside_plate",
-        "box": {
-            "row": 79,
-            "column": 429,
-            "height": 165,
-            "width": 143,
-            "point": "Bottom Left"
-        }
+        "row": 79,
+        "column": 429,
+        "height": 165,
+        "width": 143
     },
     {
         "id": "1F85mNPNz",
         "label": "bar_end",
-        "box": {
-            "row": 34,
-            "column": 88,
-            "height": 38,
-            "width": 34,
-            "point": "Bottom Left"
-        }
+        "row": 34,
+        "column": 88,
+        "height": 38,
+        "width": 34
     },
     {
         "id": "Jwex82aTp",
         "label": "outside_plate",
-        "box": {
-            "row": 519,
-            "column": 554,
-            "height": 195,
-            "width": 134,
-            "point": "Bottom Left"
-        }
+        "row": 519,
+        "column": 554,
+        "height": 195,
+        "width": 134
     },
     {
         "id": "fTmc5xwLB",
         "label": "inside_plate",
-        "box": {
-            "row": 540,
-            "column": 126,
-            "height": 169,
-            "width": 125,
-            "point": "Bottom Left"
-        }
+        "row": 540,
+        "column": 126,
+        "height": 169,
+        "width": 125
     },
     {
         "id": "pMvp-JdEQ",
         "label": "outside_plate",
-        "box": {
-            "row": 523,
-            "column": 580,
-            "height": 195,
-            "width": 138,
-            "point": "Bottom Left"
-        }
+        "row": 523,
+        "column": 580,
+        "height": 195,
+        "width": 138
     },
     {
         "id": "pv4irLkwg",
         "label": "inside_plate",
-        "box": {
-            "row": 544,
-            "column": 155,
-            "height": 167,
-            "width": 128,
-            "point": "Bottom Left"
-        }
+        "row": 544,
+        "column": 155,
+        "height": 167,
+        "width": 128
     },
     {
         "id": "SXRTnDwFX",
         "label": "outside_plate",
-        "box": {
-            "row": 451,
-            "column": 550,
-            "height": 206,
-            "width": 134,
-            "point": "Bottom Left"
-        }
+        "row": 451,
+        "column": 550,
+        "height": 206,
+        "width": 134
     },
     {
         "id": "Cxm7d4rSO",
         "label": "bar_end",
-        "box": {
-            "row": 537,
-            "column": 679,
-            "height": 31,
-            "width": 25,
-            "point": "Bottom Left"
-        }
+        "row": 537,
+        "column": 679,
+        "height": 31,
+        "width": 25
     },
     {
         "id": "794Jl4Wqe",
         "label": "inside_plate",
-        "box": {
-            "row": 472,
-            "column": 96,
-            "height": 180,
-            "width": 131,
-            "point": "Bottom Left"
-        }
+        "row": 472,
+        "column": 96,
+        "height": 180,
+        "width": 131
     },
     {
         "id": "VdFm9n-YB",
         "label": "outside_plate",
-        "box": {
-            "row": 497,
-            "column": 562,
-            "height": 180,
-            "width": 125,
-            "point": "Bottom Left"
-        }
+        "row": 497,
+        "column": 562,
+        "height": 180,
+        "width": 125
     },
     {
         "id": "UYTeps0ye",
         "label": "inside_plate",
-        "box": {
-            "row": 519,
-            "column": 144,
-            "height": 153,
-            "width": 123,
-            "point": "Bottom Left"
-        }
+        "row": 519,
+        "column": 144,
+        "height": 153,
+        "width": 123
     },
     {
         "id": "HxSPJlkaC",
         "label": "outside_plate",
-        "box": {
-            "row": 95,
-            "column": 80,
-            "height": 152,
-            "width": 124,
-            "point": "Bottom Left"
-        }
+        "row": 95,
+        "column": 80,
+        "height": 152,
+        "width": 124
     },
     {
         "id": "JKmCv1Pjx",
         "label": "inside_plate",
-        "box": {
-            "row": 178,
-            "column": 347,
-            "height": 132,
-            "width": 120,
-            "point": "Bottom Left"
-        }
+        "row": 178,
+        "column": 347,
+        "height": 132,
+        "width": 120
     },
     {
         "id": "sfUpC4yGz",
         "label": "bar_end",
-        "box": {
-            "row": 153,
-            "column": 99,
-            "height": 27,
-            "width": 25,
-            "point": "Bottom Left"
-        }
+        "row": 153,
+        "column": 99,
+        "height": 27,
+        "width": 25
     },
     {
         "id": "wUCPpRm3K",
         "label": "outside_plate",
-        "box": {
-            "row": 384,
-            "column": 25,
-            "height": 239,
-            "width": 200,
-            "point": "Bottom Left"
-        }
+        "row": 384,
+        "column": 25,
+        "height": 239,
+        "width": 200
     },
     {
         "id": "iIuTB8YDb",
         "label": "inside_plate",
-        "box": {
-            "row": 403,
-            "column": 418,
-            "height": 200,
-            "width": 177,
-            "point": "Bottom Left"
-        }
+        "row": 403,
+        "column": 418,
+        "height": 200,
+        "width": 177
     },
     {
         "id": "Kbhc5W2K7",
         "label": "inside_plate",
-        "box": {
-            "row": 142,
-            "column": 422,
-            "height": 166,
-            "width": 146,
-            "point": "Bottom Left"
-        }
+        "row": 142,
+        "column": 422,
+        "height": 166,
+        "width": 146
     },
     {
         "id": "ZQf16I-Xr",
         "label": "bar_end",
-        "box": {
-            "row": 100,
-            "column": 89,
-            "height": 27,
-            "width": 30,
-            "point": "Bottom Left"
-        }
+        "row": 100,
+        "column": 89,
+        "height": 27,
+        "width": 30
     },
     {
         "id": "Ew0YJi1A2",
         "label": "outside_plate",
-        "box": {
-            "row": 23,
-            "column": 79,
-            "height": 209,
-            "width": 167,
-            "point": "Bottom Left"
-        }
+        "row": 23,
+        "column": 79,
+        "height": 209,
+        "width": 167
     },
     {
         "id": "sDSbR5rR0",
         "label": "bar_end",
-        "box": {
-            "row": 624,
-            "column": 593,
-            "height": 23,
-            "width": 22,
-            "point": "Bottom Left"
-        }
+        "row": 624,
+        "column": 593,
+        "height": 23,
+        "width": 22
     },
     {
         "id": "yG4CT7SBB",
         "label": "outside_plate",
-        "box": {
-            "row": 557,
-            "column": 504,
-            "height": 161,
-            "width": 114,
-            "point": "Bottom Left"
-        }
+        "row": 557,
+        "column": 504,
+        "height": 161,
+        "width": 114
     },
     {
         "id": "FYg8ig-G9",
         "label": "inside_plate",
-        "box": {
-            "row": 575,
-            "column": 155,
-            "height": 138,
-            "width": 105,
-            "point": "Bottom Left"
-        }
+        "row": 575,
+        "column": 155,
+        "height": 138,
+        "width": 105
     },
     {
         "id": "p8Un1GuxT",
         "label": "outside_plate",
-        "box": {
-            "row": 541,
-            "column": 508,
-            "height": 169,
-            "width": 120,
-            "point": "Bottom Left"
-        }
+        "row": 541,
+        "column": 508,
+        "height": 169,
+        "width": 120
     },
     {
         "id": "VSo_sdBmM",
         "label": "inside_plate",
-        "box": {
-            "row": 557,
-            "column": 141,
-            "height": 146,
-            "width": 112,
-            "point": "Bottom Left"
-        }
+        "row": 557,
+        "column": 141,
+        "height": 146,
+        "width": 112
     },
     {
         "id": "5rDDqrpmO",
         "label": "outside_plate",
-        "box": {
-            "row": 176,
-            "column": 152,
-            "height": 160,
-            "width": 136,
-            "point": "Bottom Left"
-        }
+        "row": 176,
+        "column": 152,
+        "height": 160,
+        "width": 136
     },
     {
         "id": "LaEfQ3uYQ",
         "label": "inside_plate",
-        "box": {
-            "row": 216,
-            "column": 418,
-            "height": 141,
-            "width": 128,
-            "point": "Bottom Left"
-        }
+        "row": 216,
+        "column": 418,
+        "height": 141,
+        "width": 128
     },
     {
         "id": "cPH0VMuVG",
         "label": "bar_end",
-        "box": {
-            "row": 241,
-            "column": 173,
-            "height": 23,
-            "width": 23,
-            "point": "Bottom Left"
-        }
+        "row": 241,
+        "column": 173,
+        "height": 23,
+        "width": 23
     },
     {
         "id": "elFTTm_7L",
         "label": "outside_plate",
-        "box": {
-            "row": 120,
-            "column": 573,
-            "height": 184,
-            "width": 129,
-            "point": "Bottom Left"
-        }
+        "row": 120,
+        "column": 573,
+        "height": 184,
+        "width": 129
     },
     {
         "id": "AwlzwbkaJ",
         "label": "inside_plate",
-        "box": {
-            "row": 186,
-            "column": 185,
-            "height": 150,
-            "width": 124,
-            "point": "Bottom Left"
-        }
+        "row": 186,
+        "column": 185,
+        "height": 150,
+        "width": 124
     },
     {
         "id": "HVjCeLTAd",
         "label": "bar_end",
-        "box": {
-            "row": 195,
-            "column": 681,
-            "height": 21,
-            "width": 19,
-            "point": "Bottom Left"
-        }
+        "row": 195,
+        "column": 681,
+        "height": 21,
+        "width": 19
     },
     {
         "id": "MInVndLc9",
         "label": "outside_plate",
-        "box": {
-            "row": 333,
-            "column": 130,
-            "height": 188,
-            "width": 159,
-            "point": "Bottom Left"
-        }
+        "row": 333,
+        "column": 130,
+        "height": 188,
+        "width": 159
     },
     {
         "id": "79pzi8CZO",
         "label": "inside_plate",
-        "box": {
-            "row": 371,
-            "column": 443,
-            "height": 158,
-            "width": 140,
-            "point": "Bottom Left"
-        }
+        "row": 371,
+        "column": 443,
+        "height": 158,
+        "width": 140
     },
     {
         "id": "-R_wDBF8m",
         "label": "outside_plate",
-        "box": {
-            "row": 704,
-            "column": 529,
-            "height": 185,
-            "width": 131,
-            "point": "Bottom Left"
-        }
+        "row": 704,
+        "column": 529,
+        "height": 185,
+        "width": 131
     },
     {
         "id": "Y_6yFex3D",
         "label": "inside_plate",
-        "box": {
-            "row": 696,
-            "column": 145,
-            "height": 158,
-            "width": 126,
-            "point": "Bottom Left"
-        }
+        "row": 696,
+        "column": 145,
+        "height": 158,
+        "width": 126
     },
     {
         "id": "BRbo_DA4d",
         "label": "bar_end",
-        "box": {
-            "row": 784,
-            "column": 609,
-            "height": 37,
-            "width": 36,
-            "point": "Bottom Left"
-        }
+        "row": 784,
+        "column": 609,
+        "height": 37,
+        "width": 36
     },
     {
         "id": "bUs1bD8Z3",
         "label": "outside_plate",
-        "box": {
-            "row": 510,
-            "column": 530,
-            "height": 208,
-            "width": 143,
-            "point": "Bottom Left"
-        }
+        "row": 510,
+        "column": 530,
+        "height": 208,
+        "width": 143
     },
     {
         "id": "20qPwbrTg",
         "label": "inside_plate",
-        "box": {
-            "row": 529,
-            "column": 109,
-            "height": 181,
-            "width": 139,
-            "point": "Bottom Left"
-        }
+        "row": 529,
+        "column": 109,
+        "height": 181,
+        "width": 139
     },
     {
         "id": "ZRqP9-WBB",
         "label": "bar_end",
-        "box": {
-            "row": 600,
-            "column": 657,
-            "height": 30,
-            "width": 29,
-            "point": "Bottom Left"
-        }
+        "row": 600,
+        "column": 657,
+        "height": 30,
+        "width": 29
     },
     {
         "id": "lLELSMqu5",
         "label": "outside_plate",
-        "box": {
-            "row": 6,
-            "column": 534,
-            "height": 159,
-            "width": 106,
-            "point": "Bottom Left"
-        }
+        "row": 6,
+        "column": 534,
+        "height": 159,
+        "width": 106
     },
     {
         "id": "hbNZzcxuR",
         "label": "inside_plate",
-        "box": {
-            "row": 102,
-            "column": 157,
-            "height": 135,
-            "width": 104,
-            "point": "Bottom Left"
-        }
+        "row": 102,
+        "column": 157,
+        "height": 135,
+        "width": 104
     },
     {
         "id": "eW8xXwvIH",
         "label": "outside_plate",
-        "box": {
-            "row": 513,
-            "column": 458,
-            "height": 159,
-            "width": 142,
-            "point": "Bottom Left"
-        }
+        "row": 513,
+        "column": 458,
+        "height": 159,
+        "width": 142
     },
     {
         "id": "tIIsQobB4",
         "label": "inside_plate",
-        "box": {
-            "row": 527,
-            "column": 252,
-            "height": 141,
-            "width": 124,
-            "point": "Bottom Left"
-        }
+        "row": 527,
+        "column": 252,
+        "height": 141,
+        "width": 124
     },
     {
         "id": "z9ybZh01d",
         "label": "bar_end",
-        "box": {
-            "row": 583,
-            "column": 564,
-            "height": 24,
-            "width": 19,
-            "point": "Bottom Left"
-        }
+        "row": 583,
+        "column": 564,
+        "height": 24,
+        "width": 19
     },
     {
         "id": "l7pJn-RIH",
         "label": "outside_plate",
-        "box": {
-            "row": 204,
-            "column": 100,
-            "height": 182,
-            "width": 158,
-            "point": "Bottom Left"
-        }
+        "row": 204,
+        "column": 100,
+        "height": 182,
+        "width": 158
     },
     {
         "id": "2i6xBLIcz",
         "label": "inside_plate",
-        "box": {
-            "row": 267,
-            "column": 361,
-            "height": 154,
-            "width": 139,
-            "point": "Bottom Left"
-        }
+        "row": 267,
+        "column": 361,
+        "height": 154,
+        "width": 139
     },
     {
         "id": "JbARxM9td",
         "label": "bar_end",
-        "box": {
-            "row": 276,
-            "column": 126,
-            "height": 24,
-            "width": 24,
-            "point": "Bottom Left"
-        }
+        "row": 276,
+        "column": 126,
+        "height": 24,
+        "width": 24
     },
     {
         "id": "ibvZ1aJor",
         "label": "outside_plate",
-        "box": {
-            "row": 197,
-            "column": 89,
-            "height": 182,
-            "width": 163,
-            "point": "Bottom Left"
-        }
+        "row": 197,
+        "column": 89,
+        "height": 182,
+        "width": 163
     },
     {
         "id": "GiS9xqHis",
         "label": "inside_plate",
-        "box": {
-            "row": 235,
-            "column": 339,
-            "height": 161,
-            "width": 149,
-            "point": "Bottom Left"
-        }
+        "row": 235,
+        "column": 339,
+        "height": 161,
+        "width": 149
     },
     {
         "id": "sYfSlQhvH",
         "label": "bar_end",
-        "box": {
-            "row": 272,
-            "column": 113,
-            "height": 26,
-            "width": 26,
-            "point": "Bottom Left"
-        }
+        "row": 272,
+        "column": 113,
+        "height": 26,
+        "width": 26
     },
     {
         "id": "8ajdijeHd",
         "label": "outside_plate",
-        "box": {
-            "row": 206,
-            "column": 130,
-            "height": 187,
-            "width": 162,
-            "point": "Bottom Left"
-        }
+        "row": 206,
+        "column": 130,
+        "height": 187,
+        "width": 162
     },
     {
         "id": "YnySbei_-",
         "label": "inside_plate",
-        "box": {
-            "row": 270,
-            "column": 443,
-            "height": 159,
-            "width": 143,
-            "point": "Bottom Left"
-        }
+        "row": 270,
+        "column": 443,
+        "height": 159,
+        "width": 143
     },
     {
         "id": "1Zw1qTyt5",
         "label": "inside_plate",
-        "box": {
-            "row": 212,
-            "column": 214,
-            "height": 153,
-            "width": 131,
-            "point": "Bottom Left"
-        }
+        "row": 212,
+        "column": 214,
+        "height": 153,
+        "width": 131
     },
     {
         "id": "cv-WFq6X1",
         "label": "outside_plate",
-        "box": {
-            "row": 154,
-            "column": 506,
-            "height": 167,
-            "width": 134,
-            "point": "Bottom Left"
-        }
+        "row": 154,
+        "column": 506,
+        "height": 167,
+        "width": 134
     },
     {
         "id": "nG0fHL5wj",
         "label": "bar_end",
-        "box": {
-            "row": 221,
-            "column": 608,
-            "height": 27,
-            "width": 23,
-            "point": "Bottom Left"
-        }
+        "row": 221,
+        "column": 608,
+        "height": 27,
+        "width": 23
     },
     {
         "id": "H4Uu7gDuy",
         "label": "outside_plate",
-        "box": {
-            "row": 535,
-            "column": 556,
-            "height": 180,
-            "width": 119,
-            "point": "Bottom Left"
-        }
+        "row": 535,
+        "column": 556,
+        "height": 180,
+        "width": 119
     },
     {
         "id": "KyWPLjcih",
         "label": "bar_end",
-        "box": {
-            "row": 610,
-            "column": 688,
-            "height": 31,
-            "width": 19,
-            "point": "Bottom Left"
-        }
+        "row": 610,
+        "column": 688,
+        "height": 31,
+        "width": 19
     },
     {
         "id": "MIsgbVb0Y",
         "label": "inside_plate",
-        "box": {
-            "row": 543,
-            "column": 147,
-            "height": 167,
-            "width": 124,
-            "point": "Bottom Left"
-        }
+        "row": 543,
+        "column": 147,
+        "height": 167,
+        "width": 124
     },
     {
         "id": "D25Cf0g2w",
         "label": "outside_plate",
-        "box": {
-            "row": 339,
-            "column": 35,
-            "height": 241,
-            "width": 194,
-            "point": "Bottom Left"
-        }
+        "row": 339,
+        "column": 35,
+        "height": 241,
+        "width": 194
     },
     {
         "id": "4jviXY-je",
         "label": "inside_plate",
-        "box": {
-            "row": 371,
-            "column": 468,
-            "height": 216,
-            "width": 183,
-            "point": "Bottom Left"
-        }
+        "row": 371,
+        "column": 468,
+        "height": 216,
+        "width": 183
     },
     {
         "id": "4Zpj4Gifw",
         "label": "outside_plate",
-        "box": {
-            "row": 555,
-            "column": 119,
-            "height": 160,
-            "width": 126,
-            "point": "Bottom Left"
-        }
+        "row": 555,
+        "column": 119,
+        "height": 160,
+        "width": 126
     },
     {
         "id": "IBu_SNP0Q",
         "label": "bar_end",
-        "box": {
-            "row": 624,
-            "column": 111,
-            "height": 21,
-            "width": 19,
-            "point": "Bottom Left"
-        }
+        "row": 624,
+        "column": 111,
+        "height": 21,
+        "width": 19
     },
     {
         "id": "WAjoWHxY8",
         "label": "inside_plate",
-        "box": {
-            "row": 567,
-            "column": 422,
-            "height": 140,
-            "width": 120,
-            "point": "Bottom Left"
-        }
+        "row": 567,
+        "column": 422,
+        "height": 140,
+        "width": 120
     },
     {
         "id": "8L0-iSaqY",
         "label": "outside_plate",
-        "box": {
-            "row": 462,
-            "column": 115,
-            "height": 191,
-            "width": 156,
-            "point": "Bottom Left"
-        }
+        "row": 462,
+        "column": 115,
+        "height": 191,
+        "width": 156
     },
     {
         "id": "9b3GxBQli",
         "label": "inside_plate",
-        "box": {
-            "row": 513,
-            "column": 418,
-            "height": 150,
-            "width": 136,
-            "point": "Bottom Left"
-        }
+        "row": 513,
+        "column": 418,
+        "height": 150,
+        "width": 136
     },
     {
         "id": "8jw-iEFJX",
         "label": "bar_end",
-        "box": {
-            "row": 539,
-            "column": 124,
-            "height": 30,
-            "width": 29,
-            "point": "Bottom Left"
-        }
+        "row": 539,
+        "column": 124,
+        "height": 30,
+        "width": 29
     },
     {
         "id": "dIO6Vd1zo",
         "label": "bar_end",
-        "box": {
-            "row": 302,
-            "column": 610,
-            "height": 24,
-            "width": 24,
-            "point": "Bottom Left"
-        }
+        "row": 302,
+        "column": 610,
+        "height": 24,
+        "width": 24
     },
     {
         "id": "JZktqub9Q",
         "label": "outside_plate",
-        "box": {
-            "row": 231,
-            "column": 500,
-            "height": 164,
-            "width": 138,
-            "point": "Bottom Left"
-        }
+        "row": 231,
+        "column": 500,
+        "height": 164,
+        "width": 138
     },
     {
         "id": "S6CSBY70j",
         "label": "inside_plate",
-        "box": {
-            "row": 245,
-            "column": 254,
-            "height": 141,
-            "width": 126,
-            "point": "Bottom Left"
-        }
+        "row": 245,
+        "column": 254,
+        "height": 141,
+        "width": 126
     },
     {
         "id": "HhKuI3Yg_",
         "label": "outside_plate",
-        "box": {
-            "row": 368,
-            "column": 123,
-            "height": 166,
-            "width": 119,
-            "point": "Bottom Left"
-        }
+        "row": 368,
+        "column": 123,
+        "height": 166,
+        "width": 119
     },
     {
         "id": "zjKNRJCnQ",
         "label": "bar_end",
-        "box": {
-            "row": 431,
-            "column": 104,
-            "height": 28,
-            "width": 22,
-            "point": "Bottom Left"
-        }
+        "row": 431,
+        "column": 104,
+        "height": 28,
+        "width": 22
     },
     {
         "id": "GkOqklhOT",
         "label": "inside_plate",
-        "box": {
-            "row": 442,
-            "column": 456,
-            "height": 145,
-            "width": 119,
-            "point": "Bottom Left"
-        }
+        "row": 442,
+        "column": 456,
+        "height": 145,
+        "width": 119
     },
     {
         "id": "dLkqvQSnZ",
         "label": "inside_plate",
-        "box": {
-            "row": 462,
-            "column": 167,
-            "height": 141,
-            "width": 108,
-            "point": "Bottom Left"
-        }
+        "row": 462,
+        "column": 167,
+        "height": 141,
+        "width": 108
     },
     {
         "id": "5pK6f9gH7",
         "label": "outside_plate",
-        "box": {
-            "row": 434,
-            "column": 539,
-            "height": 165,
-            "width": 112,
-            "point": "Bottom Left"
-        }
+        "row": 434,
+        "column": 539,
+        "height": 165,
+        "width": 112
     },
     {
         "id": "uz6WPM9OS",
         "label": "outside_plate",
-        "box": {
-            "row": 531,
-            "column": 118,
-            "height": 168,
-            "width": 138,
-            "point": "Bottom Left"
-        }
+        "row": 531,
+        "column": 118,
+        "height": 168,
+        "width": 138
     },
     {
         "id": "repGsB5DV",
         "label": "inside_plate",
-        "box": {
-            "row": 546,
-            "column": 430,
-            "height": 150,
-            "width": 132,
-            "point": "Bottom Left"
-        }
+        "row": 546,
+        "column": 430,
+        "height": 150,
+        "width": 132
     },
     {
         "id": "Xc2dHngn1",
         "label": "bar_end",
-        "box": {
-            "row": 603,
-            "column": 121,
-            "height": 27,
-            "width": 23,
-            "point": "Bottom Left"
-        }
+        "row": 603,
+        "column": 121,
+        "height": 27,
+        "width": 23
     },
     {
         "id": "0XgwsIQbK",
         "label": "inside_plate",
-        "box": {
-            "row": 136,
-            "column": 161,
-            "height": 149,
-            "width": 118,
-            "point": "Bottom Left"
-        }
+        "row": 136,
+        "column": 161,
+        "height": 149,
+        "width": 118
     },
     {
         "id": "w8EE151un",
         "label": "outside_plate",
-        "box": {
-            "row": 66,
-            "column": 561,
-            "height": 175,
-            "width": 122,
-            "point": "Bottom Left"
-        }
+        "row": 66,
+        "column": 561,
+        "height": 175,
+        "width": 122
     },
     {
         "id": "SAMSYKFTL",
         "label": "bar_end",
-        "box": {
-            "row": 135,
-            "column": 655,
-            "height": 32,
-            "width": 32,
-            "point": "Bottom Left"
-        }
+        "row": 135,
+        "column": 655,
+        "height": 32,
+        "width": 32
     },
     {
         "id": "3Z5bmKfLa",
         "label": "outside_plate",
-        "box": {
-            "row": 403,
-            "column": 14,
-            "height": 247,
-            "width": 206,
-            "point": "Bottom Left"
-        }
+        "row": 403,
+        "column": 14,
+        "height": 247,
+        "width": 206
     },
     {
         "id": "gOdX1638W",
         "label": "inside_plate",
-        "box": {
-            "row": 418,
-            "column": 422,
-            "height": 207,
-            "width": 183,
-            "point": "Bottom Left"
-        }
+        "row": 418,
+        "column": 422,
+        "height": 207,
+        "width": 183
     },
     {
         "id": "D14TyvuYN",
         "label": "outside_plate",
-        "box": {
-            "row": 533,
-            "column": 150,
-            "height": 169,
-            "width": 135,
-            "point": "Bottom Left"
-        }
+        "row": 533,
+        "column": 150,
+        "height": 169,
+        "width": 135
     },
     {
         "id": "69dJ_n67f",
         "label": "bar_end",
-        "box": {
-            "row": 605,
-            "column": 143,
-            "height": 26,
-            "width": 28,
-            "point": "Bottom Left"
-        }
+        "row": 605,
+        "column": 143,
+        "height": 26,
+        "width": 28
     },
     {
         "id": "abkuPTqPT",
         "label": "inside_plate",
-        "box": {
-            "row": 551,
-            "column": 475,
-            "height": 148,
-            "width": 127,
-            "point": "Bottom Left"
-        }
+        "row": 551,
+        "column": 475,
+        "height": 148,
+        "width": 127
     },
     {
         "id": "mqxuMZ9-J",
         "label": "inside_plate",
-        "box": {
-            "row": 449,
-            "column": 247,
-            "height": 143,
-            "width": 139,
-            "point": "Bottom Left"
-        }
+        "row": 449,
+        "column": 247,
+        "height": 143,
+        "width": 139
     },
     {
         "id": "sFEwhyCLf",
         "label": "outside_plate",
-        "box": {
-            "row": 488,
-            "column": 412,
-            "height": 170,
-            "width": 160,
-            "point": "Bottom Left"
-        }
+        "row": 488,
+        "column": 412,
+        "height": 170,
+        "width": 160
     },
     {
         "id": "cTkJlMTWi",
         "label": "bar_end",
-        "box": {
-            "row": 572,
-            "column": 511,
-            "height": 27,
-            "width": 28,
-            "point": "Bottom Left"
-        }
+        "row": 572,
+        "column": 511,
+        "height": 27,
+        "width": 28
     },
     {
         "id": "0G3C_Jd5E",
         "label": "outside_plate",
-        "box": {
-            "row": 116,
-            "column": 76,
-            "height": 173,
-            "width": 140,
-            "point": "Bottom Left"
-        }
+        "row": 116,
+        "column": 76,
+        "height": 173,
+        "width": 140
     },
     {
         "id": "_KFZ0_vNG",
         "label": "inside_plate",
-        "box": {
-            "row": 209,
-            "column": 402,
-            "height": 147,
-            "width": 128,
-            "point": "Bottom Left"
-        }
+        "row": 209,
+        "column": 402,
+        "height": 147,
+        "width": 128
     },
     {
         "id": "RTSORKK59",
         "label": "outside_plate",
-        "box": {
-            "row": 557,
-            "column": 573,
-            "height": 158,
-            "width": 111,
-            "point": "Bottom Left"
-        }
+        "row": 557,
+        "column": 573,
+        "height": 158,
+        "width": 111
     },
     {
         "id": "ZhfifKteH",
         "label": "inside_plate",
-        "box": {
-            "row": 573,
-            "column": 209,
-            "height": 135,
-            "width": 108,
-            "point": "Bottom Left"
-        }
+        "row": 573,
+        "column": 209,
+        "height": 135,
+        "width": 108
     },
     {
         "id": "RWyaUpsG4",
         "label": "outside_plate",
-        "box": {
-            "row": 502,
-            "column": 25,
-            "height": 197,
-            "width": 86,
-            "point": "Bottom Left"
-        }
+        "row": 502,
+        "column": 25,
+        "height": 197,
+        "width": 86
     },
     {
         "id": "YqVSPgZyD",
         "label": "inside_plate",
-        "box": {
-            "row": 502,
-            "column": 529,
-            "height": 166,
-            "width": 106,
-            "point": "Bottom Left"
-        }
+        "row": 502,
+        "column": 529,
+        "height": 166,
+        "width": 106
     },
     {
         "id": "sAAusQ9E1",
         "label": "bar_end",
-        "box": {
-            "row": 587,
-            "column": -1,
-            "height": 34,
-            "width": 14,
-            "point": "Bottom Left"
-        }
+        "row": 587,
+        "column": -1,
+        "height": 34,
+        "width": 14
     },
     {
         "id": "QJ9U_3VAl",
         "label": "outside_plate",
-        "box": {
-            "row": 534,
-            "column": 94,
-            "height": 184,
-            "width": 156,
-            "point": "Bottom Left"
-        }
+        "row": 534,
+        "column": 94,
+        "height": 184,
+        "width": 156
     },
     {
         "id": "P8DkydIee",
         "label": "inside_plate",
-        "box": {
-            "row": 543,
-            "column": 401,
-            "height": 166,
-            "width": 149,
-            "point": "Bottom Left"
-        }
+        "row": 543,
+        "column": 401,
+        "height": 166,
+        "width": 149
     },
     {
         "id": "tl-OzWyJv",
         "label": "bar_end",
-        "box": {
-            "row": 616,
-            "column": 106,
-            "height": 23,
-            "width": 23,
-            "point": "Bottom Left"
-        }
+        "row": 616,
+        "column": 106,
+        "height": 23,
+        "width": 23
     },
     {
         "id": "XZDDapeI2",
         "label": "outside_plate",
-        "box": {
-            "row": 536,
-            "column": 551,
-            "height": 179,
-            "width": 123,
-            "point": "Bottom Left"
-        }
+        "row": 536,
+        "column": 551,
+        "height": 179,
+        "width": 123
     },
     {
         "id": "LEGD-VLrO",
         "label": "bar_end",
-        "box": {
-            "row": 610,
-            "column": 669,
-            "height": 24,
-            "width": 24,
-            "point": "Bottom Left"
-        }
+        "row": 610,
+        "column": 669,
+        "height": 24,
+        "width": 24
     },
     {
         "id": "3KTPFSe03",
         "label": "inside_plate",
-        "box": {
-            "row": 557,
-            "column": 163,
-            "height": 154,
-            "width": 121,
-            "point": "Bottom Left"
-        }
+        "row": 557,
+        "column": 163,
+        "height": 154,
+        "width": 121
     },
     {
         "id": "cibKj9d2u",
         "label": "outside_plate",
-        "box": {
-            "row": 229,
-            "column": 152,
-            "height": 120,
-            "width": 96,
-            "point": "Bottom Left"
-        }
+        "row": 229,
+        "column": 152,
+        "height": 120,
+        "width": 96
     },
     {
         "id": "LZMwJ9fUn",
         "label": "inside_plate",
-        "box": {
-            "row": 287,
-            "column": 358,
-            "height": 105,
-            "width": 91,
-            "point": "Bottom Left"
-        }
+        "row": 287,
+        "column": 358,
+        "height": 105,
+        "width": 91
     },
     {
         "id": "nMP7YRSP7",
         "label": "bar_end",
-        "box": {
-            "row": 273,
-            "column": 157,
-            "height": 18,
-            "width": 17,
-            "point": "Bottom Left"
-        }
+        "row": 273,
+        "column": 157,
+        "height": 18,
+        "width": 17
     },
     {
         "id": "5FUSiquYD",
         "label": "inside_plate",
-        "box": {
-            "row": 539,
-            "column": 130,
-            "height": 163,
-            "width": 124,
-            "point": "Bottom Left"
-        }
+        "row": 539,
+        "column": 130,
+        "height": 163,
+        "width": 124
     },
     {
         "id": "ZNAz8FeMK",
         "label": "outside_plate",
-        "box": {
-            "row": 521,
-            "column": 552,
-            "height": 188,
-            "width": 123,
-            "point": "Bottom Left"
-        }
+        "row": 521,
+        "column": 552,
+        "height": 188,
+        "width": 123
     },
     {
         "id": "nROzMHHpK",
         "label": "bar_end",
-        "box": {
-            "row": 605,
-            "column": 650,
-            "height": 32,
-            "width": 37,
-            "point": "Bottom Left"
-        }
+        "row": 605,
+        "column": 650,
+        "height": 32,
+        "width": 37
     },
     {
         "id": "1PV1xsHEy",
         "label": "outside_plate",
-        "box": {
-            "row": 134,
-            "column": 70,
-            "height": 174,
-            "width": 144,
-            "point": "Bottom Left"
-        }
+        "row": 134,
+        "column": 70,
+        "height": 174,
+        "width": 144
     },
     {
         "id": "vAiFH8Y8M",
         "label": "inside_plate",
-        "box": {
-            "row": 228,
-            "column": 400,
-            "height": 146,
-            "width": 129,
-            "point": "Bottom Left"
-        }
+        "row": 228,
+        "column": 400,
+        "height": 146,
+        "width": 129
     },
     {
         "id": "Zzt_xtomV",
         "label": "outside_plate",
-        "box": {
-            "row": 321,
-            "column": 502,
-            "height": 247,
-            "width": 215,
-            "point": "Bottom Left"
-        }
+        "row": 321,
+        "column": 502,
+        "height": 247,
+        "width": 215
     },
     {
         "id": "BnSdbuuwa",
         "label": "bar_end",
-        "box": {
-            "row": 425,
-            "column": 639,
-            "height": 34,
-            "width": 34,
-            "point": "Bottom Left"
-        }
+        "row": 425,
+        "column": 639,
+        "height": 34,
+        "width": 34
     },
     {
         "id": "Cg7bWmUFi",
         "label": "inside_plate",
-        "box": {
-            "row": 388,
-            "column": 131,
-            "height": 219,
-            "width": 213,
-            "point": "Bottom Left"
-        }
+        "row": 388,
+        "column": 131,
+        "height": 219,
+        "width": 213
     },
     {
         "id": "L2C1YukD2",
         "label": "outside_plate",
-        "box": {
-            "row": 533,
-            "column": 113,
-            "height": 185,
-            "width": 161,
-            "point": "Bottom Left"
-        }
+        "row": 533,
+        "column": 113,
+        "height": 185,
+        "width": 161
     },
     {
         "id": "lcFJD8-Pt",
         "label": "inside_plate",
-        "box": {
-            "row": 557,
-            "column": 373,
-            "height": 157,
-            "width": 141,
-            "point": "Bottom Left"
-        }
+        "row": 557,
+        "column": 373,
+        "height": 157,
+        "width": 141
     },
     {
         "id": "1faw5ezI_",
         "label": "bar_end",
-        "box": {
-            "row": 611,
-            "column": 139,
-            "height": 28,
-            "width": 27,
-            "point": "Bottom Left"
-        }
+        "row": 611,
+        "column": 139,
+        "height": 28,
+        "width": 27
     },
     {
         "id": "WIs2bTp-g",
         "label": "outside_plate",
-        "box": {
-            "row": 539,
-            "column": 462,
-            "height": 179,
-            "width": 143,
-            "point": "Bottom Left"
-        }
+        "row": 539,
+        "column": 462,
+        "height": 179,
+        "width": 143
     },
     {
         "id": "gcm8ObBt0",
         "label": "bar_end",
-        "box": {
-            "row": 617,
-            "column": 575,
-            "height": 26,
-            "width": 26,
-            "point": "Bottom Left"
-        }
+        "row": 617,
+        "column": 575,
+        "height": 26,
+        "width": 26
     },
     {
         "id": "NMnj7EKu2",
         "label": "inside_plate",
-        "box": {
-            "row": 197,
-            "column": 94,
-            "height": 161,
-            "width": 108,
-            "point": "Bottom Left"
-        }
+        "row": 197,
+        "column": 94,
+        "height": 161,
+        "width": 108
     },
     {
         "id": "6i3VRzZwz",
         "label": "outside_plate",
-        "box": {
-            "row": 141,
-            "column": 608,
-            "height": 197,
-            "width": 97,
-            "point": "Bottom Left"
-        }
+        "row": 141,
+        "column": 608,
+        "height": 197,
+        "width": 97
     },
     {
         "id": "3kprUfUvp",
         "label": "outside_plate",
-        "box": {
-            "row": 680,
-            "column": 504,
-            "height": 207,
-            "width": 150,
-            "point": "Bottom Left"
-        }
+        "row": 680,
+        "column": 504,
+        "height": 207,
+        "width": 150
     },
     {
         "id": "ubxTrqVVN",
         "label": "inside_plate",
-        "box": {
-            "row": 682,
-            "column": 92,
-            "height": 176,
-            "width": 135,
-            "point": "Bottom Left"
-        }
+        "row": 682,
+        "column": 92,
+        "height": 176,
+        "width": 135
     },
     {
         "id": "5jGJPMpyi",
         "label": "bar_end",
-        "box": {
-            "row": 767,
-            "column": 611,
-            "height": 34,
-            "width": 35,
-            "point": "Bottom Left"
-        }
+        "row": 767,
+        "column": 611,
+        "height": 34,
+        "width": 35
     },
     {
         "id": "1ydpPdxdS",
         "label": "outside_plate",
-        "box": {
-            "row": 533,
-            "column": 575,
-            "height": 185,
-            "width": 126,
-            "point": "Bottom Left"
-        }
+        "row": 533,
+        "column": 575,
+        "height": 185,
+        "width": 126
     },
     {
         "id": "9oWZbBll2",
         "label": "inside_plate",
-        "box": {
-            "row": 555,
-            "column": 171,
-            "height": 156,
-            "width": 119,
-            "point": "Bottom Left"
-        }
+        "row": 555,
+        "column": 171,
+        "height": 156,
+        "width": 119
     },
     {
         "id": "VoSQgj18O",
         "label": "bar_end",
-        "box": {
-            "row": 610,
-            "column": 678,
-            "height": 32,
-            "width": 32,
-            "point": "Bottom Left"
-        }
+        "row": 610,
+        "column": 678,
+        "height": 32,
+        "width": 32
     },
     {
         "id": "ZK0HuJ0cG",
         "label": "inside_plate",
-        "box": {
-            "row": 220,
-            "column": 185,
-            "height": 155,
-            "width": 117,
-            "point": "Bottom Left"
-        }
+        "row": 220,
+        "column": 185,
+        "height": 155,
+        "width": 117
     },
     {
         "id": "QruokhztO",
         "label": "outside_plate",
-        "box": {
-            "row": 148,
-            "column": 608,
-            "height": 183,
-            "width": 110,
-            "point": "Bottom Left"
-        }
+        "row": 148,
+        "column": 608,
+        "height": 183,
+        "width": 110
     },
     {
         "id": "_hB7YyX8Z",
         "label": "outside_plate",
-        "box": {
-            "row": 85,
-            "column": 432,
-            "height": 175,
-            "width": 164,
-            "point": "Bottom Left"
-        }
+        "row": 85,
+        "column": 432,
+        "height": 175,
+        "width": 164
     },
     {
         "id": "kjCp5ueKO",
         "label": "inside_plate",
-        "box": {
-            "row": 93,
-            "column": 285,
-            "height": 148,
-            "width": 142,
-            "point": "Bottom Left"
-        }
+        "row": 93,
+        "column": 285,
+        "height": 148,
+        "width": 142
     },
     {
         "id": "BUjy6yJ3z",
         "label": "bar_end",
-        "box": {
-            "row": 159,
-            "column": 530,
-            "height": 27,
-            "width": 24,
-            "point": "Bottom Left"
-        }
+        "row": 159,
+        "column": 530,
+        "height": 27,
+        "width": 24
     },
     {
         "id": "EGxJLKM01",
         "label": "outside_plate",
-        "box": {
-            "row": 38,
-            "column": 84,
-            "height": 168,
-            "width": 137,
-            "point": "Bottom Left"
-        }
+        "row": 38,
+        "column": 84,
+        "height": 168,
+        "width": 137
     },
     {
         "id": "AO_oSb9m7",
         "label": "inside_plate",
-        "box": {
-            "row": 97,
-            "column": 395,
-            "height": 146,
-            "width": 124,
-            "point": "Bottom Left"
-        }
+        "row": 97,
+        "column": 395,
+        "height": 146,
+        "width": 124
     },
     {
         "id": "fijCytXZm",
         "label": "bar_end",
-        "box": {
-            "row": 106,
-            "column": 84,
-            "height": 23,
-            "width": 23,
-            "point": "Bottom Left"
-        }
+        "row": 106,
+        "column": 84,
+        "height": 23,
+        "width": 23
     },
     {
         "id": "1IYDbtHPk",
         "label": "outside_plate",
-        "box": {
-            "row": 529,
-            "column": 60,
-            "height": 184,
-            "width": 148,
-            "point": "Bottom Left"
-        }
+        "row": 529,
+        "column": 60,
+        "height": 184,
+        "width": 148
     },
     {
         "id": "8Bj8MSBl0",
         "label": "inside_plate",
-        "box": {
-            "row": 542,
-            "column": 388,
-            "height": 164,
-            "width": 141,
-            "point": "Bottom Left"
-        }
+        "row": 542,
+        "column": 388,
+        "height": 164,
+        "width": 141
     },
     {
         "id": "lCqHh1dyl",
         "label": "outside_plate",
-        "box": {
-            "row": 539,
-            "column": 130,
-            "height": 172,
-            "width": 153,
-            "point": "Bottom Left"
-        }
+        "row": 539,
+        "column": 130,
+        "height": 172,
+        "width": 153
     },
     {
         "id": "d4hJDou4g",
         "label": "bar_end",
-        "box": {
-            "row": 616,
-            "column": 155,
-            "height": 20,
-            "width": 20,
-            "point": "Bottom Left"
-        }
+        "row": 616,
+        "column": 155,
+        "height": 20,
+        "width": 20
     },
     {
         "id": "3iUYGVLp2",
         "label": "inside_plate",
-        "box": {
-            "row": 557,
-            "column": 380,
-            "height": 146,
-            "width": 135,
-            "point": "Bottom Left"
-        }
+        "row": 557,
+        "column": 380,
+        "height": 146,
+        "width": 135
     },
     {
         "id": "u4MlrfESj",
         "label": "outside_plate",
-        "box": {
-            "row": 550,
-            "column": 521,
-            "height": 165,
-            "width": 115,
-            "point": "Bottom Left"
-        }
+        "row": 550,
+        "column": 521,
+        "height": 165,
+        "width": 115
     },
     {
         "id": "BjbIRIDT1",
         "label": "inside_plate",
-        "box": {
-            "row": 568,
-            "column": 157,
-            "height": 142,
-            "width": 107,
-            "point": "Bottom Left"
-        }
+        "row": 568,
+        "column": 157,
+        "height": 142,
+        "width": 107
     },
     {
         "id": "DLWWKosAJ",
         "label": "outside_plate",
-        "box": {
-            "row": 513,
-            "column": 143,
-            "height": 171,
-            "width": 145,
-            "point": "Bottom Left"
-        }
+        "row": 513,
+        "column": 143,
+        "height": 171,
+        "width": 145
     },
     {
         "id": "XfkdaEa-Z",
         "label": "inside_plate",
-        "box": {
-            "row": 524,
-            "column": 411,
-            "height": 150,
-            "width": 137,
-            "point": "Bottom Left"
-        }
+        "row": 524,
+        "column": 411,
+        "height": 150,
+        "width": 137
     },
     {
         "id": "NO4rfp6tq",
         "label": "bar_end",
-        "box": {
-            "row": 588,
-            "column": 158,
-            "height": 26,
-            "width": 23,
-            "point": "Bottom Left"
-        }
+        "row": 588,
+        "column": 158,
+        "height": 26,
+        "width": 23
     },
     {
         "id": "ACrtEjtcH",
         "label": "outside_plate",
-        "box": {
-            "row": 148,
-            "column": 115,
-            "height": 172,
-            "width": 145,
-            "point": "Bottom Left"
-        }
+        "row": 148,
+        "column": 115,
+        "height": 172,
+        "width": 145
     },
     {
         "id": "tWjDImgEw",
         "label": "bar_end",
-        "box": {
-            "row": 183,
-            "column": 403,
-            "height": 157,
-            "width": 137,
-            "point": "Bottom Left"
-        }
+        "row": 183,
+        "column": 403,
+        "height": 157,
+        "width": 137
     },
     {
         "id": "m456anOhj",
         "label": "inside_plate",
-        "box": {
-            "row": 554,
-            "column": 175,
-            "height": 157,
-            "width": 118,
-            "point": "Bottom Left"
-        }
+        "row": 554,
+        "column": 175,
+        "height": 157,
+        "width": 118
     },
     {
         "id": "0eDgTus7l",
         "label": "outside_plate",
-        "box": {
-            "row": 536,
-            "column": 578,
-            "height": 182,
-            "width": 124,
-            "point": "Bottom Left"
-        }
+        "row": 536,
+        "column": 578,
+        "height": 182,
+        "width": 124
     },
     {
         "id": "h2mL7swWo",
         "label": "bar_end",
-        "box": {
-            "row": 609,
-            "column": 701,
-            "height": 30,
-            "width": 16,
-            "point": "Bottom Left"
-        }
+        "row": 609,
+        "column": 701,
+        "height": 30,
+        "width": 16
     },
     {
         "id": "f2ZHX-PbJ",
         "label": "outside_plate",
-        "box": {
-            "row": 458,
-            "column": 554,
-            "height": 186,
-            "width": 127,
-            "point": "Bottom Left"
-        }
+        "row": 458,
+        "column": 554,
+        "height": 186,
+        "width": 127
     },
     {
         "id": "p6TUHjrWd",
         "label": "bar_end",
-        "box": {
-            "row": 535,
-            "column": 682,
-            "height": 30,
-            "width": 22,
-            "point": "Bottom Left"
-        }
+        "row": 535,
+        "column": 682,
+        "height": 30,
+        "width": 22
     },
     {
         "id": "_VUrfigiJ",
         "label": "inside_plate",
-        "box": {
-            "row": 498,
-            "column": 140,
-            "height": 163,
-            "width": 119,
-            "point": "Bottom Left"
-        }
+        "row": 498,
+        "column": 140,
+        "height": 163,
+        "width": 119
     },
     {
         "id": "wWKAv4AWB",
         "label": "outside_plate",
-        "box": {
-            "row": 551,
-            "column": 99,
-            "height": 167,
-            "width": 134,
-            "point": "Bottom Left"
-        }
+        "row": 551,
+        "column": 99,
+        "height": 167,
+        "width": 134
     },
     {
         "id": "MFiPwKYlQ",
         "label": "inside_plate",
-        "box": {
-            "row": 560,
-            "column": 404,
-            "height": 149,
-            "width": 127,
-            "point": "Bottom Left"
-        }
+        "row": 560,
+        "column": 404,
+        "height": 149,
+        "width": 127
     },
     {
         "id": "UCl-LtzUv",
         "label": "bar_end",
-        "box": {
-            "row": 622,
-            "column": 92,
-            "height": 25,
-            "width": 26,
-            "point": "Bottom Left"
-        }
+        "row": 622,
+        "column": 92,
+        "height": 25,
+        "width": 26
     },
     {
         "id": "zTAk_k-yk",
         "label": "inside_plate",
-        "box": {
-            "row": 150,
-            "column": 181,
-            "height": 141,
-            "width": 120,
-            "point": "Bottom Left"
-        }
+        "row": 150,
+        "column": 181,
+        "height": 141,
+        "width": 120
     },
     {
         "id": "Y2QV_68tk",
         "label": "outside_plate",
-        "box": {
-            "row": 46,
-            "column": 558,
-            "height": 173,
-            "width": 121,
-            "point": "Bottom Left"
-        }
+        "row": 46,
+        "column": 558,
+        "height": 173,
+        "width": 121
     },
     {
         "id": "rikiBc8PY",
         "label": "bar_end",
-        "box": {
-            "row": 113,
-            "column": 653,
-            "height": 24,
-            "width": 21,
-            "point": "Bottom Left"
-        }
+        "row": 113,
+        "column": 653,
+        "height": 24,
+        "width": 21
     },
     {
         "id": "n7PAg3pDj",
         "label": "inside_plate",
-        "box": {
-            "row": 417,
-            "column": 167,
-            "height": 131,
-            "width": 109,
-            "point": "Bottom Left"
-        }
+        "row": 417,
+        "column": 167,
+        "height": 131,
+        "width": 109
     },
     {
         "id": "RmD-mLcqE",
         "label": "outside_plate",
-        "box": {
-            "row": 536,
-            "column": 439,
-            "height": 182,
-            "width": 137,
-            "point": "Bottom Left"
-        }
+        "row": 536,
+        "column": 439,
+        "height": 182,
+        "width": 137
     },
     {
         "id": "Hx-62l0Vg",
         "label": "bar_end",
-        "box": {
-            "row": 640,
-            "column": 553,
-            "height": 30,
-            "width": 31,
-            "point": "Bottom Left"
-        }
+        "row": 640,
+        "column": 553,
+        "height": 30,
+        "width": 31
     },
     {
         "id": "r7eyluVLd",
         "label": "outside_plate",
-        "box": {
-            "row": 699,
-            "column": 391,
-            "height": 226,
-            "width": 216,
-            "point": "Bottom Left"
-        }
+        "row": 699,
+        "column": 391,
+        "height": 226,
+        "width": 216
     },
     {
         "id": "vBvnJdA7R",
         "label": "bar_end",
-        "box": {
-            "row": 795,
-            "column": 519,
-            "height": 41,
-            "width": 42,
-            "point": "Bottom Left"
-        }
+        "row": 795,
+        "column": 519,
+        "height": 41,
+        "width": 42
     },
     {
         "id": "98GVW4OJy",
         "label": "outside_plate",
-        "box": {
-            "row": 544,
-            "column": 448,
-            "height": 171,
-            "width": 141,
-            "point": "Bottom Left"
-        }
+        "row": 544,
+        "column": 448,
+        "height": 171,
+        "width": 141
     },
     {
         "id": "PbR-HHhMz",
         "label": "inside_plate",
-        "box": {
-            "row": 556,
-            "column": 166,
-            "height": 153,
-            "width": 132,
-            "point": "Bottom Left"
-        }
+        "row": 556,
+        "column": 166,
+        "height": 153,
+        "width": 132
     },
     {
         "id": "rw2XTNS0A",
         "label": "outside_plate",
-        "box": {
-            "row": 221,
-            "column": 529,
-            "height": 213,
-            "width": 163,
-            "point": "Bottom Left"
-        }
+        "row": 221,
+        "column": 529,
+        "height": 213,
+        "width": 163
     },
     {
         "id": "8BBHFub9D",
         "label": "inside_plate",
-        "box": {
-            "row": 258,
-            "column": 145,
-            "height": 182,
-            "width": 149,
-            "point": "Bottom Left"
-        }
+        "row": 258,
+        "column": 145,
+        "height": 182,
+        "width": 149
     },
     {
         "id": "lS_UPofFX",
         "label": "bar_end",
-        "box": {
-            "row": 312,
-            "column": 663,
-            "height": 31,
-            "width": 33,
-            "point": "Bottom Left"
-        }
+        "row": 312,
+        "column": 663,
+        "height": 31,
+        "width": 33
     },
     {
         "id": "OFAAHpISW",
         "label": "inside_plate",
-        "box": {
-            "row": 119,
-            "column": 139,
-            "height": 146,
-            "width": 111,
-            "point": "Bottom Left"
-        }
+        "row": 119,
+        "column": 139,
+        "height": 146,
+        "width": 111
     },
     {
         "id": "h5RKFMobK",
         "label": "outside_plate",
-        "box": {
-            "row": 33,
-            "column": 542,
-            "height": 169,
-            "width": 113,
-            "point": "Bottom Left"
-        }
+        "row": 33,
+        "column": 542,
+        "height": 169,
+        "width": 113
     },
     {
         "id": "jwWiPW3H3",
         "label": "bar_end",
-        "box": {
-            "row": 93,
-            "column": 654,
-            "height": 30,
-            "width": 27,
-            "point": "Bottom Left"
-        }
+        "row": 93,
+        "column": 654,
+        "height": 30,
+        "width": 27
     },
     {
         "id": "q-MIbQOz1",
         "label": "bar_end",
-        "box": {
-            "row": 612,
-            "column": 650,
-            "height": 27,
-            "width": 23,
-            "point": "Bottom Left"
-        }
+        "row": 612,
+        "column": 650,
+        "height": 27,
+        "width": 23
     },
     {
         "id": "KO4gPgu6m",
         "label": "outside_plate",
-        "box": {
-            "row": 538,
-            "column": 553,
-            "height": 178,
-            "width": 125,
-            "point": "Bottom Left"
-        }
+        "row": 538,
+        "column": 553,
+        "height": 178,
+        "width": 125
     },
     {
         "id": "1_bTySgMj",
         "label": "inside_plate",
-        "box": {
-            "row": 558,
-            "column": 163,
-            "height": 150,
-            "width": 116,
-            "point": "Bottom Left"
-        }
+        "row": 558,
+        "column": 163,
+        "height": 150,
+        "width": 116
     },
     {
         "id": "4SvlfWh_Q",
         "label": "outside_plate",
-        "box": {
-            "row": 201,
-            "column": 78,
-            "height": 172,
-            "width": 123,
-            "point": "Bottom Left"
-        }
+        "row": 201,
+        "column": 78,
+        "height": 172,
+        "width": 123
     },
     {
         "id": "6ys3pcdp3",
         "label": "inside_plate",
-        "box": {
-            "row": 266,
-            "column": 445,
-            "height": 153,
-            "width": 117,
-            "point": "Bottom Left"
-        }
+        "row": 266,
+        "column": 445,
+        "height": 153,
+        "width": 117
     },
     {
         "id": "ObdENCoKR",
         "label": "outside_plate",
-        "box": {
-            "row": 522,
-            "column": 560,
-            "height": 185,
-            "width": 124,
-            "point": "Bottom Left"
-        }
+        "row": 522,
+        "column": 560,
+        "height": 185,
+        "width": 124
     },
     {
         "id": "d8ODYqSSc",
         "label": "inside_plate",
-        "box": {
-            "row": 544,
-            "column": 149,
-            "height": 158,
-            "width": 125,
-            "point": "Bottom Left"
-        }
+        "row": 544,
+        "column": 149,
+        "height": 158,
+        "width": 125
     },
     {
         "id": "nFwLvF-rj",
         "label": "bar_end",
-        "box": {
-            "row": 600,
-            "column": 653,
-            "height": 35,
-            "width": 35,
-            "point": "Bottom Left"
-        }
+        "row": 600,
+        "column": 653,
+        "height": 35,
+        "width": 35
     },
     {
         "id": "mc1V03FTS",
         "label": "bar_end",
-        "box": {
-            "row": 190,
-            "column": 111,
-            "height": 19,
-            "width": 15,
-            "point": "Bottom Left"
-        }
+        "row": 190,
+        "column": 111,
+        "height": 19,
+        "width": 15
     },
     {
         "id": "t6wKP81mk",
         "label": "outside_plate",
-        "box": {
-            "row": 116,
-            "column": 87,
-            "height": 175,
-            "width": 153,
-            "point": "Bottom Left"
-        }
+        "row": 116,
+        "column": 87,
+        "height": 175,
+        "width": 153
     },
     {
         "id": "p4DYiEH3C",
         "label": "inside_plate",
-        "box": {
-            "row": 158,
-            "column": 357,
-            "height": 160,
-            "width": 143,
-            "point": "Bottom Left"
-        }
+        "row": 158,
+        "column": 357,
+        "height": 160,
+        "width": 143
     },
     {
         "id": "10KznyZhA",
         "label": "outside_plate",
-        "box": {
-            "row": 540,
-            "column": 148,
-            "height": 174,
-            "width": 150,
-            "point": "Bottom Left"
-        }
+        "row": 540,
+        "column": 148,
+        "height": 174,
+        "width": 150
     },
     {
         "id": "kQcebysL7",
         "label": "inside_plate",
-        "box": {
-            "row": 544,
-            "column": 429,
-            "height": 158,
-            "width": 138,
-            "point": "Bottom Left"
-        }
+        "row": 544,
+        "column": 429,
+        "height": 158,
+        "width": 138
     },
     {
         "id": "Y-JEXsZdJ",
         "label": "outside_plate",
-        "box": {
-            "row": 180,
-            "column": 95,
-            "height": 153,
-            "width": 130,
-            "point": "Bottom Left"
-        }
+        "row": 180,
+        "column": 95,
+        "height": 153,
+        "width": 130
     },
     {
         "id": "gHB9qHuiY",
         "label": "bar_end",
-        "box": {
-            "row": 231,
-            "column": 388,
-            "height": 139,
-            "width": 117,
-            "point": "Bottom Left"
-        }
+        "row": 231,
+        "column": 388,
+        "height": 139,
+        "width": 117
     },
     {
         "id": "M8Hvgt9f8",
         "label": "outside_plate",
-        "box": {
-            "row": 164,
-            "column": 581,
-            "height": 165,
-            "width": 58,
-            "point": "Bottom Left"
-        }
+        "row": 164,
+        "column": 581,
+        "height": 165,
+        "width": 58
     },
     {
         "id": "kj1-vnXlf",
         "label": "inside_plate",
-        "box": {
-            "row": 230,
-            "column": 142,
-            "height": 124,
-            "width": 75,
-            "point": "Bottom Left"
-        }
+        "row": 230,
+        "column": 142,
+        "height": 124,
+        "width": 75
     },
     {
         "id": "NsVaheqIo",
         "label": "bar_end",
-        "box": {
-            "row": 224,
-            "column": 685,
-            "height": 28,
-            "width": 16,
-            "point": "Bottom Left"
-        }
+        "row": 224,
+        "column": 685,
+        "height": 28,
+        "width": 16
     }
 ]
