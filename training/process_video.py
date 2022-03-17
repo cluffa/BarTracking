@@ -41,7 +41,7 @@ def load_all_json():
 
 # %%
 def to_idx(coord):
-    return int(round(coord, 0))
+    return int(np.floor(coord))
 
 def coords_transform(
     old_frame_h,
@@ -154,8 +154,8 @@ def vid_to_train_data(annotations: list, out_res = 720, color = True):
 
             i = to_idx(i) - 1
             j = to_idx(j) - 1
-            h = to_idx(h) - 1
-            w = to_idx(w) - 1
+            h = to_idx(h)
+            w = to_idx(w)
 
             # frame[i,:] = 255
             # frame[i+h,:] = 255
@@ -190,5 +190,5 @@ def create_dataset(color, res):
 # %%
 if __name__ == "__main__":
     color = (True,)
-    res = (120, 240, 480, 720,)
+    res = (720,)
     [create_dataset(*config) for config in list(itertools.product(color, res))]

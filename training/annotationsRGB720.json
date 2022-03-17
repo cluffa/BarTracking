@@ -3,17 +3,17 @@
         "id": "IalEupseX",
         "label": "inside_plate",
         "row": 194,
-        "column": 176,
-        "height": 134,
-        "width": 103
+        "column": 175,
+        "height": 135,
+        "width": 104
     },
     {
         "id": "CAOp77phC",
         "label": "outside_plate",
         "row": 115,
-        "column": 577,
+        "column": 576,
         "height": 162,
-        "width": 100
+        "width": 101
     },
     {
         "id": "Vg0Ar5XHu",
@@ -27,38 +27,38 @@
         "id": "Lburryy4U",
         "label": "inside_plate",
         "row": 273,
-        "column": 389,
-        "height": 159,
-        "width": 142
+        "column": 388,
+        "height": 160,
+        "width": 143
     },
     {
         "id": "a5X80-T7W",
         "label": "outside_plate",
-        "row": 112,
+        "row": 111,
         "column": 67,
         "height": 166,
-        "width": 139
+        "width": 140
     },
     {
         "id": "9sBZqaWOj",
         "label": "bar_end",
         "row": 178,
         "column": 74,
-        "height": 22,
-        "width": 22
+        "height": 23,
+        "width": 23
     },
     {
         "id": "0X_6PGPDb",
         "label": "inside_plate",
         "row": 171,
-        "column": 369,
+        "column": 368,
         "height": 145,
-        "width": 123
+        "width": 124
     },
     {
         "id": "nLWMWR6eV",
         "label": "outside_plate",
-        "row": 500,
+        "row": 499,
         "column": 85,
         "height": 217,
         "width": 181
@@ -66,26 +66,26 @@
     {
         "id": "Y708GqQtS",
         "label": "inside_plate",
-        "row": 541,
-        "column": 418,
+        "row": 540,
+        "column": 417,
         "height": 178,
-        "width": 158
+        "width": 159
     },
     {
         "id": "RCUSLTBTQ",
         "label": "bar_end",
         "row": 591,
-        "column": 103,
+        "column": 102,
         "height": 28,
         "width": 28
     },
     {
         "id": "B2hqObGpB",
         "label": "outside_plate",
-        "row": 499,
+        "row": 498,
         "column": 104,
         "height": 194,
-        "width": 159
+        "width": 160
     },
     {
         "id": "pWf0hYNnk",
@@ -99,41 +99,41 @@
         "id": "IjieQzUs_",
         "label": "bar_end",
         "row": 373,
-        "column": 36,
-        "height": 29,
+        "column": 35,
+        "height": 30,
         "width": 23
     },
     {
         "id": "chb6NX88u",
         "label": "outside_plate",
-        "row": 293,
+        "row": 292,
         "column": 59,
-        "height": 195,
-        "width": 90
+        "height": 196,
+        "width": 91
     },
     {
         "id": "MTSOq0fqm",
         "label": "inside_plate",
-        "row": 353,
+        "row": 352,
         "column": 551,
-        "height": 157,
+        "height": 158,
         "width": 113
     },
     {
         "id": "0BzPFYYlz",
         "label": "outside_plate",
-        "row": 518,
+        "row": 517,
         "column": 549,
-        "height": 200,
+        "height": 201,
         "width": 138
     },
     {
         "id": "fih9GS5Ob",
         "label": "inside_plate",
-        "row": 539,
-        "column": 134,
-        "height": 174,
-        "width": 135
+        "row": 538,
+        "column": 133,
+        "height": 175,
+        "width": 136
     },
     {
         "id": "D_ZDwqgO6",
@@ -147,25 +147,25 @@
         "id": "TcH0oDKXw",
         "label": "inside_plate",
         "row": 137,
-        "column": 414,
-        "height": 153,
+        "column": 413,
+        "height": 154,
         "width": 135
     },
     {
         "id": "vj2AhW9QD",
         "label": "outside_plate",
         "row": 446,
-        "column": 593,
+        "column": 592,
         "height": 176,
-        "width": 125
+        "width": 126
     },
     {
         "id": "jcafsER8f",
         "label": "inside_plate",
         "row": 475,
         "column": 202,
-        "height": 152,
-        "width": 119
+        "height": 153,
+        "width": 120
     },
     {
         "id": "Fhqi_o_1Y",
@@ -178,49 +178,49 @@
     {
         "id": "VJwgDL3dh",
         "label": "outside_plate",
-        "row": 474,
-        "column": 80,
-        "height": 165,
+        "row": 473,
+        "column": 79,
+        "height": 166,
         "width": 132
     },
     {
         "id": "enGxzaAbv",
         "label": "inside_plate",
-        "row": 499,
+        "row": 498,
         "column": 390,
         "height": 149,
-        "width": 126
+        "width": 127
     },
     {
         "id": "6TOeMNAQP",
         "label": "bar_end",
         "row": 547,
-        "column": 81,
-        "height": 23,
+        "column": 80,
+        "height": 24,
         "width": 22
     },
     {
         "id": "FokUCcuy_",
         "label": "inside_plate",
-        "row": 555,
+        "row": 554,
         "column": 217,
-        "height": 149,
-        "width": 133
+        "height": 150,
+        "width": 134
     },
     {
         "id": "EqIlK4eA1",
         "label": "outside_plate",
-        "row": 542,
-        "column": 494,
+        "row": 541,
+        "column": 493,
         "height": 173,
-        "width": 145
+        "width": 146
     },
     {
         "id": "zR29gcFn9",
         "label": "bar_end",
         "row": 617,
         "column": 601,
-        "height": 26,
+        "height": 27,
         "width": 22
     },
     {
@@ -228,7 +228,7 @@
         "label": "outside_plate",
         "row": 398,
         "column": 16,
-        "height": 236,
+        "height": 237,
         "width": 184
     },
     {
@@ -237,46 +237,46 @@
         "row": 414,
         "column": 471,
         "height": 206,
-        "width": 171
+        "width": 172
     },
     {
         "id": "bWmWddgyY",
         "label": "bar_end",
-        "row": 502,
-        "column": 2,
+        "row": 501,
+        "column": 1,
         "height": 32,
         "width": 28
     },
     {
         "id": "tnY1-q06h",
         "label": "outside_plate",
-        "row": 102,
-        "column": 50,
-        "height": 132,
-        "width": 102
+        "row": 101,
+        "column": 49,
+        "height": 133,
+        "width": 103
     },
     {
         "id": "To030-mj9",
         "label": "inside_plate",
         "row": 44,
-        "column": 374,
+        "column": 373,
         "height": 127,
         "width": 100
     },
     {
         "id": "Z-1N7UBFS",
         "label": "bar_end",
-        "row": 164,
+        "row": 163,
         "column": 63,
-        "height": 23,
-        "width": 27
+        "height": 24,
+        "width": 28
     },
     {
         "id": "f77GWS5GQ",
         "label": "inside_plate",
-        "row": 79,
+        "row": 78,
         "column": 429,
-        "height": 165,
+        "height": 166,
         "width": 143
     },
     {
@@ -284,93 +284,93 @@
         "label": "bar_end",
         "row": 34,
         "column": 88,
-        "height": 38,
+        "height": 39,
         "width": 34
     },
     {
         "id": "Jwex82aTp",
         "label": "outside_plate",
         "row": 519,
-        "column": 554,
-        "height": 195,
+        "column": 553,
+        "height": 196,
         "width": 134
     },
     {
         "id": "fTmc5xwLB",
         "label": "inside_plate",
-        "row": 540,
+        "row": 539,
         "column": 126,
         "height": 169,
-        "width": 125
+        "width": 126
     },
     {
         "id": "pMvp-JdEQ",
         "label": "outside_plate",
-        "row": 523,
+        "row": 522,
         "column": 580,
-        "height": 195,
+        "height": 196,
         "width": 138
     },
     {
         "id": "pv4irLkwg",
         "label": "inside_plate",
-        "row": 544,
-        "column": 155,
+        "row": 543,
+        "column": 154,
         "height": 167,
         "width": 128
     },
     {
         "id": "SXRTnDwFX",
         "label": "outside_plate",
-        "row": 451,
-        "column": 550,
+        "row": 450,
+        "column": 549,
         "height": 206,
-        "width": 134
+        "width": 135
     },
     {
         "id": "Cxm7d4rSO",
         "label": "bar_end",
-        "row": 537,
-        "column": 679,
+        "row": 536,
+        "column": 678,
         "height": 31,
-        "width": 25
+        "width": 26
     },
     {
         "id": "794Jl4Wqe",
         "label": "inside_plate",
         "row": 472,
         "column": 96,
-        "height": 180,
-        "width": 131
+        "height": 181,
+        "width": 132
     },
     {
         "id": "VdFm9n-YB",
         "label": "outside_plate",
-        "row": 497,
-        "column": 562,
+        "row": 496,
+        "column": 561,
         "height": 180,
-        "width": 125
+        "width": 126
     },
     {
         "id": "UYTeps0ye",
         "label": "inside_plate",
         "row": 519,
-        "column": 144,
-        "height": 153,
-        "width": 123
+        "column": 143,
+        "height": 154,
+        "width": 124
     },
     {
         "id": "HxSPJlkaC",
         "label": "outside_plate",
-        "row": 95,
-        "column": 80,
+        "row": 94,
+        "column": 79,
         "height": 152,
         "width": 124
     },
     {
         "id": "JKmCv1Pjx",
         "label": "inside_plate",
-        "row": 178,
+        "row": 177,
         "column": 347,
         "height": 132,
         "width": 120
@@ -378,25 +378,25 @@
     {
         "id": "sfUpC4yGz",
         "label": "bar_end",
-        "row": 153,
-        "column": 99,
+        "row": 152,
+        "column": 98,
         "height": 27,
-        "width": 25
+        "width": 26
     },
     {
         "id": "wUCPpRm3K",
         "label": "outside_plate",
-        "row": 384,
-        "column": 25,
-        "height": 239,
-        "width": 200
+        "row": 383,
+        "column": 24,
+        "height": 240,
+        "width": 201
     },
     {
         "id": "iIuTB8YDb",
         "label": "inside_plate",
         "row": 403,
-        "column": 418,
-        "height": 200,
+        "column": 417,
+        "height": 201,
         "width": 177
     },
     {
@@ -404,7 +404,7 @@
         "label": "inside_plate",
         "row": 142,
         "column": 422,
-        "height": 166,
+        "height": 167,
         "width": 146
     },
     {
@@ -421,28 +421,28 @@
         "row": 23,
         "column": 79,
         "height": 209,
-        "width": 167
+        "width": 168
     },
     {
         "id": "sDSbR5rR0",
         "label": "bar_end",
         "row": 624,
-        "column": 593,
-        "height": 23,
-        "width": 22
+        "column": 592,
+        "height": 24,
+        "width": 23
     },
     {
         "id": "yG4CT7SBB",
         "label": "outside_plate",
         "row": 557,
-        "column": 504,
+        "column": 503,
         "height": 161,
         "width": 114
     },
     {
         "id": "FYg8ig-G9",
         "label": "inside_plate",
-        "row": 575,
+        "row": 574,
         "column": 155,
         "height": 138,
         "width": 105
@@ -452,31 +452,31 @@
         "label": "outside_plate",
         "row": 541,
         "column": 508,
-        "height": 169,
+        "height": 170,
         "width": 120
     },
     {
         "id": "VSo_sdBmM",
         "label": "inside_plate",
         "row": 557,
-        "column": 141,
+        "column": 140,
         "height": 146,
-        "width": 112
+        "width": 113
     },
     {
         "id": "5rDDqrpmO",
         "label": "outside_plate",
         "row": 176,
-        "column": 152,
-        "height": 160,
+        "column": 151,
+        "height": 161,
         "width": 136
     },
     {
         "id": "LaEfQ3uYQ",
         "label": "inside_plate",
-        "row": 216,
+        "row": 215,
         "column": 418,
-        "height": 141,
+        "height": 142,
         "width": 128
     },
     {
@@ -484,30 +484,30 @@
         "label": "bar_end",
         "row": 241,
         "column": 173,
-        "height": 23,
-        "width": 23
+        "height": 24,
+        "width": 24
     },
     {
         "id": "elFTTm_7L",
         "label": "outside_plate",
-        "row": 120,
+        "row": 119,
         "column": 573,
         "height": 184,
-        "width": 129
+        "width": 130
     },
     {
         "id": "AwlzwbkaJ",
         "label": "inside_plate",
         "row": 186,
-        "column": 185,
-        "height": 150,
-        "width": 124
+        "column": 184,
+        "height": 151,
+        "width": 125
     },
     {
         "id": "HVjCeLTAd",
         "label": "bar_end",
-        "row": 195,
-        "column": 681,
+        "row": 194,
+        "column": 680,
         "height": 21,
         "width": 19
     },
@@ -516,54 +516,30 @@
         "label": "outside_plate",
         "row": 333,
         "column": 130,
-        "height": 188,
-        "width": 159
+        "height": 189,
+        "width": 160
     },
     {
         "id": "79pzi8CZO",
         "label": "inside_plate",
         "row": 371,
-        "column": 443,
-        "height": 158,
+        "column": 442,
+        "height": 159,
         "width": 140
-    },
-    {
-        "id": "-R_wDBF8m",
-        "label": "outside_plate",
-        "row": 704,
-        "column": 529,
-        "height": 185,
-        "width": 131
-    },
-    {
-        "id": "Y_6yFex3D",
-        "label": "inside_plate",
-        "row": 696,
-        "column": 145,
-        "height": 158,
-        "width": 126
-    },
-    {
-        "id": "BRbo_DA4d",
-        "label": "bar_end",
-        "row": 784,
-        "column": 609,
-        "height": 37,
-        "width": 36
     },
     {
         "id": "bUs1bD8Z3",
         "label": "outside_plate",
         "row": 510,
-        "column": 530,
+        "column": 529,
         "height": 208,
         "width": 143
     },
     {
         "id": "20qPwbrTg",
         "label": "inside_plate",
-        "row": 529,
-        "column": 109,
+        "row": 528,
+        "column": 108,
         "height": 181,
         "width": 139
     },
@@ -578,39 +554,39 @@
     {
         "id": "lLELSMqu5",
         "label": "outside_plate",
-        "row": 6,
-        "column": 534,
-        "height": 159,
-        "width": 106
+        "row": 5,
+        "column": 533,
+        "height": 160,
+        "width": 107
     },
     {
         "id": "hbNZzcxuR",
         "label": "inside_plate",
-        "row": 102,
+        "row": 101,
         "column": 157,
-        "height": 135,
-        "width": 104
+        "height": 136,
+        "width": 105
     },
     {
         "id": "eW8xXwvIH",
         "label": "outside_plate",
         "row": 513,
         "column": 458,
-        "height": 159,
-        "width": 142
+        "height": 160,
+        "width": 143
     },
     {
         "id": "tIIsQobB4",
         "label": "inside_plate",
         "row": 527,
         "column": 252,
-        "height": 141,
+        "height": 142,
         "width": 124
     },
     {
         "id": "z9ybZh01d",
         "label": "bar_end",
-        "row": 583,
+        "row": 582,
         "column": 564,
         "height": 24,
         "width": 19
@@ -618,8 +594,8 @@
     {
         "id": "l7pJn-RIH",
         "label": "outside_plate",
-        "row": 204,
-        "column": 100,
+        "row": 203,
+        "column": 99,
         "height": 182,
         "width": 158
     },
@@ -628,7 +604,7 @@
         "label": "inside_plate",
         "row": 267,
         "column": 361,
-        "height": 154,
+        "height": 155,
         "width": 139
     },
     {
@@ -644,7 +620,7 @@
         "label": "outside_plate",
         "row": 197,
         "column": 89,
-        "height": 182,
+        "height": 183,
         "width": 163
     },
     {
@@ -652,31 +628,31 @@
         "label": "inside_plate",
         "row": 235,
         "column": 339,
-        "height": 161,
-        "width": 149
+        "height": 162,
+        "width": 150
     },
     {
         "id": "sYfSlQhvH",
         "label": "bar_end",
         "row": 272,
         "column": 113,
-        "height": 26,
+        "height": 27,
         "width": 26
     },
     {
         "id": "8ajdijeHd",
         "label": "outside_plate",
-        "row": 206,
+        "row": 205,
         "column": 130,
         "height": 187,
-        "width": 162
+        "width": 163
     },
     {
         "id": "YnySbei_-",
         "label": "inside_plate",
-        "row": 270,
-        "column": 443,
-        "height": 159,
+        "row": 269,
+        "column": 442,
+        "height": 160,
         "width": 143
     },
     {
@@ -685,7 +661,7 @@
         "row": 212,
         "column": 214,
         "height": 153,
-        "width": 131
+        "width": 132
     },
     {
         "id": "cv-WFq6X1",
@@ -693,31 +669,47 @@
         "row": 154,
         "column": 506,
         "height": 167,
-        "width": 134
+        "width": 135
     },
     {
         "id": "nG0fHL5wj",
         "label": "bar_end",
-        "row": 221,
-        "column": 608,
-        "height": 27,
-        "width": 23
+        "row": 220,
+        "column": 607,
+        "height": 28,
+        "width": 24
+    },
+    {
+        "id": "-kMHFFrr7",
+        "label": "outside_plate",
+        "row": 123,
+        "column": 486,
+        "height": 171,
+        "width": 153
+    },
+    {
+        "id": "QDyyPA5p2",
+        "label": "bar_end",
+        "row": 190,
+        "column": 573,
+        "height": 24,
+        "width": 22
     },
     {
         "id": "H4Uu7gDuy",
         "label": "outside_plate",
-        "row": 535,
+        "row": 534,
         "column": 556,
-        "height": 180,
+        "height": 181,
         "width": 119
     },
     {
         "id": "KyWPLjcih",
         "label": "bar_end",
-        "row": 610,
-        "column": 688,
-        "height": 31,
-        "width": 19
+        "row": 609,
+        "column": 687,
+        "height": 32,
+        "width": 20
     },
     {
         "id": "MIsgbVb0Y",
@@ -725,68 +717,68 @@
         "row": 543,
         "column": 147,
         "height": 167,
-        "width": 124
+        "width": 125
     },
     {
         "id": "D25Cf0g2w",
         "label": "outside_plate",
         "row": 339,
-        "column": 35,
-        "height": 241,
-        "width": 194
+        "column": 34,
+        "height": 242,
+        "width": 195
     },
     {
         "id": "4jviXY-je",
         "label": "inside_plate",
         "row": 371,
-        "column": 468,
+        "column": 467,
         "height": 216,
         "width": 183
     },
     {
         "id": "4Zpj4Gifw",
         "label": "outside_plate",
-        "row": 555,
+        "row": 554,
         "column": 119,
-        "height": 160,
-        "width": 126
+        "height": 161,
+        "width": 127
     },
     {
         "id": "IBu_SNP0Q",
         "label": "bar_end",
         "row": 624,
-        "column": 111,
+        "column": 110,
         "height": 21,
-        "width": 19
+        "width": 20
     },
     {
         "id": "WAjoWHxY8",
         "label": "inside_plate",
         "row": 567,
-        "column": 422,
+        "column": 421,
         "height": 140,
-        "width": 120
+        "width": 121
     },
     {
         "id": "8L0-iSaqY",
         "label": "outside_plate",
-        "row": 462,
-        "column": 115,
-        "height": 191,
-        "width": 156
+        "row": 461,
+        "column": 114,
+        "height": 192,
+        "width": 157
     },
     {
         "id": "9b3GxBQli",
         "label": "inside_plate",
         "row": 513,
-        "column": 418,
-        "height": 150,
+        "column": 417,
+        "height": 151,
         "width": 136
     },
     {
         "id": "8jw-iEFJX",
         "label": "bar_end",
-        "row": 539,
+        "row": 538,
         "column": 124,
         "height": 30,
         "width": 29
@@ -796,46 +788,46 @@
         "label": "bar_end",
         "row": 302,
         "column": 610,
-        "height": 24,
+        "height": 25,
         "width": 24
     },
     {
         "id": "JZktqub9Q",
         "label": "outside_plate",
-        "row": 231,
+        "row": 230,
         "column": 500,
         "height": 164,
-        "width": 138
+        "width": 139
     },
     {
         "id": "S6CSBY70j",
         "label": "inside_plate",
         "row": 245,
-        "column": 254,
-        "height": 141,
-        "width": 126
+        "column": 253,
+        "height": 142,
+        "width": 127
     },
     {
         "id": "HhKuI3Yg_",
         "label": "outside_plate",
         "row": 368,
-        "column": 123,
+        "column": 122,
         "height": 166,
         "width": 119
     },
     {
         "id": "zjKNRJCnQ",
         "label": "bar_end",
-        "row": 431,
+        "row": 430,
         "column": 104,
         "height": 28,
-        "width": 22
+        "width": 23
     },
     {
         "id": "GkOqklhOT",
         "label": "inside_plate",
         "row": 442,
-        "column": 456,
+        "column": 455,
         "height": 145,
         "width": 119
     },
@@ -843,22 +835,22 @@
         "id": "dLkqvQSnZ",
         "label": "inside_plate",
         "row": 462,
-        "column": 167,
+        "column": 166,
         "height": 141,
         "width": 108
     },
     {
         "id": "5pK6f9gH7",
         "label": "outside_plate",
-        "row": 434,
+        "row": 433,
         "column": 539,
         "height": 165,
-        "width": 112
+        "width": 113
     },
     {
         "id": "uz6WPM9OS",
         "label": "outside_plate",
-        "row": 531,
+        "row": 530,
         "column": 118,
         "height": 168,
         "width": 138
@@ -866,17 +858,17 @@
     {
         "id": "repGsB5DV",
         "label": "inside_plate",
-        "row": 546,
-        "column": 430,
+        "row": 545,
+        "column": 429,
         "height": 150,
-        "width": 132
+        "width": 133
     },
     {
         "id": "Xc2dHngn1",
         "label": "bar_end",
         "row": 603,
-        "column": 121,
-        "height": 27,
+        "column": 120,
+        "height": 28,
         "width": 23
     },
     {
@@ -885,15 +877,15 @@
         "row": 136,
         "column": 161,
         "height": 149,
-        "width": 118
+        "width": 119
     },
     {
         "id": "w8EE151un",
         "label": "outside_plate",
         "row": 66,
-        "column": 561,
+        "column": 560,
         "height": 175,
-        "width": 122
+        "width": 123
     },
     {
         "id": "SAMSYKFTL",
@@ -909,12 +901,12 @@
         "row": 403,
         "column": 14,
         "height": 247,
-        "width": 206
+        "width": 207
     },
     {
         "id": "gOdX1638W",
         "label": "inside_plate",
-        "row": 418,
+        "row": 417,
         "column": 422,
         "height": 207,
         "width": 183
@@ -922,7 +914,7 @@
     {
         "id": "D14TyvuYN",
         "label": "outside_plate",
-        "row": 533,
+        "row": 532,
         "column": 150,
         "height": 169,
         "width": 135
@@ -931,47 +923,47 @@
         "id": "69dJ_n67f",
         "label": "bar_end",
         "row": 605,
-        "column": 143,
-        "height": 26,
-        "width": 28
+        "column": 142,
+        "height": 27,
+        "width": 29
     },
     {
         "id": "abkuPTqPT",
         "label": "inside_plate",
-        "row": 551,
+        "row": 550,
         "column": 475,
         "height": 148,
-        "width": 127
+        "width": 128
     },
     {
         "id": "mqxuMZ9-J",
         "label": "inside_plate",
         "row": 449,
-        "column": 247,
+        "column": 246,
         "height": 143,
-        "width": 139
+        "width": 140
     },
     {
         "id": "sFEwhyCLf",
         "label": "outside_plate",
-        "row": 488,
+        "row": 487,
         "column": 412,
-        "height": 170,
+        "height": 171,
         "width": 160
     },
     {
         "id": "cTkJlMTWi",
         "label": "bar_end",
         "row": 572,
-        "column": 511,
+        "column": 510,
         "height": 27,
-        "width": 28
+        "width": 29
     },
     {
         "id": "0G3C_Jd5E",
         "label": "outside_plate",
-        "row": 116,
-        "column": 76,
+        "row": 115,
+        "column": 75,
         "height": 173,
         "width": 140
     },
@@ -979,16 +971,16 @@
         "id": "_KFZ0_vNG",
         "label": "inside_plate",
         "row": 209,
-        "column": 402,
+        "column": 401,
         "height": 147,
-        "width": 128
+        "width": 129
     },
     {
         "id": "RTSORKK59",
         "label": "outside_plate",
         "row": 557,
         "column": 573,
-        "height": 158,
+        "height": 159,
         "width": 111
     },
     {
@@ -1005,20 +997,20 @@
         "row": 502,
         "column": 25,
         "height": 197,
-        "width": 86
+        "width": 87
     },
     {
         "id": "YqVSPgZyD",
         "label": "inside_plate",
         "row": 502,
-        "column": 529,
+        "column": 528,
         "height": 166,
-        "width": 106
+        "width": 107
     },
     {
         "id": "sAAusQ9E1",
         "label": "bar_end",
-        "row": 587,
+        "row": 586,
         "column": -1,
         "height": 34,
         "width": 14
@@ -1026,18 +1018,18 @@
     {
         "id": "QJ9U_3VAl",
         "label": "outside_plate",
-        "row": 534,
+        "row": 533,
         "column": 94,
-        "height": 184,
-        "width": 156
+        "height": 185,
+        "width": 157
     },
     {
         "id": "P8DkydIee",
         "label": "inside_plate",
-        "row": 543,
+        "row": 542,
         "column": 401,
         "height": 166,
-        "width": 149
+        "width": 150
     },
     {
         "id": "tl-OzWyJv",
@@ -1050,23 +1042,23 @@
     {
         "id": "XZDDapeI2",
         "label": "outside_plate",
-        "row": 536,
+        "row": 535,
         "column": 551,
-        "height": 179,
-        "width": 123
+        "height": 180,
+        "width": 124
     },
     {
         "id": "LEGD-VLrO",
         "label": "bar_end",
-        "row": 610,
+        "row": 609,
         "column": 669,
-        "height": 24,
+        "height": 25,
         "width": 24
     },
     {
         "id": "3KTPFSe03",
         "label": "inside_plate",
-        "row": 557,
+        "row": 556,
         "column": 163,
         "height": 154,
         "width": 121
@@ -1074,23 +1066,23 @@
     {
         "id": "cibKj9d2u",
         "label": "outside_plate",
-        "row": 229,
-        "column": 152,
+        "row": 228,
+        "column": 151,
         "height": 120,
-        "width": 96
+        "width": 97
     },
     {
         "id": "LZMwJ9fUn",
         "label": "inside_plate",
         "row": 287,
-        "column": 358,
-        "height": 105,
+        "column": 357,
+        "height": 106,
         "width": 91
     },
     {
         "id": "nMP7YRSP7",
         "label": "bar_end",
-        "row": 273,
+        "row": 272,
         "column": 157,
         "height": 18,
         "width": 17
@@ -1098,47 +1090,47 @@
     {
         "id": "5FUSiquYD",
         "label": "inside_plate",
-        "row": 539,
+        "row": 538,
         "column": 130,
-        "height": 163,
-        "width": 124
+        "height": 164,
+        "width": 125
     },
     {
         "id": "ZNAz8FeMK",
         "label": "outside_plate",
         "row": 521,
-        "column": 552,
-        "height": 188,
-        "width": 123
+        "column": 551,
+        "height": 189,
+        "width": 124
     },
     {
         "id": "nROzMHHpK",
         "label": "bar_end",
-        "row": 605,
+        "row": 604,
         "column": 650,
         "height": 32,
-        "width": 37
+        "width": 38
     },
     {
         "id": "1PV1xsHEy",
         "label": "outside_plate",
         "row": 134,
-        "column": 70,
+        "column": 69,
         "height": 174,
         "width": 144
     },
     {
         "id": "vAiFH8Y8M",
         "label": "inside_plate",
-        "row": 228,
-        "column": 400,
+        "row": 227,
+        "column": 399,
         "height": 146,
-        "width": 129
+        "width": 130
     },
     {
         "id": "Zzt_xtomV",
         "label": "outside_plate",
-        "row": 321,
+        "row": 320,
         "column": 502,
         "height": 247,
         "width": 215
@@ -1146,15 +1138,15 @@
     {
         "id": "BnSdbuuwa",
         "label": "bar_end",
-        "row": 425,
-        "column": 639,
+        "row": 424,
+        "column": 638,
         "height": 34,
         "width": 34
     },
     {
         "id": "Cg7bWmUFi",
         "label": "inside_plate",
-        "row": 388,
+        "row": 387,
         "column": 131,
         "height": 219,
         "width": 213
@@ -1162,49 +1154,49 @@
     {
         "id": "L2C1YukD2",
         "label": "outside_plate",
-        "row": 533,
+        "row": 532,
         "column": 113,
-        "height": 185,
-        "width": 161
+        "height": 186,
+        "width": 162
     },
     {
         "id": "lcFJD8-Pt",
         "label": "inside_plate",
         "row": 557,
-        "column": 373,
-        "height": 157,
+        "column": 372,
+        "height": 158,
         "width": 141
     },
     {
         "id": "1faw5ezI_",
         "label": "bar_end",
-        "row": 611,
+        "row": 610,
         "column": 139,
         "height": 28,
-        "width": 27
+        "width": 28
     },
     {
         "id": "WIs2bTp-g",
         "label": "outside_plate",
-        "row": 539,
+        "row": 538,
         "column": 462,
-        "height": 179,
-        "width": 143
+        "height": 180,
+        "width": 144
     },
     {
         "id": "gcm8ObBt0",
         "label": "bar_end",
-        "row": 617,
-        "column": 575,
+        "row": 616,
+        "column": 574,
         "height": 26,
-        "width": 26
+        "width": 27
     },
     {
         "id": "NMnj7EKu2",
         "label": "inside_plate",
-        "row": 197,
+        "row": 196,
         "column": 94,
-        "height": 161,
+        "height": 162,
         "width": 108
     },
     {
@@ -1212,13 +1204,13 @@
         "label": "outside_plate",
         "row": 141,
         "column": 608,
-        "height": 197,
+        "height": 198,
         "width": 97
     },
     {
         "id": "3kprUfUvp",
         "label": "outside_plate",
-        "row": 680,
+        "row": 679,
         "column": 504,
         "height": 207,
         "width": 150
@@ -1226,7 +1218,7 @@
     {
         "id": "ubxTrqVVN",
         "label": "inside_plate",
-        "row": 682,
+        "row": 681,
         "column": 92,
         "height": 176,
         "width": 135
@@ -1234,7 +1226,7 @@
     {
         "id": "5jGJPMpyi",
         "label": "bar_end",
-        "row": 767,
+        "row": 766,
         "column": 611,
         "height": 34,
         "width": 35
@@ -1242,24 +1234,24 @@
     {
         "id": "1ydpPdxdS",
         "label": "outside_plate",
-        "row": 533,
+        "row": 532,
         "column": 575,
         "height": 185,
-        "width": 126
+        "width": 127
     },
     {
         "id": "9oWZbBll2",
         "label": "inside_plate",
         "row": 555,
         "column": 171,
-        "height": 156,
-        "width": 119
+        "height": 157,
+        "width": 120
     },
     {
         "id": "VoSQgj18O",
         "label": "bar_end",
-        "row": 610,
-        "column": 678,
+        "row": 609,
+        "column": 677,
         "height": 32,
         "width": 32
     },
@@ -1267,9 +1259,9 @@
         "id": "ZK0HuJ0cG",
         "label": "inside_plate",
         "row": 220,
-        "column": 185,
-        "height": 155,
-        "width": 117
+        "column": 184,
+        "height": 156,
+        "width": 118
     },
     {
         "id": "QruokhztO",
@@ -1282,7 +1274,7 @@
     {
         "id": "_hB7YyX8Z",
         "label": "outside_plate",
-        "row": 85,
+        "row": 84,
         "column": 432,
         "height": 175,
         "width": 164
@@ -1293,36 +1285,36 @@
         "row": 93,
         "column": 285,
         "height": 148,
-        "width": 142
+        "width": 143
     },
     {
         "id": "BUjy6yJ3z",
         "label": "bar_end",
         "row": 159,
-        "column": 530,
-        "height": 27,
-        "width": 24
+        "column": 529,
+        "height": 28,
+        "width": 25
     },
     {
         "id": "EGxJLKM01",
         "label": "outside_plate",
         "row": 38,
-        "column": 84,
-        "height": 168,
+        "column": 83,
+        "height": 169,
         "width": 137
     },
     {
         "id": "AO_oSb9m7",
         "label": "inside_plate",
         "row": 97,
-        "column": 395,
+        "column": 394,
         "height": 146,
         "width": 124
     },
     {
         "id": "fijCytXZm",
         "label": "bar_end",
-        "row": 106,
+        "row": 105,
         "column": 84,
         "height": 23,
         "width": 23
@@ -1331,31 +1323,31 @@
         "id": "1IYDbtHPk",
         "label": "outside_plate",
         "row": 529,
-        "column": 60,
+        "column": 59,
         "height": 184,
         "width": 148
     },
     {
         "id": "8Bj8MSBl0",
         "label": "inside_plate",
-        "row": 542,
-        "column": 388,
-        "height": 164,
-        "width": 141
+        "row": 541,
+        "column": 387,
+        "height": 165,
+        "width": 142
     },
     {
         "id": "lCqHh1dyl",
         "label": "outside_plate",
-        "row": 539,
+        "row": 538,
         "column": 130,
-        "height": 172,
-        "width": 153
+        "height": 173,
+        "width": 154
     },
     {
         "id": "d4hJDou4g",
         "label": "bar_end",
         "row": 616,
-        "column": 155,
+        "column": 154,
         "height": 20,
         "width": 20
     },
@@ -1363,121 +1355,121 @@
         "id": "3iUYGVLp2",
         "label": "inside_plate",
         "row": 557,
-        "column": 380,
-        "height": 146,
-        "width": 135
+        "column": 379,
+        "height": 147,
+        "width": 136
     },
     {
         "id": "u4MlrfESj",
         "label": "outside_plate",
-        "row": 550,
-        "column": 521,
-        "height": 165,
-        "width": 115
+        "row": 549,
+        "column": 520,
+        "height": 166,
+        "width": 116
     },
     {
         "id": "BjbIRIDT1",
         "label": "inside_plate",
-        "row": 568,
+        "row": 567,
         "column": 157,
         "height": 142,
-        "width": 107
+        "width": 108
     },
     {
         "id": "DLWWKosAJ",
         "label": "outside_plate",
         "row": 513,
-        "column": 143,
+        "column": 142,
         "height": 171,
         "width": 145
     },
     {
         "id": "XfkdaEa-Z",
         "label": "inside_plate",
-        "row": 524,
+        "row": 523,
         "column": 411,
-        "height": 150,
-        "width": 137
+        "height": 151,
+        "width": 138
     },
     {
         "id": "NO4rfp6tq",
         "label": "bar_end",
-        "row": 588,
+        "row": 587,
         "column": 158,
         "height": 26,
-        "width": 23
+        "width": 24
     },
     {
         "id": "ACrtEjtcH",
         "label": "outside_plate",
-        "row": 148,
-        "column": 115,
+        "row": 147,
+        "column": 114,
         "height": 172,
         "width": 145
     },
     {
         "id": "tWjDImgEw",
         "label": "bar_end",
-        "row": 183,
+        "row": 182,
         "column": 403,
         "height": 157,
-        "width": 137
+        "width": 138
     },
     {
         "id": "m456anOhj",
         "label": "inside_plate",
         "row": 554,
-        "column": 175,
+        "column": 174,
         "height": 157,
-        "width": 118
+        "width": 119
     },
     {
         "id": "0eDgTus7l",
         "label": "outside_plate",
-        "row": 536,
+        "row": 535,
         "column": 578,
-        "height": 182,
-        "width": 124
+        "height": 183,
+        "width": 125
     },
     {
         "id": "h2mL7swWo",
         "label": "bar_end",
-        "row": 609,
+        "row": 608,
         "column": 701,
-        "height": 30,
+        "height": 31,
         "width": 16
     },
     {
         "id": "f2ZHX-PbJ",
         "label": "outside_plate",
-        "row": 458,
-        "column": 554,
+        "row": 457,
+        "column": 553,
         "height": 186,
-        "width": 127
+        "width": 128
     },
     {
         "id": "p6TUHjrWd",
         "label": "bar_end",
-        "row": 535,
-        "column": 682,
+        "row": 534,
+        "column": 681,
         "height": 30,
         "width": 22
     },
     {
         "id": "_VUrfigiJ",
         "label": "inside_plate",
-        "row": 498,
-        "column": 140,
-        "height": 163,
-        "width": 119
+        "row": 497,
+        "column": 139,
+        "height": 164,
+        "width": 120
     },
     {
         "id": "wWKAv4AWB",
         "label": "outside_plate",
         "row": 551,
-        "column": 99,
+        "column": 98,
         "height": 167,
-        "width": 134
+        "width": 135
     },
     {
         "id": "MFiPwKYlQ",
@@ -1485,22 +1477,22 @@
         "row": 560,
         "column": 404,
         "height": 149,
-        "width": 127
+        "width": 128
     },
     {
         "id": "UCl-LtzUv",
         "label": "bar_end",
         "row": 622,
-        "column": 92,
-        "height": 25,
-        "width": 26
+        "column": 91,
+        "height": 26,
+        "width": 27
     },
     {
         "id": "zTAk_k-yk",
         "label": "inside_plate",
         "row": 150,
         "column": 181,
-        "height": 141,
+        "height": 142,
         "width": 120
     },
     {
@@ -1515,17 +1507,17 @@
         "id": "rikiBc8PY",
         "label": "bar_end",
         "row": 113,
-        "column": 653,
-        "height": 24,
+        "column": 652,
+        "height": 25,
         "width": 21
     },
     {
         "id": "n7PAg3pDj",
         "label": "inside_plate",
-        "row": 417,
+        "row": 416,
         "column": 167,
         "height": 131,
-        "width": 109
+        "width": 110
     },
     {
         "id": "RmD-mLcqE",
@@ -1533,7 +1525,7 @@
         "row": 536,
         "column": 439,
         "height": 182,
-        "width": 137
+        "width": 138
     },
     {
         "id": "Hx-62l0Vg",
@@ -1548,23 +1540,23 @@
         "label": "outside_plate",
         "row": 699,
         "column": 391,
-        "height": 226,
+        "height": 227,
         "width": 216
     },
     {
         "id": "vBvnJdA7R",
         "label": "bar_end",
-        "row": 795,
-        "column": 519,
-        "height": 41,
-        "width": 42
+        "row": 794,
+        "column": 518,
+        "height": 42,
+        "width": 43
     },
     {
         "id": "98GVW4OJy",
         "label": "outside_plate",
         "row": 544,
         "column": 448,
-        "height": 171,
+        "height": 172,
         "width": 141
     },
     {
@@ -1572,46 +1564,46 @@
         "label": "inside_plate",
         "row": 556,
         "column": 166,
-        "height": 153,
-        "width": 132
+        "height": 154,
+        "width": 133
     },
     {
         "id": "rw2XTNS0A",
         "label": "outside_plate",
         "row": 221,
         "column": 529,
-        "height": 213,
+        "height": 214,
         "width": 163
     },
     {
         "id": "8BBHFub9D",
         "label": "inside_plate",
-        "row": 258,
+        "row": 257,
         "column": 145,
         "height": 182,
-        "width": 149
+        "width": 150
     },
     {
         "id": "lS_UPofFX",
         "label": "bar_end",
         "row": 312,
         "column": 663,
-        "height": 31,
-        "width": 33
+        "height": 32,
+        "width": 34
     },
     {
         "id": "OFAAHpISW",
         "label": "inside_plate",
-        "row": 119,
+        "row": 118,
         "column": 139,
-        "height": 146,
-        "width": 111
+        "height": 147,
+        "width": 112
     },
     {
         "id": "h5RKFMobK",
         "label": "outside_plate",
-        "row": 33,
-        "column": 542,
+        "row": 32,
+        "column": 541,
         "height": 169,
         "width": 113
     },
@@ -1619,22 +1611,22 @@
         "id": "jwWiPW3H3",
         "label": "bar_end",
         "row": 93,
-        "column": 654,
-        "height": 30,
+        "column": 653,
+        "height": 31,
         "width": 27
     },
     {
         "id": "q-MIbQOz1",
         "label": "bar_end",
         "row": 612,
-        "column": 650,
+        "column": 649,
         "height": 27,
         "width": 23
     },
     {
         "id": "KO4gPgu6m",
         "label": "outside_plate",
-        "row": 538,
+        "row": 537,
         "column": 553,
         "height": 178,
         "width": 125
@@ -1642,8 +1634,8 @@
     {
         "id": "1_bTySgMj",
         "label": "inside_plate",
-        "row": 558,
-        "column": 163,
+        "row": 557,
+        "column": 162,
         "height": 150,
         "width": 116
     },
@@ -1653,31 +1645,31 @@
         "row": 201,
         "column": 78,
         "height": 172,
-        "width": 123
+        "width": 124
     },
     {
         "id": "6ys3pcdp3",
         "label": "inside_plate",
-        "row": 266,
-        "column": 445,
-        "height": 153,
+        "row": 265,
+        "column": 444,
+        "height": 154,
         "width": 117
     },
     {
         "id": "ObdENCoKR",
         "label": "outside_plate",
         "row": 522,
-        "column": 560,
+        "column": 559,
         "height": 185,
-        "width": 124
+        "width": 125
     },
     {
         "id": "d8ODYqSSc",
         "label": "inside_plate",
-        "row": 544,
-        "column": 149,
-        "height": 158,
-        "width": 125
+        "row": 543,
+        "column": 148,
+        "height": 159,
+        "width": 126
     },
     {
         "id": "nFwLvF-rj",
@@ -1690,8 +1682,8 @@
     {
         "id": "mc1V03FTS",
         "label": "bar_end",
-        "row": 190,
-        "column": 111,
+        "row": 189,
+        "column": 110,
         "height": 19,
         "width": 15
     },
@@ -1699,15 +1691,15 @@
         "id": "t6wKP81mk",
         "label": "outside_plate",
         "row": 116,
-        "column": 87,
-        "height": 175,
+        "column": 86,
+        "height": 176,
         "width": 153
     },
     {
         "id": "p4DYiEH3C",
         "label": "inside_plate",
         "row": 158,
-        "column": 357,
+        "column": 356,
         "height": 160,
         "width": 143
     },
@@ -1717,20 +1709,20 @@
         "row": 540,
         "column": 148,
         "height": 174,
-        "width": 150
+        "width": 151
     },
     {
         "id": "kQcebysL7",
         "label": "inside_plate",
-        "row": 544,
+        "row": 543,
         "column": 429,
         "height": 158,
-        "width": 138
+        "width": 139
     },
     {
         "id": "Y-JEXsZdJ",
         "label": "outside_plate",
-        "row": 180,
+        "row": 179,
         "column": 95,
         "height": 153,
         "width": 130
@@ -1738,17 +1730,17 @@
     {
         "id": "gHB9qHuiY",
         "label": "bar_end",
-        "row": 231,
+        "row": 230,
         "column": 388,
-        "height": 139,
-        "width": 117
+        "height": 140,
+        "width": 118
     },
     {
         "id": "M8Hvgt9f8",
         "label": "outside_plate",
         "row": 164,
-        "column": 581,
-        "height": 165,
+        "column": 580,
+        "height": 166,
         "width": 58
     },
     {
@@ -1764,7 +1756,7 @@
         "label": "bar_end",
         "row": 224,
         "column": 685,
-        "height": 28,
+        "height": 29,
         "width": 16
     }
 ]
