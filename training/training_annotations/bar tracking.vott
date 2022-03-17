@@ -1,0 +1,52 @@
+{
+    "name": "bar tracking",
+    "securityToken": "bar tracking Token",
+    "sourceConnection": {
+        "name": "trainging images",
+        "providerType": "localFileSystemProxy",
+        "providerOptions": {
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiNTA3ZmE3NDkwY2JiZWY2ZDAxY2M0ZDY1NTMwYjhjNjAzNDcwZWEwNjRlMzg2MDI1MTMxZWYyNGMwNmNkNDU4MzI4MmRkZWQ3YzM1NmIzNGIyMDU3ZjZkMTcyMzM3Y2Q4ODRlZDk4ZTQ3MTBmYjQ2OTdiYTM1ZmQ3MGM2NmIyNDc0ZDBkNDA4NzU3MTYyNzZkNGNiMDA2NjJhNWE2OGZlMGUyODY1MzUzMmRhNzI1MjFlZDJjNDE4YzcxMWExYjI5YWQ4ZmMyNTdlMGYwN2UzN2RkZTQwMjNhNjNlNDc5MTciLCJpdiI6ImE0N2NmMjllZDFlMWYxMjdiZjg1YTMwNDJjZTcwY2VlOTIxMDU4ZTY2MjdmZmIxOCJ9"
+        },
+        "id": "Fz87STAjy"
+    },
+    "targetConnection": {
+        "name": "trainging annotations",
+        "providerType": "localFileSystemProxy",
+        "providerOptions": {
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiOGJmNmQ5YTU0ZjIwZDMzMjI2NmIxODdhYzczNzM5MTNjNTRhNzJhODhjNDc0ZTE5MTNkMzdmYmFmNDk3MzhkN2M0YWZlZjAzOGVmM2FmMWU0OTI1ZTk2ZDg3NDIwMmI5NTQxOGEwNTMzY2ExZDVjZGExZjlmNTUxNGRkNGQ3ZjUxZmY2MWNhODlkOGM1ZWIyYWQwYzdjMzY5NDkyYjJlY2VhNmU0NDg0Zjg0MmRkODFiYWZkNDUyOWNhYzQ4NmFiMTMxMTJiNGI3YzQ5NTZiZWI1ZDA0NjQ1NTBjYTAxNDUiLCJpdiI6ImMyODEyNDM3NDI3NTBlODA5ZDlmNGFhNWQxMzYyNmUxYzBmMGYzYzI2NGY4YWZlNyJ9"
+        },
+        "id": "8EaESchyL"
+    },
+    "videoSettings": {
+        "frameExtractionRate": 15
+    },
+    "tags": [],
+    "id": "91lzY3FRl",
+    "activeLearningSettings": {
+        "autoDetect": false,
+        "predictTag": true,
+        "modelPathType": "coco"
+    },
+    "exportFormat": {
+        "providerType": "vottJson",
+        "providerOptions": {
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiM2YwMzM2OWNjNDFiYjA3ZTIzMTZjOWMyN2QxYTdiODk3Y2RiNmVhMDBiZjI1YTE2NTZiZDZiNmZiOTA1MGE1YmNiYzQxMGJmNDVmNzI5ODU2NzNiNzUxYTU4OTVlZDk2IiwiaXYiOiI5YTA3MjcwNzU4M2U1NmFhMzljMWY1N2ViNDNmNzBiZTZiNjJiNjNkY2UwZGIwYWEifQ=="
+        }
+    },
+    "version": "2.2.0",
+    "lastVisitedAssetId": "f4fc5914a9d50071ebe5185b97495b76",
+    "assets": {
+        "f4fc5914a9d50071ebe5185b97495b76": {
+            "format": "jpg",
+            "id": "f4fc5914a9d50071ebe5185b97495b76",
+            "name": "23903524000.jpg",
+            "path": "file://wsl.localhost/Debian/root/workspace/bar_tracking/training/training_images/23903524000.jpg",
+            "size": {
+                "width": 720,
+                "height": 720
+            },
+            "state": 1,
+            "type": 1
+        }
+    }
+}
