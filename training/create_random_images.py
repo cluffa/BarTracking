@@ -5,13 +5,14 @@ import os
 import time
 from torchvision import transforms
 from PIL import Image
+import shutil
 
 DIR_PATH = os.path.dirname(os.path.realpath(__file__))
 # %%
 def select_random_frames():
-    video_files = os.listdir(f'{DIR_PATH}/video2/')
+    video_files = os.listdir(f'{DIR_PATH}/raw_videos/')
     for file in video_files:
-        cap = cv2.VideoCapture(f'{DIR_PATH}/video2/{file}')
+        cap = cv2.VideoCapture(f'{DIR_PATH}/raw_videos/{file}')
         frameCount = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
         frameWidth = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
         frameHeight = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
@@ -37,6 +38,8 @@ def select_random_frames():
             image = transforms.RandomVerticalFlip(0.25)(image)
             image = transforms.RandomGrayscale()(image)
             image.save(f'{DIR_PATH}/training_images/{time.thread_time_ns()}.jpg')
+        else:
+            shutil.move(f'{DIR_PATH}/raw_videos/{file}', f'{DIR_PATH}/raw_videos_processed/{file}')
 
 if __name__ == "__main__":
     select_random_frames()
