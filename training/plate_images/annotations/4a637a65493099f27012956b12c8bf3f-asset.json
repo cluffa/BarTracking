@@ -1,0 +1,48 @@
+{
+    "asset": {
+        "format": "jpg",
+        "id": "4a637a65493099f27012956b12c8bf3f",
+        "name": "outside_plate-36588519000.jpg",
+        "path": "file://wsl.localhost/Debian/root/workspace/bar_tracking/training/plate_images/images/outside_plate-36588519000.jpg",
+        "size": {
+            "width": 128,
+            "height": 128
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "nVMRusdv_",
+            "type": "RECTANGLE",
+            "tags": [
+                "center"
+            ],
+            "boundingBox": {
+                "height": 0,
+                "width": 0,
+                "left": 59.73667711598746,
+                "top": 78.64576802507837
+            },
+            "points": [
+                {
+                    "x": 59.73667711598746,
+                    "y": 78.64576802507837
+                },
+                {
+                    "x": 59.73667711598746,
+                    "y": 78.64576802507837
+                },
+                {
+                    "x": 59.73667711598746,
+                    "y": 78.64576802507837
+                },
+                {
+                    "x": 59.73667711598746,
+                    "y": 78.64576802507837
+                }
+            ]
+        }
+    ],
+    "version": "2.2.0"
+}

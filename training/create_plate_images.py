@@ -18,7 +18,7 @@ for idx, row in df.iterrows():
         rand = [-random.randint(*rng), -random.randint(*rng), random.randint(*rng), random.randint(*rng)]
         crop = [i+j for i, j in zip(crop, rand)]
         crop = [i if i <= 720 else 720 for i in crop]
-        crop = [i if i >= 0 else 720 for i in crop]
+        crop = [i if i >= 0 else 0 for i in crop]
         im = im.crop(crop)
         im = im.resize((128, 128))
         im.save(f'{DIR_PATH}/plate_images/images/{row[5]}-{row[0]}')

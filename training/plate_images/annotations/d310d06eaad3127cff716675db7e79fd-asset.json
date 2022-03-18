@@ -1,0 +1,48 @@
+{
+    "asset": {
+        "format": "jpg",
+        "id": "d310d06eaad3127cff716675db7e79fd",
+        "name": "inside_plate-41733785900.jpg",
+        "path": "file://wsl.localhost/Debian/root/workspace/bar_tracking/training/plate_images/images/inside_plate-41733785900.jpg",
+        "size": {
+            "width": 128,
+            "height": 128
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "go3DTx1rD",
+            "type": "RECTANGLE",
+            "tags": [
+                "center"
+            ],
+            "boundingBox": {
+                "height": 0,
+                "width": 0,
+                "left": 58.83385579937304,
+                "top": 72.12539184952978
+            },
+            "points": [
+                {
+                    "x": 58.83385579937304,
+                    "y": 72.12539184952978
+                },
+                {
+                    "x": 58.83385579937304,
+                    "y": 72.12539184952978
+                },
+                {
+                    "x": 58.83385579937304,
+                    "y": 72.12539184952978
+                },
+                {
+                    "x": 58.83385579937304,
+                    "y": 72.12539184952978
+                }
+            ]
+        }
+    ],
+    "version": "2.2.0"
+}
