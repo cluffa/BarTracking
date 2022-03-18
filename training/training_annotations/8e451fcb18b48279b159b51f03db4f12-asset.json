@@ -1,0 +1,79 @@
+{
+    "asset": {
+        "format": "jpg",
+        "id": "8e451fcb18b48279b159b51f03db4f12",
+        "name": "56682145200.jpg",
+        "path": "file://wsl.localhost/Debian/root/workspace/bar_tracking/training/training_images/56682145200.jpg",
+        "size": {
+            "width": 720,
+            "height": 720
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "FspXuY1XA",
+            "type": "RECTANGLE",
+            "tags": [
+                "inside_plate"
+            ],
+            "boundingBox": {
+                "height": 192.9780564263322,
+                "width": 208.21316614420056,
+                "left": 402.0376175548587,
+                "top": 0
+            },
+            "points": [
+                {
+                    "x": 402.0376175548587,
+                    "y": 0
+                },
+                {
+                    "x": 610.2507836990593,
+                    "y": 0
+                },
+                {
+                    "x": 610.2507836990593,
+                    "y": 192.9780564263322
+                },
+                {
+                    "x": 402.0376175548587,
+                    "y": 192.9780564263322
+                }
+            ]
+        },
+        {
+            "id": "gtfdKFBtR",
+            "type": "RECTANGLE",
+            "tags": [
+                "outside_plate"
+            ],
+            "boundingBox": {
+                "height": 225.70532915360494,
+                "width": 229.93730407523503,
+                "left": 0,
+                "top": 0
+            },
+            "points": [
+                {
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "x": 229.93730407523503,
+                    "y": 0
+                },
+                {
+                    "x": 229.93730407523503,
+                    "y": 225.70532915360496
+                },
+                {
+                    "x": 0,
+                    "y": 225.70532915360496
+                }
+            ]
+        }
+    ],
+    "version": "2.2.0"
+}

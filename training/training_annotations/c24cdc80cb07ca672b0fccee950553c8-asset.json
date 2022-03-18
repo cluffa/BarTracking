@@ -1,0 +1,80 @@
+{
+    "asset": {
+        "format": "jpg",
+        "id": "c24cdc80cb07ca672b0fccee950553c8",
+        "name": "81163757400.jpg",
+        "path": "file://wsl.localhost/Debian/root/workspace/bar_tracking/training/training_images/81163757400.jpg",
+        "size": {
+            "width": 720,
+            "height": 720
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "0jO5I-w6I",
+            "type": "RECTANGLE",
+            "tags": [
+                "inside_plate"
+            ],
+            "boundingBox": {
+                "height": 199.1849529780564,
+                "width": 174.35736677115986,
+                "left": 64.60815047021943,
+                "top": 0
+            },
+            "points": [
+                {
+                    "x": 64.60815047021943,
+                    "y": 0
+                },
+                {
+                    "x": 238.96551724137927,
+                    "y": 0
+                },
+                {
+                    "x": 238.96551724137927,
+                    "y": 199.1849529780564
+                },
+                {
+                    "x": 64.60815047021943,
+                    "y": 199.1849529780564
+                }
+            ]
+        },
+        {
+            "id": "OcxqONFgJ",
+            "type": "RECTANGLE",
+            "tags": [
+                "outside_plate",
+                "inside_plate"
+            ],
+            "boundingBox": {
+                "height": 187.89968652037615,
+                "width": 133.44827586206895,
+                "left": 586.5517241379309,
+                "top": 0
+            },
+            "points": [
+                {
+                    "x": 586.5517241379309,
+                    "y": 0
+                },
+                {
+                    "x": 719.9999999999999,
+                    "y": 0
+                },
+                {
+                    "x": 719.9999999999999,
+                    "y": 187.89968652037615
+                },
+                {
+                    "x": 586.5517241379309,
+                    "y": 187.89968652037615
+                }
+            ]
+        }
+    ],
+    "version": "2.2.0"
+}

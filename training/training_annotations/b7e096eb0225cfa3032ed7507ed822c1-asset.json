@@ -1,0 +1,79 @@
+{
+    "asset": {
+        "format": "jpg",
+        "id": "b7e096eb0225cfa3032ed7507ed822c1",
+        "name": "18091469500.jpg",
+        "path": "file://wsl.localhost/Debian/root/workspace/bar_tracking/training/training_images/18091469500.jpg",
+        "size": {
+            "width": 720,
+            "height": 720
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "gojgtvSxC",
+            "type": "RECTANGLE",
+            "tags": [
+                "outside_plate"
+            ],
+            "boundingBox": {
+                "height": 124.70219435736676,
+                "width": 188.74608150470218,
+                "left": 0,
+                "top": 0
+            },
+            "points": [
+                {
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "x": 188.74608150470218,
+                    "y": 0
+                },
+                {
+                    "x": 188.74608150470218,
+                    "y": 124.70219435736676
+                },
+                {
+                    "x": 0,
+                    "y": 124.70219435736676
+                }
+            ]
+        },
+        {
+            "id": "dIUvDgz-T",
+            "type": "RECTANGLE",
+            "tags": [
+                "inside_plate"
+            ],
+            "boundingBox": {
+                "height": 210.47021943573665,
+                "width": 179.99999999999997,
+                "left": 480.4702194357366,
+                "top": 0
+            },
+            "points": [
+                {
+                    "x": 480.4702194357366,
+                    "y": 0
+                },
+                {
+                    "x": 660.4702194357366,
+                    "y": 0
+                },
+                {
+                    "x": 660.4702194357366,
+                    "y": 210.47021943573665
+                },
+                {
+                    "x": 480.4702194357366,
+                    "y": 210.47021943573665
+                }
+            ]
+        }
+    ],
+    "version": "2.2.0"
+}
