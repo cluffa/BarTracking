@@ -37,7 +37,11 @@ def select_random_frames():
             image = transforms.RandomHorizontalFlip(0.25)(image)
             image = transforms.RandomVerticalFlip(0.25)(image)
             image = transforms.RandomGrayscale()(image)
-            image.save(f'{DIR_PATH}/training_images/{time.thread_time_ns()}.jpg')
+            path = f'{DIR_PATH}/training_images/{time.thread_time_ns()}.jpg'
+            if not os.path.isfile(path):
+                image.save(path)
+            else:
+                raise FileExistsError('file already exists')
         else:
             shutil.move(f'{DIR_PATH}/raw_videos/{file}', f'{DIR_PATH}/raw_videos_processed/{file}')
 
