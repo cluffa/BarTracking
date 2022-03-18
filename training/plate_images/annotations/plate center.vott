@@ -1,0 +1,52 @@
+{
+    "name": "plate center",
+    "securityToken": "plate center Token",
+    "sourceConnection": {
+        "name": "plate images",
+        "providerType": "localFileSystemProxy",
+        "providerOptions": {
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiYjQ3NjgwYjc4YTZjMGMxNTAxMWMxZmU3OWQ3M2M2MjBlMGRjZmM4MDg5NGZmMGE5YWVlZjU5MWYyN2EyNDZiNTZkMTNiMmM5ZDNjNGU0MDEwYjZmODU1OWI0YmM5YzRlMzkyYTFjZGI4YzQxOGQwY2QzZDQ3ZjVkMDkyY2IxMGNmMDg5ZGM5ZTNhM2QxMWFiNzVhMjZjMDJmNzQ2MGMxOGExMTIyYTBkZWY3MTg1MjU0N2E4ZGFlNzQyMWQwM2E4ZDU3NGQwZGI1Mjg2YWQ4OTUzZGMwYWNlZGUxZTA3NTgiLCJpdiI6IjQwYjZkNmFiNWQ4NWY5YmQzYzQ5NGU0YWQ0YzE1NTM5NTU1NjhiYmY2NDkxNjY4ZSJ9"
+        },
+        "id": "RXqkpnMlC"
+    },
+    "targetConnection": {
+        "name": "plate annotations",
+        "providerType": "localFileSystemProxy",
+        "providerOptions": {
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiNjhhYTRjMWFhZTI2NTkxOWE5ZmIwNzU4NjA0YzI0NDIzN2RmNjVlYTc5MDMwMmUyODA2ZGI3NTc1MDk4ZmQyM2E3ZGY1Yzk2ZGJiZjlhMjVmMzgyZDU1OTg2YjlkNGRjNjAyMjg3ZTZiYTFiOGU2ZTc5YzQ5MDkwMTJmNmQ3NWNkYzlmY2ViMTU1ZGQzOThmYmM1ZmNjZDRmOGNlODk5NmFmYWM0ODg1ZDk2MmI4OWU0ZjcxOWU3NjkyMDJiZjBhYjgxNDU2MGU5N2U0NjFmZjkzMzAxYzQ2ZjQ5OTEwNDUiLCJpdiI6Ijk5YWFmMTkyZDJhN2MwMjk4ZmZkYTU3ZTZkYjIwMTNlMzE4ODE2ODcyZDA3MWY5MCJ9"
+        },
+        "id": "V4zVeVe5z"
+    },
+    "videoSettings": {
+        "frameExtractionRate": 15
+    },
+    "tags": [],
+    "id": "ghkV_eY-2",
+    "activeLearningSettings": {
+        "autoDetect": false,
+        "predictTag": true,
+        "modelPathType": "coco"
+    },
+    "exportFormat": {
+        "providerType": "vottJson",
+        "providerOptions": {
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiZWE4MTM2ZWRlYjc3NjA2MmRjNTYwMDdlNzNjNGE2ZjE4MDBmODQ5ZTgxNWEyY2M4MTAwNzE2ZDEzOTdjOTgzZmVhN2Q1NTZmYjM0NzE5OTkxODM1ZjM0NzFiYThjZDVjIiwiaXYiOiI0NTNjZjgzODY1YTIzY2Y2NGFiNzExNzAzNDJjMDFiZjUzNGFkOGMyNWY2NTJkZDMifQ=="
+        }
+    },
+    "version": "2.2.0",
+    "lastVisitedAssetId": "c13b2bf76a94c21c4b51fae40f050a34",
+    "assets": {
+        "c13b2bf76a94c21c4b51fae40f050a34": {
+            "format": "jpg",
+            "id": "c13b2bf76a94c21c4b51fae40f050a34",
+            "name": "inside_plate-61164531500.jpg",
+            "path": "file://wsl.localhost/Debian/root/workspace/bar_tracking/training/plate_images/images/inside_plate-61164531500.jpg",
+            "size": {
+                "width": 128,
+                "height": 128
+            },
+            "state": 1,
+            "type": 1
+        }
+    }
+}
