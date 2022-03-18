@@ -5,7 +5,7 @@
         "name": "trainging images",
         "providerType": "localFileSystemProxy",
         "providerOptions": {
-            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiOTdkNjEwMDY2MTg1OGEzZDA2NmM0ODNmM2IzZDc0MjU4NGUwZjNjZDkyY2JlZWE1MTM0NjQxN2I3YTZlNDA4NjAxYmRmMTNmNDI2NWZiNDdmMzE4MDBlZjVhYjBkNjU4MTg1YjMyYTczMmMyOWM5ZDc4OTNlMDVlNDRkYjIxMDc0ZTIxNGM2OWMyM2E4M2M4MGJmZWU5MzMzZjcwOGNkYTY1YjM3YzE5YjVjMDRhZTdlMmZhYzk0MWM4NGUwNzQxNzRhNzE4MTVhYTg1YzAyODNlMDI2Y2E3MjIxNWE2YTIiLCJpdiI6ImJkNTQ5MDJlYWFmMjBlNjBhODU2MzM3ZDNkMzA2NTMxMmZkNDk2YTU2ODJhZWJiNSJ9"
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiNmU3MzVmMTA5MWM1Nzg2ZThmMGYwNDlhYzI5OTg4ZTg3NWM3Y2YwMjgyYzg3ZjgyOGY0ZTFiNDFiNzVkNjU0MWZiYWEwYTBjY2Y3YTU5MjcwYzY3OGI0N2FkNzFkYzdhNDc3M2JhMDQ2OWM4Yjg4MWM2N2ExM2JhNTM3NzE4N2EzZTViMDM5MWQyMWI1ZmI4ODdlNTE5NmI4NDk4ODNkNGJmZGQ4NTBmODc4ODcyMmRiMjM5YjM4ODlkMTY0NDY3OWVlMjhiYzJkZjRjYjM2NDA2MTJhMTQwMDdhYjFmYTAiLCJpdiI6IjNlZjk3Njc4YjM3ZmFlNDJjMzRiMzVlNzUxMjM4YThiYzY5NzgyY2U5MWQ4MjhjNiJ9"
         },
         "id": "Fz87STAjy"
     },
@@ -13,7 +13,7 @@
         "name": "trainging annotations",
         "providerType": "localFileSystemProxy",
         "providerOptions": {
-            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiZDVjY2FmOTA5Y2JmYmM1ZTE0NjEyOTUxMmQxMjkxYjcwNzE2ODEwZDE5NDUyN2I3NWQyZGQ4Nzk4NzIzODkzZWNiYjMxYmVmNjZlMjkyMGNmNDMwNjgwZDc5MDVjNmNiYmVmZTc5ODU4NTNlYmIxNjZjOTZiYmQ5ZmZmNTU3MjBmMDI3NTgxZTlmY2EwNDA2ZWMyYjQwYWYzZjNjYjVjYThlMGNiOWU1OWZlNWM0NDRjZjIwMTJkZTMxYjBiM2U4YmYxY2QwYmVkNmQ1MTk0YTczNjg3NDJmNmVhMDFiODUiLCJpdiI6Ijk5ZmI0MmNjOWMxYjFjOGZhYjVmMGRkZDU0MDBiMTIxOTJlNTc1NWI0OTBhMmM1OSJ9"
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiMWJhNTQ0OWMzMGEzMzVjMzM5MDdiZjI2Y2U5NDk4NmUwZTlmMzk3M2UzNDgyYzk1YTY2ZDUyOGM3OTkyY2JiZGE5NWFhMGY5YWQyODdhYjViYTYzY2ZlYjdkMWQ4NjU4NjY0OWM5MjQzYTVlMWE3Yzk4ZDNjMTMwNzQyYWZkMmEwNTE2ZWQ3NmRhYzc3OGE5NDZkYzI5NTc5OGE5Y2E4MzdmYzI0Y2YzZDhiZGMxYjJlMDYzNTJiMDY2YzM5MGMyMjJjZDg1OGNhZmExNDFlOGNiOWZhNjAyMzAxYzMzMjMiLCJpdiI6Ijk5ZTBhOGE5YmI5MzZhNWQ1YzY4MGE5NTNjYjEyYjIwNDIxMmI3YmVjNTAzZTdmNSJ9"
         },
         "id": "8EaESchyL"
     },
@@ -43,11 +43,11 @@
     "exportFormat": {
         "providerType": "csv",
         "providerOptions": {
-            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiZDk1MmNiZmRmZGU3YWYyZThiOWZmNjVmNzQ2ZGE0OTA5YzdkNjc0ODM0MGE4MjVhOGFhMTk5ZmJmYWU1YTZjNGFkYWU0NzkxNGYyZmIxMTI3MTg1NDMzZjFiNWE5MzdkIiwiaXYiOiI3MDA5ODg3YjljMWNjYWYzYjU0MTE5Zjg0YTEyMjYzN2IxMTBiNzU5YTg5ZjQ5YzEifQ=="
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiYzY1NDhhOGQyYTZjOTQ2OTk1MzkzOWYzZmQ1MDE3M2VlNTUzN2M2OGU5ZmE4NjEzMDE2MmU3NGE3NmU3NWFkYzIxMzIzOGM1YzhmMjZhNzc5Y2MxYmI2OTlmMGJmY2Q3IiwiaXYiOiI0MTczMzhiYzZkNTBiMGViYzFhNzIxMjJiNDM2NzkyNmJhYjMyNjI1NmRlMWYyOWUifQ=="
         }
     },
     "version": "2.2.0",
-    "lastVisitedAssetId": "f0f7f55eaf508334fdc7daf18632d2ac",
+    "lastVisitedAssetId": "0b086bce3533473123ec433b64b863ca",
     "assets": {
         "f4fc5914a9d50071ebe5185b97495b76": {
             "format": "jpg",
@@ -13124,6 +13124,102 @@
             "id": "8f226e50ae84bd43a31ecdfcfd74d01e",
             "name": "3318327400.jpg",
             "path": "file://wsl.localhost/Debian/root/workspace/bar_tracking/training/training_images/3318327400.jpg",
+            "size": {
+                "width": 720,
+                "height": 720
+            },
+            "state": 2,
+            "type": 1
+        },
+        "34b18944a0aa720658ac2e9b6cbc2951": {
+            "format": "jpg",
+            "id": "34b18944a0aa720658ac2e9b6cbc2951",
+            "name": "4670045600.jpg",
+            "path": "file://wsl.localhost/Debian/root/workspace/bar_tracking/training/training_images/4670045600.jpg",
+            "size": {
+                "width": 720,
+                "height": 720
+            },
+            "state": 2,
+            "type": 1
+        },
+        "415f88b1ce90f5d38b98944965131180": {
+            "format": "jpg",
+            "id": "415f88b1ce90f5d38b98944965131180",
+            "name": "9445661200.jpg",
+            "path": "file://wsl.localhost/Debian/root/workspace/bar_tracking/training/training_images/9445661200.jpg",
+            "size": {
+                "width": 720,
+                "height": 720
+            },
+            "state": 2,
+            "type": 1
+        },
+        "f066078f07f86857ff3c5d6fe459c108": {
+            "format": "jpg",
+            "id": "f066078f07f86857ff3c5d6fe459c108",
+            "name": "1599942000.jpg",
+            "path": "file://wsl.localhost/Debian/root/workspace/bar_tracking/training/training_images/1599942000.jpg",
+            "size": {
+                "width": 720,
+                "height": 720
+            },
+            "state": 2,
+            "type": 1
+        },
+        "38437388aa3a7dddbeedff098447b9df": {
+            "format": "jpg",
+            "id": "38437388aa3a7dddbeedff098447b9df",
+            "name": "10358638900.jpg",
+            "path": "file://wsl.localhost/Debian/root/workspace/bar_tracking/training/training_images/10358638900.jpg",
+            "size": {
+                "width": 720,
+                "height": 720
+            },
+            "state": 2,
+            "type": 1
+        },
+        "caa41632ff70ce0bad70e788c1b445a3": {
+            "format": "jpg",
+            "id": "caa41632ff70ce0bad70e788c1b445a3",
+            "name": "9393084000.jpg",
+            "path": "file://wsl.localhost/Debian/root/workspace/bar_tracking/training/training_images/9393084000.jpg",
+            "size": {
+                "width": 720,
+                "height": 720
+            },
+            "state": 2,
+            "type": 1
+        },
+        "3335f945300a85c6052e867e1d9a5069": {
+            "format": "jpg",
+            "id": "3335f945300a85c6052e867e1d9a5069",
+            "name": "1611859300.jpg",
+            "path": "file://wsl.localhost/Debian/root/workspace/bar_tracking/training/training_images/1611859300.jpg",
+            "size": {
+                "width": 720,
+                "height": 720
+            },
+            "state": 2,
+            "type": 1
+        },
+        "2b2f9bed240d4fb1c92c3d168f9cd518": {
+            "format": "jpg",
+            "id": "2b2f9bed240d4fb1c92c3d168f9cd518",
+            "name": "1615689300.jpg",
+            "path": "file://wsl.localhost/Debian/root/workspace/bar_tracking/training/training_images/1615689300.jpg",
+            "size": {
+                "width": 720,
+                "height": 720
+            },
+            "state": 2,
+            "type": 1
+        },
+        "0b086bce3533473123ec433b64b863ca": {
+            "format": "jpg",
+            "id": "0b086bce3533473123ec433b64b863ca",
+            "name": "6038013800.jpg",
+            "path": "file://wsl.localhost/Debian/root/workspace/bar_tracking/training/training_images/6038013800.jpg",
             "size": {
                 "width": 720,
                 "height": 720
