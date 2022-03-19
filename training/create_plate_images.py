@@ -22,9 +22,9 @@ df = pd.read_csv(f'{DIR_PATH}/training_annotations/vott-csv-export/bar-tracking-
 #new_images = 0
 
 def main(input):
-    idx, row = input
-    rows = []
-    for i in range(50):
+    for i in range(40):
+        idx, row = input
+        rows = []
         fp = f'{DIR_PATH}/training_images/{row[0]}'
         im = Image.open(fp)
         xmin, ymin, xmax, ymax = row[1:5]
