@@ -22,9 +22,9 @@ df = pd.read_csv(f'{DIR_PATH}/training_annotations/vott-csv-export/bar-tracking-
 #new_images = 0
 
 def main(input):
-    for i in range(40):
+    rows = []
+    for i in range(25):
         idx, row = input
-        rows = []
         fp = f'{DIR_PATH}/training_images/{row[0]}'
         im = Image.open(fp)
         xmin, ymin, xmax, ymax = row[1:5]
@@ -69,11 +69,11 @@ def main(input):
 
 if __name__ == '__main__':
     with Pool(12) as p:
-        plate_info=p.map(main, df.iterrows())
+        plate_info = p.map(main, df.iterrows())
 
     plate_info = pd.concat(plate_info)
+    print(plate_info)
     plate_info.to_csv(f'{DIR_PATH}/plate_images/plate-center-export.csv', index=False)
-    #print(f'created {new_images} new plate images')
 
 
 
