@@ -57,37 +57,52 @@ class BarData:
     def __getitem__(self, idx: slice):
         return self.images[idx], self.outside[idx], self.inside[idx]
 
-barData = BarData()
-test = barData[:4]
+#barData = BarData()
+# test = barData[:4]
 #print('test shapes for 4 samples:',*[i.shape for i in test])
 # %%
-train_dl = DataLoader(
-    barData,
-    batch_size=16,
-    shuffle=True
-)
-valid_dl = DataLoader(
-    barData,
-    batch_size=128,
-    shuffle=True
-)
+# train_dl = DataLoader(
+#     barData,
+#     batch_size=16,
+#     shuffle=True
+# )
+# valid_dl = DataLoader(
+#     barData,
+#     batch_size=128,
+#     shuffle=True
+# )
 
 class BarModel(nn.Module):
     def __init__(self):
         super(BarModel, self).__init__()
         layers = list(resnet.children())[:8]
-        self.features1 = nn.Sequential(*layers[:6])
-        self.features2 = nn.Sequential(*layers[6:])
+        self.features1 = nn.Sequential(*layers[:7])
+        self.features2out = nn.Sequential(*layers[7:])
+        self.features2in = nn.Sequential(*layers[7:])
         self.outsidebb = nn.Sequential(nn.BatchNorm1d(512), nn.Linear(512, 4))
         self.insidebb = nn.Sequential(nn.BatchNorm1d(512), nn.Linear(512, 4))
         
     def forward(self, x):
+        #shared
         x = self.features1(x)
-        x = self.features2(x)
+
+        #split
+        z = self.features2in(x)
+        x = self.features2out(x)
+
+        #outside
         x = F.relu(x)
         x = nn.AdaptiveAvgPool2d((1,1))(x)
         x = x.view(x.shape[0], -1)
-        return self.outsidebb(x), self.insidebb(x)
+        x = self.outsidebb(x)
+
+        #inside
+        z = F.relu(z)
+        z = nn.AdaptiveAvgPool2d((1,1))(z)
+        z = z.view(z.shape[0], -1)
+        z = self.insidebb(z)
+
+        return x, z
 
 def update_optimizer(optimizer, lr):
     for i, param_group in enumerate(optimizer.param_groups):
@@ -144,9 +159,7 @@ def train_epocs(model, optimizer, train_dl, epochs=10):
         print(f'epoch {i} train_loss {train_loss}')
     return sum_loss/total
 # %%
-model = BarModel().cuda()
-parameters = filter(lambda p: p.requires_grad, model.parameters())
-optimizer = torch.optim.Adam(parameters, lr=0.006)
+
 
 # def get_prediction(image: Image = None, fp: str = None, tensor: torch.Tensor = None):
 #     model.eval()
@@ -185,15 +198,26 @@ optimizer = torch.optim.Adam(parameters, lr=0.006)
 #     draw.text((0., 0.), text = label)
 #     return image
 
+model_path = f'{DIR_PATH}/../models/bar_model.pth'
 override = False
 if __name__ == "__main__" and not override:
     try:
-        model.load_state_dict(torch.load(f'{DIR_PATH}/../models/bar_model.pth'))
+        model = BarModel().cuda()
+        parameters = filter(lambda p: p.requires_grad, model.parameters())
+        optimizer = torch.optim.Adam(parameters, lr=0.006)
+        model.load_state_dict(torch.load(model_path))
         model = model.cuda()
+        barData = BarData()
+        train_dl = DataLoader(
+            barData,
+            batch_size=16,
+            shuffle=True
+        )
         train_epocs(model, optimizer, train_dl, epochs=100)
     except KeyboardInterrupt:
         pass
-    torch.save(model.state_dict(), f'{DIR_PATH}/../models/bar_model.pth')
+    torch.save(model.state_dict(), model_path)
 else:
-    model.load_state_dict(torch.load(f'{DIR_PATH}/../models/bar_model.pth'))
+    model = BarModel().cuda()
+    model.load_state_dict(torch.load(model_path))
     model = model.cuda()

@@ -67,20 +67,7 @@ class PlatesData:
         return self.images[idx], self.labels[idx], self.center[idx]
 
 
-plate_data = PlatesData()
-test = plate_data[:4]
-#print('test shapes for 4 samples:',*[i.shape for i in test])
 
-train_dl = DataLoader(
-    plate_data,
-    batch_size=512,
-    shuffle=True
-)
-valid_dl = DataLoader(
-    plate_data,
-    batch_size=128,
-    shuffle=True
-)
 
 class PlateModel(nn.Module):
     def __init__(self):
@@ -103,28 +90,28 @@ def update_optimizer(optimizer, lr):
     for i, param_group in enumerate(optimizer.param_groups):
         param_group["lr"] = lr
 
-def val_metrics(model, valid_dl, C=1000):
-    model.eval()
-    total = 0
-    sum_loss = 0
-    #correct = 0 
-    for x, y_class, y_bb in valid_dl:
-        batch = y_class.shape[0]
-        x = x.cuda().float()
-        y_class = y_class.cuda()
-        y_bb = y_bb.cuda().float()
-        out_class, out_bb = model(x)
-        loss_class = F.cross_entropy(out_class, y_class, reduction="sum")
-        loss_bb = F.l1_loss(out_bb, y_bb, reduction="none").sum(1)
-        loss_bb = loss_bb.sum()
-        loss = loss_class + loss_bb/C
-        _, pred = torch.max(out_class, 1)
-        #correct += pred.eq(y_class).sum().item()
-        sum_loss += loss.item()
-        total += batch
-    return sum_loss/total#, correct/total
+# def val_metrics(model, valid_dl, C=1000):
+#     model.eval()
+#     total = 0
+#     sum_loss = 0
+#     #correct = 0 
+#     for x, y_class, y_bb in valid_dl:
+#         batch = y_class.shape[0]
+#         x = x.cuda().float()
+#         y_class = y_class.cuda()
+#         y_bb = y_bb.cuda().float()
+#         out_class, out_bb = model(x)
+#         loss_class = F.cross_entropy(out_class, y_class, reduction="sum")
+#         loss_bb = F.l1_loss(out_bb, y_bb, reduction="none").sum(1)
+#         loss_bb = loss_bb.sum()
+#         loss = loss_class + loss_bb/C
+#         _, pred = torch.max(out_class, 1)
+#         #correct += pred.eq(y_class).sum().item()
+#         sum_loss += loss.item()
+#         total += batch
+#     return sum_loss/total#, correct/total
 
-def train_epocs(model, optimizer, train_dl, val_dl, epochs=10,C=1000):
+def train_epocs(model, optimizer, train_dl, epochs=10,C=100):
     idx = 0
     for i in range(epochs):
         model.train()
@@ -153,9 +140,6 @@ def train_epocs(model, optimizer, train_dl, val_dl, epochs=10,C=1000):
         print(f'epoch {i} train_loss {train_loss}')
     return sum_loss/total
 # %%
-model = PlateModel().cuda()
-parameters = filter(lambda p: p.requires_grad, model.parameters())
-optimizer = torch.optim.Adam(parameters, lr=0.006)
 
 def get_prediction(image: Image = None, fp: str = None, tensor: torch.Tensor = None):
     model.eval()
@@ -194,21 +178,31 @@ def add_points(image: Image = None, fp: str = None, center = None, label = None)
     draw.text((0., 0.), text = label)
     return image
 
-override = True
+override = False
 if __name__ == "__main__" and not override:
+    model = PlateModel().cuda()
+    parameters = filter(lambda p: p.requires_grad, model.parameters())
+    optimizer = torch.optim.Adam(parameters, lr=0.006)
+    plate_data = PlatesData()
+    train_dl = DataLoader(
+        plate_data,
+        batch_size=512,
+        shuffle=True
+    )
     try:
         model.load_state_dict(torch.load(f'{DIR_PATH}/../models/plate_model.pth'))
         model = model.cuda()
-        train_epocs(model, optimizer, train_dl, valid_dl, epochs=250)
+        train_epocs(model, optimizer, train_dl, epochs=250)
     except KeyboardInterrupt:
         pass
     torch.save(model.state_dict(), f'{DIR_PATH}/../models/plate_model.pth')
 else:
+    model = PlateModel().cuda()
     model.load_state_dict(torch.load(f'{DIR_PATH}/../models/plate_model.pth'))
     model = model.cuda()
 
 # %%
-for i in range(8):
-    #print(get_prediction(fp=f'/root/workspace/bar_tracking/training/test{i+1}.jpg'))
-    add_points(fp=f'/root/workspace/bar_tracking/training/test{i+1}.jpg').save(f'/root/workspace/bar_tracking/training/pred{i+1}.jpg')
+# for i in range(8):
+#     #print(get_prediction(fp=f'/root/workspace/bar_tracking/training/test{i+1}.jpg'))
+#     add_points(fp=f'/root/workspace/bar_tracking/training/test{i+1}.jpg').save(f'/root/workspace/bar_tracking/training/pred{i+1}.jpg')
 # %%
