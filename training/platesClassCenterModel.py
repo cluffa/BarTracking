@@ -5,15 +5,11 @@ import torch.nn.functional as F
 import numpy as np
 import pandas as pd
 import os
-import json
-import matplotlib.pyplot as plt
 
 from torchvision import transforms
 from torch.utils.data import DataLoader
 from PIL import Image
 from PIL import ImageDraw
-from PIL import ImageOps
-from IPython import display
 
 resnet = torch.hub.load('pytorch/vision:v0.10.0', 'resnet34', pretrained=False, verbose=False)
 
@@ -66,9 +62,6 @@ class PlatesData:
     def __getitem__(self, idx: slice):
         return self.images[idx], self.labels[idx], self.center[idx]
 
-
-
-
 class PlateModel(nn.Module):
     def __init__(self):
         super(PlateModel, self).__init__()
@@ -89,27 +82,6 @@ class PlateModel(nn.Module):
 def update_optimizer(optimizer, lr):
     for i, param_group in enumerate(optimizer.param_groups):
         param_group["lr"] = lr
-
-# def val_metrics(model, valid_dl, C=1000):
-#     model.eval()
-#     total = 0
-#     sum_loss = 0
-#     #correct = 0 
-#     for x, y_class, y_bb in valid_dl:
-#         batch = y_class.shape[0]
-#         x = x.cuda().float()
-#         y_class = y_class.cuda()
-#         y_bb = y_bb.cuda().float()
-#         out_class, out_bb = model(x)
-#         loss_class = F.cross_entropy(out_class, y_class, reduction="sum")
-#         loss_bb = F.l1_loss(out_bb, y_bb, reduction="none").sum(1)
-#         loss_bb = loss_bb.sum()
-#         loss = loss_class + loss_bb/C
-#         _, pred = torch.max(out_class, 1)
-#         #correct += pred.eq(y_class).sum().item()
-#         sum_loss += loss.item()
-#         total += batch
-#     return sum_loss/total#, correct/total
 
 def train_epocs(model, optimizer, train_dl, epochs=10,C=100):
     idx = 0
@@ -134,9 +106,6 @@ def train_epocs(model, optimizer, train_dl, epochs=10,C=100):
             total += batch
             sum_loss += loss.item()
         train_loss = sum_loss/total
-        #val_loss, val_acc = val_metrics(model, valid_dl, C)
-        #val_loss = val_metrics(model, valid_dl, C)
-        #print("train_loss %.3f val_loss %.3f val_acc %.3f" % (train_loss, val_loss, val_acc))
         print(f'epoch {i} train_loss {train_loss}')
     return sum_loss/total
 # %%
@@ -167,11 +136,8 @@ def add_points(image: Image = None, fp: str = None, center = None, label = None)
 
     if center is None or label is None:
         predlabel, (x, y) = get_prediction(image=image)
-    
-    #x, y = x/2, y/2
 
     label = 'inside' if predlabel[0] > predlabel[1] else 'outside'
-    #image = image.resize((512, 512))
 
     draw = ImageDraw.Draw(image)
     draw.ellipse((x-3, y-3, x+3, y+3), fill=(255,0,0,0))
@@ -200,9 +166,3 @@ else:
     model = PlateModel().cuda()
     model.load_state_dict(torch.load(f'{DIR_PATH}/../models/plate_model.pth'))
     model = model.cuda()
-
-# %%
-# for i in range(8):
-#     #print(get_prediction(fp=f'/root/workspace/bar_tracking/training/test{i+1}.jpg'))
-#     add_points(fp=f'/root/workspace/bar_tracking/training/test{i+1}.jpg').save(f'/root/workspace/bar_tracking/training/pred{i+1}.jpg')
-# %%

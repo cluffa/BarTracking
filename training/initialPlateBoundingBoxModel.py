@@ -5,15 +5,10 @@ import torch.nn.functional as F
 import numpy as np
 import pandas as pd
 import os
-import json
-import matplotlib.pyplot as plt
 
 from torchvision import transforms
 from torch.utils.data import DataLoader
 from PIL import Image
-from PIL import ImageDraw
-from PIL import ImageOps
-from IPython import display
 
 resnet = torch.hub.load('pytorch/vision:v0.10.0', 'resnet34', pretrained=False, verbose=False)
 

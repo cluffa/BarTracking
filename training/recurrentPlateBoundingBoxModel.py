@@ -5,15 +5,10 @@ import torch.nn.functional as F
 import numpy as np
 import pandas as pd
 import os
-import json
-import matplotlib.pyplot as plt
 
 from torchvision import transforms
 from torch.utils.data import DataLoader
 from PIL import Image
-from PIL import ImageDraw
-from PIL import ImageOps
-from IPython import display
 
 resnet = torch.hub.load('pytorch/vision:v0.10.0', 'resnet34', pretrained=False, verbose=False)
 
@@ -31,7 +26,7 @@ class BarData:
             ).dropna(axis=0)
 
         m = len(self.df)
-        self.images = torch.empty((m, 3, 480, 480), device='cpu')
+        self.images = torch.empty((m, 3, 720, 720), device='cpu')
         for idx, img in enumerate(self.df['image']):
             img = self.get_image(fn = img)
             self.images[idx] = self.process(img)
@@ -40,7 +35,7 @@ class BarData:
         self.inside = torch.tensor(np.array(self.df[['xmin_inner', 'ymin_inner', 'xmax_inner', 'ymax_inner']], dtype=np.float32), device='cpu')
 
     def process(self, img, train = True):
-        img = img.resize((480, 480))
+        img = img.resize((720, 720))
         if train:
             img = transforms.RandomGrayscale(0.5)(img)
         img = transforms.ToTensor()(img)
@@ -57,21 +52,6 @@ class BarData:
 
     def __getitem__(self, idx: slice):
         return self.images[idx], self.outside[idx], self.inside[idx]
-
-#barData = BarData()
-# test = barData[:4]
-#print('test shapes for 4 samples:',*[i.shape for i in test])
-# %%
-# train_dl = DataLoader(
-#     barData,
-#     batch_size=16,
-#     shuffle=True
-# )
-# valid_dl = DataLoader(
-#     barData,
-#     batch_size=128,
-#     shuffle=True
-# )
 
 class BarModel(nn.Module):
     def __init__(self):
@@ -107,27 +87,6 @@ def update_optimizer(optimizer, lr):
     for i, param_group in enumerate(optimizer.param_groups):
         param_group["lr"] = lr
 
-# def val_metrics(model, valid_dl, C=1000):
-#     model.eval()
-#     total = 0
-#     sum_loss = 0
-#     #correct = 0 
-#     for x, y_out, y_in in valid_dl:
-#         batch = y_class.shape[0]
-#         x = x.cuda().float()
-#         y_class = y_class.cuda()
-#         y_bb = y_bb.cuda().float()
-#         out_class, out_bb = model(x)
-#         loss_class = F.cross_entropy(out_class, y_class, reduction="sum")
-#         loss_bb = F.l1_loss(out_bb, y_bb, reduction="none").sum(1)
-#         loss_bb = loss_bb.sum()
-#         loss = loss_class + loss_bb/C
-#         _, pred = torch.max(out_class, 1)
-#         #correct += pred.eq(y_class).sum().item()
-#         sum_loss += loss.item()
-#         total += batch
-#     return sum_loss/total#, correct/total
-
 def train_epocs(model, optimizer, train_dl, epochs=10):
     idx = 0
     for i in range(epochs):
@@ -152,9 +111,6 @@ def train_epocs(model, optimizer, train_dl, epochs=10):
             total += batch
             sum_loss += loss.item()
         train_loss = sum_loss/total
-        #val_loss, val_acc = val_metrics(model, valid_dl, C)
-        #val_loss = val_metrics(model, valid_dl, C)
-        #print("train_loss %.3f val_loss %.3f val_acc %.3f" % (train_loss, val_loss, val_acc))
         print(f'epoch {i} train_loss {train_loss}')
     return sum_loss/total
 # %%
