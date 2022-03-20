@@ -31,7 +31,7 @@ class BarData:
             ).dropna(axis=0)
 
         m = len(self.df)
-        self.images = torch.empty((m, 3, 720, 720), device='cpu')
+        self.images = torch.empty((m, 3, 480, 480), device='cpu')
         for idx, img in enumerate(self.df['image']):
             img = self.get_image(fn = img)
             self.images[idx] = self.process(img)
@@ -40,6 +40,7 @@ class BarData:
         self.inside = torch.tensor(np.array(self.df[['xmin_inner', 'ymin_inner', 'xmax_inner', 'ymax_inner']], dtype=np.float32), device='cpu')
 
     def process(self, img, train = True):
+        img = img.resize((480, 480))
         if train:
             img = transforms.RandomGrayscale(0.5)(img)
         img = transforms.ToTensor()(img)
@@ -76,31 +77,29 @@ class BarModel(nn.Module):
     def __init__(self):
         super(BarModel, self).__init__()
         layers = list(resnet.children())[:8]
-        self.features1 = nn.Sequential(*layers[:7])
-        self.features2out = nn.Sequential(*layers[7:])
-        self.features2in = nn.Sequential(*layers[7:])
+        self.features1in = nn.Sequential(*layers[:6])
+        self.features1out = nn.Sequential(*layers[:6])
+        self.features2in = nn.Sequential(*layers[6:])
+        self.features2out = nn.Sequential(*layers[6:])
         self.outsidebb = nn.Sequential(nn.BatchNorm1d(512), nn.Linear(512, 4))
         self.insidebb = nn.Sequential(nn.BatchNorm1d(512), nn.Linear(512, 4))
         
     def forward(self, x):
-        #shared
-        x = self.features1(x)
-
-        #split
-        z = self.features2in(x)
-        x = self.features2out(x)
-
-        #outside
-        x = F.relu(x)
-        x = nn.AdaptiveAvgPool2d((1,1))(x)
-        x = x.view(x.shape[0], -1)
-        x = self.outsidebb(x)
-
         #inside
+        z = self.features1in(x)
+        z = self.features2in(z)
         z = F.relu(z)
         z = nn.AdaptiveAvgPool2d((1,1))(z)
         z = z.view(z.shape[0], -1)
         z = self.insidebb(z)
+
+        #outside
+        x = self.features1out(x)
+        x = self.features2out(x)
+        x = F.relu(x)
+        x = nn.AdaptiveAvgPool2d((1,1))(x)
+        x = x.view(x.shape[0], -1)
+        x = self.outsidebb(x)
 
         return x, z
 
@@ -213,9 +212,11 @@ if __name__ == "__main__" and not override:
             batch_size=16,
             shuffle=True
         )
-        train_epocs(model, optimizer, train_dl, epochs=100)
+        train_epocs(model, optimizer, train_dl, epochs=500)
     except KeyboardInterrupt:
+        print('exiting training loop early...')
         pass
+    print('saving model...')
     torch.save(model.state_dict(), model_path)
 else:
     model = BarModel().cuda()
