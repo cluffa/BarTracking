@@ -3,7 +3,7 @@ import torch
 import numpy as np
 import cv2
 
-from training.plateBoundingBoxModel import model as barModel
+from training.initialPlateBoundingBoxModel import model as barModel
 from training.platesClassCenterModel import model as plateModel
 
 barModel.eval()
