@@ -15,7 +15,8 @@ resnet = torch.hub.load('pytorch/vision:v0.10.0', 'resnet34', pretrained=False, 
 DIR_PATH = os.path.dirname(os.path.realpath(__file__))
 
 class BarData:
-    def __init__(self):
+    def __init__(self, trainres = 256):
+        self.trainres = trainres
         self.df = pd.read_csv(f'{DIR_PATH}/training_annotations/vott-csv-export/bar-tracking-export.csv')
         self.df = self.df.sort_values('image')
 
@@ -26,7 +27,7 @@ class BarData:
             ).dropna(axis=0)
 
         m = len(self.df)
-        self.images = torch.empty((m, 3, 480, 480), device='cpu')
+        self.images = torch.empty((m, 3, self.trainres, self.trainres), device='cpu')
         for idx, img in enumerate(self.df['image']):
             img = self.get_image(fn = img)
             self.images[idx] = self.process(img)
@@ -35,11 +36,10 @@ class BarData:
         self.inside = torch.tensor(np.array(self.df[['xmin_inner', 'ymin_inner', 'xmax_inner', 'ymax_inner']], dtype=np.float32), device='cpu')
 
     def process(self, img, train = True):
-        img = img.resize((480, 480))
+        img = img.resize((self.trainres, self.trainres))
         if train:
-            img = transforms.RandomGrayscale(0.5)(img)
+            img = transforms.RandomGrayscale(0.25)(img)
         img = transforms.ToTensor()(img)
-        img = transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])(img)
         return img
 
     def get_image(self, fn:str = None, fp:str = None):
@@ -53,75 +53,26 @@ class BarData:
     def __getitem__(self, idx: slice):
         return self.images[idx], self.outside[idx], self.inside[idx]
 
-#barData = BarData()
-# test = barData[:4]
-#print('test shapes for 4 samples:',*[i.shape for i in test])
-# %%
-# train_dl = DataLoader(
-#     barData,
-#     batch_size=16,
-#     shuffle=True
-# )
-# valid_dl = DataLoader(
-#     barData,
-#     batch_size=128,
-#     shuffle=True
-# )
-
 class BarModel(nn.Module):
     def __init__(self):
         super(BarModel, self).__init__()
         layers = list(resnet.children())[:8]
-        self.features1in = nn.Sequential(*layers[:6])
-        self.features1out = nn.Sequential(*layers[:6])
-        self.features2in = nn.Sequential(*layers[6:])
-        self.features2out = nn.Sequential(*layers[6:])
-        self.outsidebb = nn.Sequential(nn.BatchNorm1d(512), nn.Linear(512, 4))
-        self.insidebb = nn.Sequential(nn.BatchNorm1d(512), nn.Linear(512, 4))
+        self.features1 = nn.Sequential(*layers[:6])
+        self.features2 = nn.Sequential(*layers[6:])
+        self.outsidebb = nn.Sequential(nn.BatchNorm1d(512), nn.Linear(512, 1024), nn.Linear(1024, 4))
+        self.insidebb = nn.Sequential(nn.BatchNorm1d(512), nn.Linear(512, 1024), nn.Linear(1024, 4))
         
     def forward(self, x):
-        #inside
-        z = self.features1in(x)
-        z = self.features2in(z)
-        z = F.relu(z)
-        z = nn.AdaptiveAvgPool2d((1,1))(z)
-        z = z.view(z.shape[0], -1)
-        z = self.insidebb(z)
-
-        #outside
-        x = self.features1out(x)
-        x = self.features2out(x)
+        x = self.features1(x)
+        x = self.features2(x)
         x = F.relu(x)
         x = nn.AdaptiveAvgPool2d((1,1))(x)
         x = x.view(x.shape[0], -1)
-        x = self.outsidebb(x)
-
-        return x, z
+        return self.outsidebb(x), self.insidebb(x)
 
 def update_optimizer(optimizer, lr):
     for i, param_group in enumerate(optimizer.param_groups):
         param_group["lr"] = lr
-
-# def val_metrics(model, valid_dl, C=1000):
-#     model.eval()
-#     total = 0
-#     sum_loss = 0
-#     #correct = 0 
-#     for x, y_out, y_in in valid_dl:
-#         batch = y_class.shape[0]
-#         x = x.cuda().float()
-#         y_class = y_class.cuda()
-#         y_bb = y_bb.cuda().float()
-#         out_class, out_bb = model(x)
-#         loss_class = F.cross_entropy(out_class, y_class, reduction="sum")
-#         loss_bb = F.l1_loss(out_bb, y_bb, reduction="none").sum(1)
-#         loss_bb = loss_bb.sum()
-#         loss = loss_class + loss_bb/C
-#         _, pred = torch.max(out_class, 1)
-#         #correct += pred.eq(y_class).sum().item()
-#         sum_loss += loss.item()
-#         total += batch
-#     return sum_loss/total#, correct/total
 
 def train_epocs(model, optimizer, train_dl, epochs=10):
     idx = 0
@@ -147,73 +98,38 @@ def train_epocs(model, optimizer, train_dl, epochs=10):
             total += batch
             sum_loss += loss.item()
         train_loss = sum_loss/total
-        #val_loss, val_acc = val_metrics(model, valid_dl, C)
-        #val_loss = val_metrics(model, valid_dl, C)
-        #print("train_loss %.3f val_loss %.3f val_acc %.3f" % (train_loss, val_loss, val_acc))
         print(f'epoch {i} train_loss {train_loss}')
     return sum_loss/total
-# %%
-
-
-# def get_prediction(image: Image = None, fp: str = None, tensor: torch.Tensor = None):
-#     model.eval()
-#     with torch.no_grad():
-#         if fp is not None:
-#             image = Image.open(fp)
-#             image = image.resize((128, 128))
-#             tensor = plate_data.process(image)
-#         elif image is not None:
-#             image = image.resize((128, 128))
-#             tensor = plate_data.process(image)
-
-#         if (len(tensor.shape) < 4):
-#             tensor = tensor.reshape((1, 3, 128, 128))
-#         label, center = model(tensor.cuda())
-#         label, center = label.cpu().numpy()[0], center.cpu().numpy()[0]
-
-#         return label, center
-
-# def add_points(image: Image = None, fp: str = None, center = None, label = None):
-#     if fp is not None and image is None:
-#         image = Image.open(fp)
-    
-#     image = image.resize((128, 128))
-
-#     if center is None or label is None:
-#         predlabel, (x, y) = get_prediction(image=image)
-    
-#     #x, y = x/2, y/2
-
-#     label = 'inside' if predlabel[0] > predlabel[1] else 'outside'
-#     #image = image.resize((512, 512))
-
-#     draw = ImageDraw.Draw(image)
-#     draw.ellipse((x-3, y-3, x+3, y+3), fill=(255,0,0,0))
-#     draw.text((0., 0.), text = label)
-#     return image
 
 model_path = f'{DIR_PATH}/../models/bar_model.pth'
-override = False
-if __name__ == "__main__" and not override:
+train = False
+save = True
+if __name__ == "__main__" and train:
     try:
         model = BarModel().cuda()
         parameters = filter(lambda p: p.requires_grad, model.parameters())
         optimizer = torch.optim.Adam(parameters, lr=0.006)
-        model.load_state_dict(torch.load(model_path))
+        try:
+            model.load_state_dict(torch.load(model_path))
+        except:
+            print('saved model does not match...')
         model = model.cuda()
         barData = BarData()
         train_dl = DataLoader(
             barData,
-            batch_size=16,
+            batch_size=128,
             shuffle=True
         )
         train_epocs(model, optimizer, train_dl, epochs=500)
+        torch.save(model.state_dict(), model_path)
     except KeyboardInterrupt:
         print('exiting training loop early...')
-        pass
-    print('saving model...')
-    torch.save(model.state_dict(), model_path)
-else:
+        print('saving model...')
+        torch.save(model.state_dict(), model_path)
+    
+elif not train:
     model = BarModel().cuda()
     model.load_state_dict(torch.load(model_path))
     model = model.cuda()
+else:
+    print('doing nothing')

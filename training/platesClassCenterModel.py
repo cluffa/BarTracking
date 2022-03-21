@@ -33,7 +33,6 @@ class PlatesData:
         if train:
             img = transforms.RandomGrayscale(0.5)(img)
         img = transforms.ToTensor()(img)
-        img = transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])(img)
         return img
 
     # cords are center of radius 5 red square
