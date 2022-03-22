@@ -95,8 +95,7 @@ def train_epocs(model, optimizer, train_dl, epochs=10,C=100):
             y_bb = y_bb.cuda().float()
             out_class, out_bb = model(x)
             loss_class = F.cross_entropy(out_class, y_class, reduction="sum")
-            loss_bb = F.l1_loss(out_bb, y_bb, reduction="none").sum(1)
-            loss_bb = loss_bb.sum()
+            loss_bb = F.mse_loss(out_bb, y_bb, reduction="sum")
             loss = loss_class + loss_bb/C
             optimizer.zero_grad()
             loss.backward()
