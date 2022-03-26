@@ -16,8 +16,10 @@ from torchvision import transforms
 
 def get_bbs(img, res = 256):
     with torch.no_grad():
+        img = img.resize((720,720))
         tensor = transforms.ToTensor()(img.resize((res,res)))
         tensor = tensor.reshape((1, 3, res, res))
+        #tensor = tensor[:, [2, 1, 0], :, :]  # BGR to RGB
         tensor = tensor.cuda()
         
         outsideBB = outBarModel(tensor)
@@ -26,7 +28,7 @@ def get_bbs(img, res = 256):
         id = ImageDraw.Draw(img) 
         bbs = [outsideBB[0].tolist(), insideBB[0].tolist()]
 
-        if True:
+        if False:
             outside = img.crop(bbs[0])
             inside = img.crop(bbs[1])
 
@@ -59,17 +61,21 @@ def pointToBox(pt, r):
 
 def add_bbs_video(fp, out):
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')
-    video = cv2.VideoWriter(out, fourcc, 30, (720,720))
+    video = cv2.VideoWriter(out, fourcc, 15, (720,720))
     vidcap = cv2.VideoCapture(fp)
 
     success = True
+    added_last = False
     while success:
         success, image = vidcap.read()
-        if success:
+        if success and not added_last:
             image = np.array(image)
             image = Image.fromarray(image)
             image = get_bbs(image)
             video.write(np.array(image))
+            added_last = True
+        elif success:
+            added_last = False
     video.release()
 
 add_bbs_video('training/raw_videos_processed/199020139_3673023292803821_3870015030764879905_n.mp4', 'test1.mp4')

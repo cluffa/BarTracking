@@ -85,7 +85,7 @@ class BarModel(nn.Module):
         layers = list(resnet.children())[:8]
         self.features1 = nn.Sequential(*layers[:6])
         self.features2 = nn.Sequential(*layers[6:])
-        self.bb = nn.Sequential(nn.BatchNorm1d(512), nn.Linear(512, 512), nn.Linear(512, 4))
+        self.bb = nn.Sequential(nn.BatchNorm1d(512), nn.Linear(512, 1024), nn.Linear(1024, 4))
         
     def forward(self, x):
         x = self.features1(x)
@@ -165,8 +165,8 @@ def main(side, lr = 0.006, epochs = 100):
 # %%
 
 if __name__ == "__main__":
-    lrs = [0.01, 0.001, 0.0001, 0.00001]
-    epochs = [200, 150, 100, 50]
+    lrs = [0.01, 0.001, 0.0001, 0.00001, 0.000001]
+    epochs = [100, 50, 50, 25, 25]
     for lr, epoch in zip(lrs, epochs):
         print(f'training inside, lr: {lr}, epochs: {epoch}')
         main(side = 'outside', lr = lr, epochs = epoch)
