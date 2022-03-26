@@ -132,3 +132,4 @@ venv_BarTracking/
 training/model.pth
 training/checkpoints/
 training/plate_images/temp
+training/random_crop

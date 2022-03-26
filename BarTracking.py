@@ -27,7 +27,6 @@ def get_bbs(img, res = 256):
         bbs = [outsideBB[0].tolist(), insideBB[0].tolist()]
 
         if True:
-
             outside = img.crop(bbs[0])
             inside = img.crop(bbs[1])
 
@@ -42,8 +41,6 @@ def get_bbs(img, res = 256):
             label = label.tolist()
             center = center.tolist()
 
-
-        
             for lab, (xC, yC), (x, y, xmax, ymax) in zip(label, center, bbs):
                 w, h = xmax - x, ymax - y
                 pxy = x + xC*(w/128), y + yC*(h/128)
@@ -77,6 +74,7 @@ def add_bbs_video(fp, out):
 
 add_bbs_video('training/raw_videos_processed/199020139_3673023292803821_3870015030764879905_n.mp4', 'test1.mp4')
 add_bbs_video('training/raw_videos_processed/175453678_1346199952416916_3270004720463027727_n.mp4', 'test2.mp4')
+
 # %%
 #img = Image.open('training/training_images/10374019900.jpg')
 #get_bbs(img, None, None)[0]

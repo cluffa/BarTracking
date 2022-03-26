@@ -1,11 +1,11 @@
 # %%
-from operator import mod
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import numpy as np
 import pandas as pd
 import os
+import uuid
 
 from torchvision import transforms
 from torch.utils.data import DataLoader
@@ -31,15 +31,6 @@ class BarData:
             suffixes=['_outer', '_inner']
             ).dropna(axis=0)
 
-        m = len(self.df)
-        self.images = torch.empty((m, 3, self.trainres, self.trainres), device='cpu')
-        for idx, img in enumerate(self.df['image']):
-            img = self.get_image(fn = img)
-            self.images[idx] = self.process(img)
-
-        self.outside = torch.tensor(np.array(self.df[['xmin_outer', 'ymin_outer', 'xmax_outer', 'ymax_outer']], dtype=np.float32), device='cpu')
-        self.inside = torch.tensor(np.array(self.df[['xmin_inner', 'ymin_inner', 'xmax_inner', 'ymax_inner']], dtype=np.float32), device='cpu')
-
     def process(self, img, train = True):
         img = img.resize((self.trainres, self.trainres))
         if train:
@@ -47,7 +38,7 @@ class BarData:
         img = transforms.ToTensor()(img)
         return img
 
-    def get_image(self, fn:str = None, fp:str = None):
+    def get_image(self, fn:str = None, fp:str = None, idx = None):
         if fp is None:
             fp = f'{DIR_PATH}/training_images/{fn}'
         return Image.open(fp)
@@ -56,7 +47,37 @@ class BarData:
         return len(self.df)
 
     def __getitem__(self, idx: slice):
-        return self.images[idx], self.outside[idx] if self.side=='outside' else self.inside[idx]
+        fn = self.df['image'][idx]
+        fp = f'{DIR_PATH}/training_images/{fn}'
+        img = Image.open(fp)
+        bbs = np.empty((2, 4))
+        bbs[0] = np.array(self.df[['xmin_outer', 'ymin_outer', 'xmax_outer', 'ymax_outer']], dtype=np.float32)[idx]
+        bbs[1] = np.array(self.df[['xmin_inner', 'ymin_inner', 'xmax_inner', 'ymax_inner']], dtype=np.float32)[idx]
+
+        min = bbs.min().round(0)
+        max = bbs.max().round(0)
+
+        randmax = np.random.randint(max, 720) if max < 720 else 720
+        randmin = np.random.randint(0, min) if min > 0 else 0
+
+        crop = (randmin, randmin, randmax, randmax)
+
+        # bb in crop resolution
+        bbs = bbs - randmin
+
+        # bb in 720x720 resolution
+        bbs = bbs * (720/(randmax-randmin))
+
+        img = img.crop(crop)
+        img = img.resize((self.trainres, self.trainres))
+
+        img = transforms.RandomGrayscale(0.25)(img)
+        img = transforms.ToTensor()(img)
+
+        if self.side == 'outside':
+            return img, torch.tensor(bbs[0], device='cpu')
+        else:
+            return img, torch.tensor(bbs[1], device='cpu')
 
 class BarModel(nn.Module):
     def __init__(self):
@@ -64,7 +85,7 @@ class BarModel(nn.Module):
         layers = list(resnet.children())[:8]
         self.features1 = nn.Sequential(*layers[:6])
         self.features2 = nn.Sequential(*layers[6:])
-        self.bb = nn.Sequential(nn.BatchNorm1d(512), nn.Linear(512, 4))
+        self.bb = nn.Sequential(nn.BatchNorm1d(512), nn.Linear(512, 512), nn.Linear(512, 4))
         
     def forward(self, x):
         x = self.features1(x)
@@ -75,7 +96,7 @@ class BarModel(nn.Module):
         x = self.bb(x)
         return x
 
-def test_img(model, epoch, res = 256):
+def test_img(model, epoch, res = 256, side = 'outside'):
     img = Image.open(f'{DIR_PATH}/../1599942000.jpg')
     model.eval()
     with torch.no_grad():
@@ -89,9 +110,14 @@ def test_img(model, epoch, res = 256):
         id.rectangle(bb[0], outline=(0,255,0,0))
 
     model.train()
-    img.save(f'{DIR_PATH}/../image_preds/pred{epoch}.jpg')
 
-def train_epocs(model, optimizer, train_dl, epochs=10):
+    # save image and increment filename if path exists
+    fn = f'{DIR_PATH}/../image_preds/pred{epoch}{side}.jpg'
+    if os.path.exists(fn):
+        fn = f'{DIR_PATH}/../image_preds/{int(os.path.basename(fn).split(".")[0])+1}.jpg'
+    img.save(fn)
+
+def train_epocs(model, optimizer, train_dl, epochs=10, side = 'outside'):
     for i in range(epochs):
         model.train()
         total = 0
@@ -108,28 +134,29 @@ def train_epocs(model, optimizer, train_dl, epochs=10):
             total += batch
             sum_loss += loss.item()
         train_loss = sum_loss/total
-        print(f'epoch {i} train_loss {train_loss}')
-        test_img(model, i)
+        print(f'epoch: {i+1}/{epochs} train_loss: {train_loss}')
+        # test image for each 10th epoch
+        #if i+1 % 10 == 0:
+            #test_img(model, i, side = side)
     return sum_loss/total
 
-def main(side):
+def main(side, lr = 0.006, epochs = 100):
     model_path = f'{DIR_PATH}/../models/bar_model_{side}.pth'
     try:
         model = BarModel().cuda()
-        parameters = model.parameters() #filter(lambda p: p.requires_grad, model.parameters())
-        optimizer = torch.optim.Adam(parameters, lr=0.006)
         try:
             model.load_state_dict(torch.load(model_path))
         except:
             print('saved model does not match...')
-        model = model.cuda()
+        parameters = model.parameters()
+        optimizer = torch.optim.Adam(parameters, lr=lr)
         barData = BarData(side = side)
         train_dl = DataLoader(
             barData,
             batch_size=128,
             shuffle=True
         )
-        train_epocs(model, optimizer, train_dl, epochs=100)
+        train_epocs(model, optimizer, train_dl, epochs=epochs, side = side)
         torch.save(model.state_dict(), model_path)
     except KeyboardInterrupt:
         print('exiting training loop early...')
@@ -138,8 +165,13 @@ def main(side):
 # %%
 
 if __name__ == "__main__":
-    main(side = 'inside')
-    main(side = 'outside')
+    lrs = [0.01, 0.001, 0.0001, 0.00001]
+    epochs = [200, 150, 100, 50]
+    for lr, epoch in zip(lrs, epochs):
+        print(f'training inside, lr: {lr}, epochs: {epoch}')
+        main(side = 'outside', lr = lr, epochs = epoch)
+        print(f'training outside, lr: {lr}, epochs: {epoch}')
+        main(side = 'inside', lr = lr, epochs = epoch)
 else:
     inside = BarModel()
     inside.load_state_dict(torch.load(f'{DIR_PATH}/../models/bar_model_inside.pth'))
@@ -147,3 +179,6 @@ else:
     outside = BarModel()
     outside.load_state_dict(torch.load(f'{DIR_PATH}/../models/bar_model_outside.pth'))
     outside = outside.cuda()
+
+
+# %%
