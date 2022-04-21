@@ -1,0 +1,6 @@
+venv/
+__pycache__/
+tmp/
+train.log
+best_model.pth
+checkpoint_model.pth
