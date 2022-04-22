@@ -4,3 +4,4 @@ tmp/
 train.log
 best_model.pth
 checkpoint_model.pth
+test_input3.mp4

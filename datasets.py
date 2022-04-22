@@ -27,7 +27,7 @@ class PlateDataset:
             mask = np.array(mask)[:, :, :2]
             train_transform = A.Compose(
                 [
-                    A.geometric.transforms.ShiftScaleRotate(shift_limit=0.25, scale_limit=0.25, rotate_limit=45, p=1),
+                    A.geometric.transforms.ShiftScaleRotate(shift_limit=0.25, scale_limit=0.25, rotate_limit=45, p=0.25),
                     A.RandomResizedCrop(self.res, self.res, scale=(0.2, 1.5), ratio=(0.8, 1.2)),
                     A.ShiftScaleRotate(shift_limit=0.05, scale_limit=0.05, rotate_limit=15, p=0.5),
                     A.RGBShift(r_shift_limit=15, g_shift_limit=15, b_shift_limit=15, p=0.5),
