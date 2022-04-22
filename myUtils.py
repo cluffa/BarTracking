@@ -6,7 +6,7 @@ def plot_tensor(tensor, plot = True) -> torch.Tensor:
     if isinstance(tensor, tuple):
         image, mask = tensor
         image = image.mean(dim=0).reshape((1, res, res))
-        combinded = torch.cat((image, mask), dim=0)
+        combinded = torch.cat((image, mask[:2]), dim=0)
     else:
         combinded = tensor
 
@@ -21,7 +21,7 @@ def plot_tensor(tensor, plot = True) -> torch.Tensor:
 
 def plot_pred(tensor, model, plot = True) -> torch.Tensor:
     res = tensor[0].shape[-1]
-    pred = model.cpu()(tensor.reshape((1, 3, res, res)))
+    pred = model.cpu()(tensor.reshape((1, 3, res, res)))[0, :2]
     pred = pred.reshape((2, res, res))
 
     if plot:
