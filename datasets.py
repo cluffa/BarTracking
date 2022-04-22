@@ -24,7 +24,7 @@ class PlateDataset:
 
         if self.train:
             img = np.array(img)
-            mask = np.array(mask)[:, :, :2]
+            mask = np.array(mask)#[:, :, :2]
             train_transform = A.Compose(
                 [
                     A.geometric.transforms.ShiftScaleRotate(shift_limit=0.25, scale_limit=0.25, rotate_limit=45, p=0.25),
@@ -42,7 +42,7 @@ class PlateDataset:
             img = img.resize((self.res, self.res))
             mask = mask.resize((self.res, self.res))
             img = np.array(img)
-            mask = np.array(mask)[:, :, :2]
+            mask = np.array(mask)#[:, :, :2]
 
         img = transforms.ToTensor()(img)
         mask = transforms.ToTensor()(mask)
