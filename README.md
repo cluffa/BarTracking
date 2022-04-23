@@ -2,8 +2,7 @@
 WIP AI barbell tracking, using pytorch and a CNN
 
 ## Current Progress
-### test video with segmentation
-The original video much lighter but the channels have been average with the mask for simplicity.  
+### Test video with tracked plate centers and average  
 ![test-overlay](./test_out.gif)
 
 ### X-Y Position Plot
