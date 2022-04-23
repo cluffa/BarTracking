@@ -1,12 +1,9 @@
 # %%
-import pandas as pd
 import numpy as np
-import torch
 import os
 from PIL import Image
 from torchvision import transforms
 import albumentations as A
-from albumentations.pytorch import ToTensorV2
 
 class PlateDataset:
 
@@ -24,11 +21,10 @@ class PlateDataset:
 
         if self.train:
             img = np.array(img)
-            mask = np.array(mask)#[:, :, :2]
+            mask = np.array(mask)
             train_transform = A.Compose(
                 [
-                    A.geometric.transforms.ShiftScaleRotate(shift_limit=0.25, scale_limit=0.25, rotate_limit=45, p=0.25),
-                    A.RandomResizedCrop(self.res, self.res, scale=(0.2, 1.5), ratio=(0.8, 1.2)),
+                    A.RandomResizedCrop(self.res, self.res, scale=(0.8, 2), ratio=(0.8, 1.2)),
                     A.ShiftScaleRotate(shift_limit=0.05, scale_limit=0.05, rotate_limit=15, p=0.5),
                     A.RGBShift(r_shift_limit=15, g_shift_limit=15, b_shift_limit=15, p=0.5),
                     A.RandomBrightnessContrast(p=0.5),
@@ -42,7 +38,7 @@ class PlateDataset:
             img = img.resize((self.res, self.res))
             mask = mask.resize((self.res, self.res))
             img = np.array(img)
-            mask = np.array(mask)#[:, :, :2]
+            mask = np.array(mask)
 
         img = transforms.ToTensor()(img)
         mask = transforms.ToTensor()(mask)
