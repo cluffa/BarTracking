@@ -32,8 +32,8 @@ class Track():
             success, frame = vidcap.read()
             if success:
                 frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-                frame = cv2.resize(frame, (res, res))
                 frame = transforms.ToTensor()(frame)
+                frame = transforms.CenterCrop((res, res))(frame)
                 self.videoRaw[i] = frame
                 i += 1
                 
