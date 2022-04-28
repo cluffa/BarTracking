@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/bar-tracking/__init__.py
+src/bar-tracking/best_model.pth
+src/bar-tracking/track.py
+src/bar_tracking_cluffa.egg-info/PKG-INFO
+src/bar_tracking_cluffa.egg-info/SOURCES.txt
+src/bar_tracking_cluffa.egg-info/dependency_links.txt
+src/bar_tracking_cluffa.egg-info/top_level.txt

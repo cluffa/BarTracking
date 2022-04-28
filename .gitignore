@@ -6,3 +6,9 @@ checkpoint_model.pth
 test_input3.mp4
 .R*
 *Zone.Identifier
+
+dev/train/train_data/athlete_masks
+dev/train/train_data/masks
+train_data.npz
+
+dev
