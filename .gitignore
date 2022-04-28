@@ -12,3 +12,4 @@ dev/train/train_data/masks
 train_data.npz
 
 dev
+dist
