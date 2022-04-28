@@ -1,4 +1,3 @@
 [build-system]
-packages = ["bar_tracking"]
 requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
