@@ -1,13 +1,4 @@
 [build-system]
 packages = ["bar_tracking"]
-requires = [
-    "setuptools",
-    "numpy",
-    "scipy",
-    "pandas",
-    "scikit-image",
-    "torch",
-    "torchvision",
-    "opencv-python"
-    ]
+requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
