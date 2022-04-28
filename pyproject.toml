@@ -1,4 +1,5 @@
 [build-system]
+packages = ["bar_tracking"]
 requires = [
     "setuptools",
     "numpy",
