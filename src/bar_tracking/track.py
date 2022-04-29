@@ -9,9 +9,10 @@ from torch.utils.data import DataLoader
 from scipy import interpolate, signal
 
 class Track():
-    def __init__(self, video_fp = None) -> None:
+    def __init__(self, video_fp = None, model_path = 'best_model.pth') -> None:
         self.res = 320
         self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+        self.model_path = model_path
         
         if video_fp is not None:
             self.load_video(video_fp)
@@ -52,8 +53,8 @@ class Track():
         self.video = self.video[start:stop]
         
     def run(self, batch_size=64) -> pd.DataFrame:
-        mask = torch.empty((self.frameCount, 3, self.res, self.res), dtype=torch.float32)
-        model = torch.load(f'./best_model.pth', map_location=self.device)
+        mask = torch.empty((self.frameCount, 2, self.res, self.res), dtype=torch.float32)
+        model = torch.load(self.model_path, map_location=self.device)
         dataloader = DataLoader(self.video, batch_size=batch_size)
         filledTo = 0
         with torch.no_grad():
@@ -133,7 +134,7 @@ class Track():
 
 if __name__ == '__main__':
     # test
-    track = Track(video_fp = './test/test_input2.mp4')
+    track = Track(video_fp = 'dev/test/test_input2.mp4', model_path = 'src/bar_tracking/best_model.pth')
     track.process_video(start = 0, stop = 60)
     df = track.run()
     print(track.videoRaw.shape)
