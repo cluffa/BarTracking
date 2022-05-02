@@ -134,6 +134,8 @@ class Track():
 
 if __name__ == '__main__':
     # test
+    import time
+    start = time.time()
     track = Track(video_fp = 'dev/test/test_input2.mp4', model_path = 'src/bar_tracking/best_model.pth')
     track.process_video(start = 0, stop = 60)
     df = track.run()
@@ -141,4 +143,6 @@ if __name__ == '__main__':
     print(track.video.shape)
     print(df.shape)
     print(df.head())
+    end = time.time()
+    print(end - start)
     
