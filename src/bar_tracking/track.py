@@ -3,7 +3,6 @@ import numpy as np
 import pandas as pd
 import cv2
 
-from skimage.measure import centroid, find_contours
 from torchvision import transforms
 from torch.utils.data import DataLoader
 from scipy import interpolate, signal
@@ -72,77 +71,120 @@ class Track():
             
         mask = mask.cpu().numpy()
         
-        position = np.empty((self.frameCount, 2, 2))
-        box = np.empty((self.frameCount, 2, 4))
-
-        idx = 0
-        for frame in mask:
-            position[idx, 0, :] = centroid(frame[0])[::-1]
-            position[idx, 1, :] = centroid(frame[1])[::-1]
-            #position[idx, 2, :] = centroid(frame[2])[::-1]
-
-            contour = find_contours(frame[0])[0], find_contours(frame[1])[0]
-
-            box[idx] = np.stack((
-                np.concatenate((contour[0].min(axis=0), contour[0].max(axis=0))),
-                np.concatenate((contour[1].min(axis=0), contour[1].max(axis=0))),
-                ))
-
-            idx += 1
-
-        # pixel coordinates to real world meters
-        position = position/self.res
+        # get contours and fit ellipses
+        rows = [None] * self.frameCount
+        for idx in range(0, self.frameCount):
+            contours_in, _ = cv2.findContours(np.array(mask[idx, 0]*255, dtype=np.uint8), cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
+            contours_out, _ = cv2.findContours(np.array(mask[idx, 1]*255, dtype=np.uint8), cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
+            largest_in = np.argmax([cv2.contourArea(c) for c in contours_in])
+            largest_out = np.argmax([cv2.contourArea(c) for c in contours_out])
+            ellipse_in = cv2.fitEllipse(contours_in[largest_in])
+            box_in = cv2.boundingRect(contours_in[largest_in])
+            ellipse_out = cv2.fitEllipse(contours_out[largest_out])
+            box_out = cv2.boundingRect(contours_out[largest_out])
+            rows[idx] = pd.DataFrame({
+                'frame': idx,
+                't': idx / self.frameRate,
+                'x_in': ellipse_in[0][0],
+                'x_out': ellipse_out[0][0],
+                'y_in': ellipse_in[0][1],
+                'y_out': ellipse_out[0][1],
+                'height_in': box_in[3],
+                'height_out': box_out[3],
+                'width_in': box_in[2],
+                'width_out': box_out[2],
+            }, index=[idx])
+        fits = pd.concat(rows)
         
-        # invert y axis
-        position[:, :, 1] = 1 - position[:, :, 1]
+        heightScale = 0.450/fits[['height_in', 'height_out']].mean(axis=1).quantile(0.5)
+        widthScale = 0.450/fits[['width_in', 'width_out']].mean(axis=1).quantile(0.5)
         
-        position = signal.savgol_filter(position, 5, 2, axis=0, mode='nearest')
         
-        dim = np.stack((box[:, :, 3] - box[:, :, 1], box[:, :, 2] - box[:, :, 0]), axis=-1)
-        dim = signal.savgol_filter(dim, 50, 1, axis=0, mode='nearest')
-
-        self.coef = 0.450/np.quantile(dim.mean(axis=1), 0.50, axis=0)/self.res
-        position = np.multiply(position, self.coef)
+        # TODO - add in the interpolation
+        # td = 0.01
+        # tn = np.arange(0, self.videoLength, td)
         
-        # average position of each side
-        position = position.mean(axis=1)
+        # splinefn = interpolate.make_interp_spline(fits['t'], fits[['x']], axis=0, k=3)
+        # pos_spline = splinefn(tn)
+        # pos_smooth = signal.savgol_filter(pos_spline, 30, 3, axis=0, mode='nearest')
         
-        #position = position - position.mean(axis=1).min(axis=0)
         
-        length = self.frameCount/self.frameRate
-        t = np.linspace(0, length, self.frameCount)
-        td = 0.01
-        tn = np.arange(0, length, td)
-
-        # create spline, interpolate, and smooth
-        splinefn = interpolate.make_interp_spline(t, position, axis=0, k=3)
-        pos_spline = splinefn(tn)
-        pos_smooth = signal.savgol_filter(pos_spline, 30, 3, axis=0, mode='nearest')
-
-        # velocity and acceleration
-        vel = np.diff(pos_smooth, axis=0)/td
-        accel = np.diff(vel, axis=0)/td
-
-        vel_smooth = signal.savgol_filter(vel, 50, 2, axis=0, mode='interp')
-        accel_smooth = signal.savgol_filter(accel, 75, 1, axis=0, mode='constant')
+        main = pd.DataFrame()
+        main['frame'] = fits['frame']
+        main['t'] = fits['t']
+        main['x'] = (fits['x_in'] + fits['x_out'])*widthScale / 2
+        main['y'] = (fits['y_in'] + fits['y_out'])*heightScale / 2
+        main['x'] = main['x'] - main['x'].min()
+        main['y'] = main['y'].max() - main['y']
+        main['vx'] = np.diff(main['x'], append=np.nan) / np.diff(main['t'], append=np.nan)
+        main['vy'] = np.diff(main['y'], append=np.nan) / np.diff(main['t'], append=np.nan)
+        main['ax'] = np.diff(main['vx'], append=np.nan) / np.diff(main['t'], append=np.nan)
+        main['ay'] = np.diff(main['vy'], append=np.nan) / np.diff(main['t'], append=np.nan)
         
-        data = np.concatenate((tn.reshape(-1, 1)[1:-1], pos_smooth[1:-1], vel_smooth[:-1], accel_smooth), axis=1)
+        return main
+    
+def plot_trajectory(df, out_fp = 'out.png', style = 'seaborn-whitegrid'):
+    import matplotlib.pyplot as plt
+    
+    colors = ['green', 'red', '#0099ff']
+    lwd = 3
+    
+    plt.style.use(style)
+    plt.figure(figsize=(15, 7), facecolor='white')
+    ax1 = plt.subplot(131)
+    ax1.set_aspect('equal')
+    ax1.plot(df.x, df.y, color=colors[0], linewidth=lwd)
+    ax1.set_title('Bar Path')
+    ax1.set_xbound(-0.2, 0.6)
 
-        # make dataframe
-        self.dataframe = pd.DataFrame(data, columns=['t', 'x', 'y', 'vx', 'vy', 'ax', 'ay'])
-        return self.dataframe
+    ax2 = plt.subplot(332)
+    ax2.plot(df.t, df.y, color = colors[1], linewidth=lwd)
+    ax2.set_title('y Attributes vs Time')
 
+    ax3 = plt.subplot(333)
+    ax3.plot(df.t, df.x, color = colors[2], linewidth=lwd)
+    ax3.set_title('x Attributes vs Time')
+
+    ax4 = plt.subplot(335)
+    ax4.plot(df.t, df.vy, color = colors[1], linewidth=lwd)
+
+    ax5 = plt.subplot(336)
+    ax5.plot(df.t, df.vx, color = colors[2], linewidth=lwd)
+
+    ax6 = plt.subplot(338)
+    ax6.plot(df.t, df.ay, color = colors[1], linewidth=lwd)
+
+    ax7 = plt.subplot(339)
+    ax7.plot(df.t, df.ax, color = colors[2], linewidth=lwd)
+
+    ax2.set_ylabel('position (m)')
+    ax4.set_ylabel('velocity (m/s)')
+    ax6.set_ylabel('acceleration (m/s^2)')
+
+    ax1.set_xlabel('x (m)')
+    ax1.set_ylabel('y (m)')
+
+    ax6.set_xlabel('Time (s)')
+    ax7.set_xlabel('Time (s)')
+    
+    for ax in [ax4, ax5, ax6, ax7]:
+        ax.axhline(y = 0, color = 'gray', linestyle = 'dashed')
+        
+    plt.savefig(out_fp, transparent=False, dpi = 300, bbox_inches='tight', facecolor='white')
+    plt.close()
+    
 if __name__ == '__main__':
     # test
     import time
     start = time.time()
     track = Track(video_fp = 'dev/test/test_input2.mp4', model_path = 'src/bar_tracking/best_model.pth')
-    track.process_video(start = 0, stop = 60)
+    track.process_video()
     df = track.run()
     print(track.videoRaw.shape)
     print(track.video.shape)
     print(df.shape)
     print(df.head())
+    plot_trajectory(df)
     end = time.time()
     print(end - start)
     
