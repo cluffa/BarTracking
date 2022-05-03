@@ -13,3 +13,4 @@ train_data.npz
 
 dev
 dist
+src/bar_tracking_cluffa.egg-info
