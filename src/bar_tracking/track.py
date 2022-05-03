@@ -85,6 +85,8 @@ class Track():
             rows[idx] = pd.DataFrame({
                 'frame': idx,
                 't': idx / self.frameRate,
+                #'ellipse_full': (ellipse_in, ellipse_out),
+                #'box_full': (box_in, box_out),
                 'x_in': ellipse_in[0][0],
                 'x_out': ellipse_out[0][0],
                 'y_in': ellipse_in[0][1],
@@ -96,24 +98,32 @@ class Track():
             }, index=[idx])
         fits = pd.concat(rows)
         
-        heightScale = 0.450/fits[['height_in', 'height_out']].mean(axis=1).quantile(0.5)
-        widthScale = 0.450/fits[['width_in', 'width_out']].mean(axis=1).quantile(0.5)
+        # interpolate to standard time resolution
+        td = 0.025
+        tn = np.arange(0, self.videoLength, td)
         
+        t = fits['t'].to_numpy()
+        pos = fits.iloc[:, 2:].to_numpy()
         
-        # TODO - add in the interpolation
-        # td = 0.01
-        # tn = np.arange(0, self.videoLength, td)
+        splinefn = interpolate.make_interp_spline(t, pos, axis=0, k=3)
+        splinedFit = pd.DataFrame(splinefn(tn), columns=fits.columns[2:])
         
-        # splinefn = interpolate.make_interp_spline(fits['t'], fits[['x']], axis=0, k=3)
-        # pos_spline = splinefn(tn)
-        # pos_smooth = signal.savgol_filter(pos_spline, 30, 3, axis=0, mode='nearest')
+        heightScale = 0.450/splinedFit[['height_in', 'height_out']].mean(axis=1).quantile(0.5)
+        widthScale = 0.450/splinedFit[['width_in', 'width_out']].mean(axis=1).quantile(0.5)
         
+        splinedFit[['height_in', 'height_out', 'y_in', 'y_out']] *= heightScale
+        splinedFit[['width_in', 'width_out', 'x_in', 'x_out']] *= widthScale
+        
+        # apply savgol filter to each column
+        for col in splinedFit.columns[2:]:
+            splinedFit[col] = signal.savgol_filter(splinedFit[col].to_numpy(), 51, 3)
+        
+        splinedFit.insert(0, 't', tn)
         
         main = pd.DataFrame()
-        main['frame'] = fits['frame']
-        main['t'] = fits['t']
-        main['x'] = (fits['x_in'] + fits['x_out'])*widthScale / 2
-        main['y'] = (fits['y_in'] + fits['y_out'])*heightScale / 2
+        main['t'] = splinedFit['t']
+        main['x'] = (splinedFit['x_in'] + splinedFit['x_out']) / 2
+        main['y'] = (splinedFit['y_in'] + splinedFit['y_out']) / 2
         main['x'] = main['x'] - main['x'].min()
         main['y'] = main['y'].max() - main['y']
         main['vx'] = np.diff(main['x'], append=np.nan) / np.diff(main['t'], append=np.nan)
