@@ -115,23 +115,21 @@ class Track():
         splinedFit[['width_in', 'width_out', 'x_in', 'x_out']] *= widthScale
         
         # apply savgol filter to each column
-        for col in splinedFit.columns[2:]:
-            splinedFit[col] = signal.savgol_filter(splinedFit[col].to_numpy(), 51, 3)
+        for col in splinedFit.columns:
+            splinedFit[col] = signal.savgol_filter(splinedFit[col].to_numpy(), 25, 3)
         
         splinedFit.insert(0, 't', tn)
         
-        main = pd.DataFrame()
-        main['t'] = splinedFit['t']
-        main['x'] = (splinedFit['x_in'] + splinedFit['x_out']) / 2
-        main['y'] = (splinedFit['y_in'] + splinedFit['y_out']) / 2
-        main['x'] = main['x'] - main['x'].min()
-        main['y'] = main['y'].max() - main['y']
-        main['vx'] = np.diff(main['x'], append=np.nan) / np.diff(main['t'], append=np.nan)
-        main['vy'] = np.diff(main['y'], append=np.nan) / np.diff(main['t'], append=np.nan)
-        main['ax'] = np.diff(main['vx'], append=np.nan) / np.diff(main['t'], append=np.nan)
-        main['ay'] = np.diff(main['vy'], append=np.nan) / np.diff(main['t'], append=np.nan)
+        splinedFit['x'] = (splinedFit['x_in'] + splinedFit['x_out']) / 2
+        splinedFit['y'] = (splinedFit['y_in'] + splinedFit['y_out']) / 2
+        splinedFit['x'] = splinedFit['x'] - splinedFit['x'].min()
+        splinedFit['y'] = splinedFit['y'].max() - splinedFit['y']
+        splinedFit['vx'] = np.diff(splinedFit['x'], append=np.nan) / td
+        splinedFit['vy'] = np.diff(splinedFit['y'], append=np.nan) / td
+        splinedFit['ax'] = np.diff(splinedFit['vx'], append=np.nan) / td
+        splinedFit['ay'] = np.diff(splinedFit['vy'], append=np.nan) / td
         
-        return main
+        return splinedFit
     
 def plot_trajectory(df, out_fp = 'out.png', style = 'seaborn-whitegrid'):
     import matplotlib.pyplot as plt
