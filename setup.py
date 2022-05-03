@@ -9,6 +9,6 @@ if __name__ == "__main__":
         url = 'https://github.com/cluffa/bar_tracking',
         packages=setuptools.find_packages(),
         install_requires = [
-            'numpy', 'scipy', 'pandas', 'scikit-image', 'torch', 'torchvision', 'opencv-python', 'matplotlib'
+            'numpy', 'scipy', 'pandas', 'torch', 'torchvision', 'opencv-python', 'matplotlib'
         ]
     )
