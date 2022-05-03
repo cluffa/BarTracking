@@ -12,6 +12,9 @@ class Track():
         self.res = 320
         self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
         self.model_path = model_path
+        self.splinedFit = None
+        self.video = None
+        self.videoRaw = None
         
         if video_fp is not None:
             self.load_video(video_fp)
@@ -38,7 +41,6 @@ class Track():
                 i += 1
                 
     def process_video(self, start: int = 0, stop: int = None) -> None:
-        
         if stop is None:
             stop = self.frameCount
         
@@ -51,7 +53,16 @@ class Track():
         self.video = transforms.Resize((self.res, self.res))(self.videoRaw)
         self.video = self.video[start:stop]
         
+    def get_splinedFit(self) -> pd.DataFrame:
+        if self.splinedFit is None:
+            self.run()
+        
+        return self.splinedFit
+        
     def run(self, batch_size=64) -> pd.DataFrame:
+        if self.video is None:
+            self.process_video()
+        
         mask = torch.empty((self.frameCount, 2, self.res, self.res), dtype=torch.float32)
         model = torch.load(self.model_path, map_location=self.device)
         dataloader = DataLoader(self.video, batch_size=batch_size)
@@ -129,10 +140,13 @@ class Track():
         splinedFit['ax'] = np.diff(splinedFit['vx'], append=np.nan) / td
         splinedFit['ay'] = np.diff(splinedFit['vy'], append=np.nan) / td
         
+        self.splinedFit = splinedFit
         return splinedFit
     
-def plot_trajectory(df, out_fp = 'out.png', style = 'seaborn-whitegrid'):
+def plot_trajectory(track: Track, out_fp = 'out.png', style = 'seaborn-whitegrid'):
     import matplotlib.pyplot as plt
+    
+    df = track.get_splinedFit()
     
     colors = ['green', 'red', '#0099ff']
     lwd = 3
@@ -181,18 +195,14 @@ def plot_trajectory(df, out_fp = 'out.png', style = 'seaborn-whitegrid'):
     plt.savefig(out_fp, transparent=False, dpi = 300, bbox_inches='tight', facecolor='white')
     plt.close()
     
+    
+    
 if __name__ == '__main__':
     # test
     import time
     start = time.time()
     track = Track(video_fp = 'dev/test/test_input2.mp4', model_path = 'src/bar_tracking/best_model.pth')
-    track.process_video()
-    df = track.run()
-    print(track.videoRaw.shape)
-    print(track.video.shape)
-    print(df.shape)
-    print(df.head())
-    plot_trajectory(df)
+    plot_trajectory(track, out_fp = '.test.png')
     end = time.time()
     print(end - start)
     
