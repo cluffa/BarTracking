@@ -1,8 +1,7 @@
 # bar_tracking
 WIP AI barbell tracking, using pytorch and a CNN
 
-To install
-```pip install git+https://github.com/cluffa/bar_tracking```
+To install: ```pip install git+https://github.com/cluffa/bar_tracking```
 
 main script: <https://github.com/cluffa/bar_tracking/blob/main/src/bar_tracking/track.py>
 
