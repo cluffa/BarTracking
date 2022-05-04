@@ -1,9 +1,10 @@
-import sys
-sys.path.append("../")
-from BarTracking.track import *
 import os
 
 dir = os.path.dirname(os.path.abspath(__file__))
+print(dir)
+print(os.listdir(dir), os.listdir(dir+ '/../'))
+
+from BarTracking.track import *
 
 def test_load():
     try:
