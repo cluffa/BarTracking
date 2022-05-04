@@ -19,5 +19,7 @@ if __name__ == "__main__":
             'opencv-python',
             'matplotlib',
             'segmentation-models-pytorch'
-        ]
+        ],
+        test_suite = 'tests',
     )
+    

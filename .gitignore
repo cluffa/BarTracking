@@ -4,7 +4,8 @@ tmp/
 train.log
 checkpoint_model.pth
 test_input3.mp4
-.*
+.test*
+.eggs
 *Zone.Identifier
 
 dev/train/train_data/athlete_masks
