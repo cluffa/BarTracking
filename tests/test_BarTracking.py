@@ -32,7 +32,7 @@ def test_run():
 def test_graph():
     try:
         t = Track(video_fp = dir + '/test.mp4')
-        plot_trajectory(t, dir + '/.test.png')
+        plot_trajectory(t, dir + '/test_output.png')
         assert True
     except Exception as e:
         print(e)
