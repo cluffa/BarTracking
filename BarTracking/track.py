@@ -7,8 +7,10 @@ from torchvision import transforms
 from torch.utils.data import DataLoader
 from scipy import interpolate, signal
 
+from .data_path import model_path
+
 class Track():
-    def __init__(self, video_fp = None, model_path = 'best_model.pth') -> None:
+    def __init__(self, video_fp = None, model_path = model_path) -> None:
         self.res = 320
         self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
         self.model_path = model_path

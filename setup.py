@@ -8,8 +8,16 @@ if __name__ == "__main__":
         author_email = 'alexcluff16@gmail.com',
         url = 'https://github.com/cluffa/bar_tracking',
         packages = ['BarTracking'],
+        package_dir={'BarTracking': 'BarTracking'},
         package_data={'BarTracking': ['*.pth']},
         install_requires = [
-            'numpy', 'scipy', 'pandas', 'torch', 'torchvision', 'opencv-python', 'matplotlib'
+            'numpy',
+            'scipy',
+            'pandas',
+            'torch',
+            'torchvision',
+            'opencv-python',
+            'matplotlib',
+            'segmentation-models-pytorch'
         ]
     )
