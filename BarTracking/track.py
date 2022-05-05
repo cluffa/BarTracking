@@ -1,46 +1,27 @@
-import torch
+import onnxruntime as ort
 import numpy as np
 import pandas as pd
 import cv2
 
-from torchvision import transforms
-from torch.utils.data import DataLoader
 from scipy import interpolate, signal
 
-from .data_path import model_path
+from modelUtils import model_paths, model_info
 
 class Track():
-    def __init__(self, video_fp = None, model_path = model_path) -> None:
+    def __init__(self, video_fp = None, model_path = model_paths[0]) -> None:
         self.res = 320
-        self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
         self.model_path = model_path
         self.splinedFit = None
         self.video = None
-        self.videoRaw = None
         
         if video_fp is not None:
             self.load_video(video_fp)
 
     def load_video(self, video_fp) -> None:
-        vidcap = cv2.VideoCapture(video_fp)
-        self.frameCount = int(vidcap.get(cv2.CAP_PROP_FRAME_COUNT))
-        self.frameRate = int(vidcap.get(cv2.CAP_PROP_FPS))
+        self.vidcap = cv2.VideoCapture(video_fp)
+        self.frameCount = int(self.vidcap.get(cv2.CAP_PROP_FRAME_COUNT))
+        self.frameRate = int(self.vidcap.get(cv2.CAP_PROP_FPS))
         self.videoLength = self.frameCount / self.frameRate
-        inW = int(vidcap.get(cv2.CAP_PROP_FRAME_WIDTH))
-        inH = int(vidcap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-        res = max(inW, inH)
-        self.videoRaw = torch.empty((self.frameCount, 3, res, res))
-        
-        success = True
-        i = 0
-        while success:
-            success, frame = vidcap.read()
-            if success:
-                frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-                frame = transforms.ToTensor()(frame)
-                frame = transforms.CenterCrop((res, res))(frame)
-                self.videoRaw[i] = frame
-                i += 1
                 
     def process_video(self, start: int = 0, stop: int = None) -> None:
         if stop is None:
@@ -50,10 +31,24 @@ class Track():
         assert stop <= self.frameCount
         assert start >= 0
         
+        
         self.frameCount = stop - start
         
-        self.video = transforms.Resize((self.res, self.res))(self.videoRaw)
-        self.video = self.video[start:stop]
+        self.video = np.empty((self.frameCount, 3, self.res, self.res), dtype=np.float32)
+        
+        success = True
+        i = 0
+        while success:
+            success, frame = self.vidcap.read()
+            if success and i >= start and i < stop:
+                frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+                frame = cv2.resize(frame, (self.res, self.res))
+                
+                frame = frame.astype(np.float32)/255.0
+                frame = np.transpose(frame, (2, 0, 1))
+                
+                self.video[i] = frame
+                i += 1
         
     def get_splinedFit(self) -> pd.DataFrame:
         if self.splinedFit is None:
@@ -65,28 +60,14 @@ class Track():
         if self.video is None:
             self.process_video()
         
-        mask = torch.empty((self.frameCount, 2, self.res, self.res), dtype=torch.float32)
-        model = torch.load(self.model_path, map_location=self.device)
-        dataloader = DataLoader(self.video, batch_size=batch_size)
-        filledTo = 0
-        with torch.no_grad():
-            for batch in dataloader:
-                batch = batch.to(self.device)
-                size = batch.shape[0]
-                pred = model(batch)
-
-                # add pred to mask
-                mask[filledTo:(filledTo + size)] = pred.cpu().detach()
-                filledTo += size
-
-            del batch, pred, model
-            torch.cuda.empty_cache()
-            
-        mask = mask.cpu().numpy()
+        mask = np.empty((self.frameCount, 2, self.res, self.res), dtype=np.float32)
+        session = ort.InferenceSession(self.model_path, providers=['CUDAExecutionProvider', 'CPUExecutionProvider'])
+        input_name = session.get_inputs()[0].name
         
         # get contours and fit ellipses
         rows = [None] * self.frameCount
         for idx in range(0, self.frameCount):
+            mask[idx] = session.run(None, {input_name: self.video[idx].reshape(1, 3, self.res, self.res)})[0]
             contours_in, _ = cv2.findContours(np.array(mask[idx, 0]*255, dtype=np.uint8), cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
             contours_out, _ = cv2.findContours(np.array(mask[idx, 1]*255, dtype=np.uint8), cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
             largest_in = np.argmax([cv2.contourArea(c) for c in contours_in])
@@ -203,8 +184,9 @@ if __name__ == '__main__':
     # test
     import time
     start = time.time()
-    track = Track(video_fp = 'dev/test/test_input2.mp4', model_path = 'src/bar_tracking/best_model.pth')
+    track = Track(video_fp = 'dev/test/test_input2.mp4')
     plot_trajectory(track, out_fp = '.test.png')
     end = time.time()
-    print(end - start)
+    print(end - start, 's elapsed')
+    print(((end-start)/track.frameCount)*1000, 'ms/frame')
     

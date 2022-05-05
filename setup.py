@@ -9,17 +9,18 @@ if __name__ == "__main__":
         url = 'https://github.com/cluffa/bar_tracking',
         packages = ['BarTracking'],
         package_dir={'BarTracking': 'BarTracking'},
-        package_data={'BarTracking': ['*.pth']},
+        package_data={'BarTracking': ['*.onnx']},
+        test_suite = 'tests',
         install_requires = [
             'numpy',
             'scipy',
             'pandas',
-            'torch',
+            'onnxruntime-gpu',
             'torchvision',
             'opencv-python',
             'matplotlib',
             'segmentation-models-pytorch'
         ],
-        test_suite = 'tests',
     )
+    
     
