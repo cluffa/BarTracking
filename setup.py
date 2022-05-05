@@ -16,11 +16,9 @@ if __name__ == "__main__":
             'scipy',
             'pandas',
             'onnxruntime-gpu',
-            'torchvision',
             'opencv-python',
             'matplotlib',
-            'segmentation-models-pytorch',
-            'json'
+            'segmentation-models-pytorch'
         ],
     )
     
