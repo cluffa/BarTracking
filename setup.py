@@ -19,7 +19,8 @@ if __name__ == "__main__":
             'torchvision',
             'opencv-python',
             'matplotlib',
-            'segmentation-models-pytorch'
+            'segmentation-models-pytorch',
+            'json'
         ],
     )
     

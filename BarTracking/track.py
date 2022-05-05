@@ -2,10 +2,17 @@ import onnxruntime as ort
 import numpy as np
 import pandas as pd
 import cv2
+import json
 
 from scipy import interpolate, signal
 
-from modelUtils import model_paths, model_info
+try:
+    from .modelUtils import model_paths, model_info
+except:
+    from modelUtils import model_paths, model_info
+
+def get_model_options():
+    return json.dump(model_info, indent=2)
 
 class Track():
     def __init__(self, video_fp = None, model_path = model_paths[0]) -> None:
