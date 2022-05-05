@@ -6,10 +6,7 @@ import json
 
 from scipy import interpolate, signal
 
-try:
-    from .modelUtils import model_paths, model_info
-except:
-    from modelUtils import model_paths, model_info
+from .modelUtils import model_paths, model_info
 
 def get_model_options():
     return json.dump(model_info, indent=2)
