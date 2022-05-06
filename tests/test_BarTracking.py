@@ -29,18 +29,3 @@ def test_graph():
     except Exception as e:
         print(e)
         assert False
-        
-# full test
-def test_full():
-    import time
-    start = time.time()
-    track = Track(video_fp = 'dev/test/test_input2.mp4')
-    track.process_video(0, 2, units = 'seconds')
-    plot_trajectory(track, out_fp = '.test.png')
-    end = time.time()
-    print(end - start, 's elapsed')
-    print(((end-start)/track.frameCount)*1000, 'ms/frame\n')
-    print(track.get_splinedFit())
-    
-if __name__ == '__main__':
-    test_full()
