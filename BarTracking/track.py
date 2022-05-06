@@ -206,8 +206,6 @@ def test_full():
     track = Track(video_fp = 'dev/test/test_input2.mp4')
     track.process_video(0, 2, units = 'seconds')
     plot_trajectory(track, out_fp = '.test.png')
-    cv2.imshow('test', cv2.imread('.test.png'))
-    cv2.waitKey()
     end = time.time()
     print(end - start, 's elapsed')
     print(((end-start)/track.frameCount)*1000, 'ms/frame\n')
