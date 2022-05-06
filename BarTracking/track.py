@@ -2,11 +2,12 @@ import onnxruntime as ort
 import numpy as np
 import pandas as pd
 import cv2
-import json
+import os
 
 from scipy import interpolate, signal
 
-from .modelUtils import *
+base_path = os.path.dirname(__file__)
+model_names = [fn for fn in os.listdir(os.path.dirname(__file__)) if fn.endswith('.onnx')]
 
 class Track():
     def __init__(self, video_fp = None, model_name = 'timm-regnetx_002_model_simplified.onnx') -> None:
@@ -43,7 +44,7 @@ class Track():
         assert stop <= self.frameCount
         assert start >= 0
         
-        self.frameCount = stop - start
+        self.frameCount = stop - start + 1
         self.videoLength = self.frameCount / self.frameRate
         
         self.video = np.empty((self.frameCount, 3, self.res, self.res), dtype=np.float32)
@@ -51,7 +52,7 @@ class Track():
         success = True
         i = 0
         idx = 0
-        while success and i < stop:
+        while success and i <= stop:
             success, frame = self.vidcap.read()
             if success and i >= start:
                 frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
@@ -199,4 +200,18 @@ def plot_trajectory(track: Track, out_fp = 'out.png', style = 'seaborn-whitegrid
     plt.savefig(out_fp, transparent=False, dpi = 300, bbox_inches='tight', facecolor='white')
     plt.close()
 
+def test_full():
+    import time
+    start = time.time()
+    track = Track(video_fp = 'dev/test/test_input2.mp4')
+    track.process_video(0, 2, units = 'seconds')
+    plot_trajectory(track, out_fp = '.test.png')
+    cv2.imshow('test', cv2.imread('.test.png'))
+    cv2.waitKey()
+    end = time.time()
+    print(end - start, 's elapsed')
+    print(((end-start)/track.frameCount)*1000, 'ms/frame\n')
+    print(track.get_splinedFit())
     
+if __name__ == '__main__':
+    test_full()
