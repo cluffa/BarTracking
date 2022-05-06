@@ -3,11 +3,15 @@ import numpy as np
 import pandas as pd
 import cv2
 import os
+import multiprocessing
 
 from scipy import interpolate, signal
 
 base_path = os.path.dirname(__file__)
 model_names = [fn for fn in os.listdir(os.path.dirname(__file__)) if fn.endswith('.onnx')]
+sess_options = ort.SessionOptions()
+sess_options.graph_optimization_level = ort.GraphOptimizationLevel.ORT_ENABLE_EXTENDED
+sess_options.intra_op_num_threads = multiprocessing.cpu_count()
 
 class Track():
     def __init__(self, video_fp = None, model_name = 'timm-regnetx_002_model_simplified.onnx') -> None:
@@ -76,7 +80,7 @@ class Track():
             self.process_video()
         
         mask = np.empty((self.frameCount, 2, self.res, self.res), dtype=np.float32)
-        session = ort.InferenceSession(self.model_path, providers=['CUDAExecutionProvider', 'CPUExecutionProvider'])
+        session = ort.InferenceSession(self.model_path, providers=['CUDAExecutionProvider', 'CPUExecutionProvider'], session_options=sess_options)
         input_name = session.get_inputs()[0].name
         
         # get contours and fit ellipses
