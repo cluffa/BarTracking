@@ -6,15 +6,12 @@ import json
 
 from scipy import interpolate, signal
 
-from .modelUtils import model_paths, model_info
-
-def get_model_options():
-    return json.dump(model_info, indent=2)
+from .modelUtils import *
 
 class Track():
-    def __init__(self, video_fp = None, model_path = model_paths[0]) -> None:
+    def __init__(self, video_fp = None, model_name = 'timm-regnetx_002_model_simplified.onnx') -> None:
         self.res = 320
-        self.model_path = model_path
+        self.model_path = base_path + '/' + model_name
         self.splinedFit = None
         self.video = None
         
@@ -27,7 +24,18 @@ class Track():
         self.frameRate = int(self.vidcap.get(cv2.CAP_PROP_FPS))
         self.videoLength = self.frameCount / self.frameRate
                 
-    def process_video(self, start: int = 0, stop: int = None) -> None:
+    def process_video(self, start = 0, stop = None, units = ['frames', 'seconds']) -> None:
+        if isinstance(units, list):
+            units = units[0]
+        
+        if units == 'seconds':
+            start = int(start * self.frameRate)
+            stop = int(stop * self.frameRate)
+        elif units == 'frames':
+            pass
+        else:
+            raise Exception('Units must be either "frames" or "seconds"')
+            
         if stop is None:
             stop = self.frameCount
         
@@ -35,24 +43,26 @@ class Track():
         assert stop <= self.frameCount
         assert start >= 0
         
-        
         self.frameCount = stop - start
+        self.videoLength = self.frameCount / self.frameRate
         
         self.video = np.empty((self.frameCount, 3, self.res, self.res), dtype=np.float32)
         
         success = True
         i = 0
-        while success:
+        idx = 0
+        while success and i < stop:
             success, frame = self.vidcap.read()
-            if success and i >= start and i < stop:
+            if success and i >= start:
                 frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
                 frame = cv2.resize(frame, (self.res, self.res))
                 
                 frame = frame.astype(np.float32)/255.0
                 frame = np.transpose(frame, (2, 0, 1))
                 
-                self.video[i] = frame
-                i += 1
+                self.video[idx] = frame
+                idx += 1
+            i += 1
         
     def get_splinedFit(self) -> pd.DataFrame:
         if self.splinedFit is None:
@@ -60,7 +70,7 @@ class Track():
         
         return self.splinedFit
         
-    def run(self, batch_size=64) -> pd.DataFrame:
+    def run(self, td = 0.025) -> pd.DataFrame:
         if self.video is None:
             self.process_video()
         
@@ -72,38 +82,45 @@ class Track():
         rows = [None] * self.frameCount
         for idx in range(0, self.frameCount):
             mask[idx] = session.run(None, {input_name: self.video[idx].reshape(1, 3, self.res, self.res)})[0]
-            contours_in, _ = cv2.findContours(np.array(mask[idx, 0]*255, dtype=np.uint8), cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
-            contours_out, _ = cv2.findContours(np.array(mask[idx, 1]*255, dtype=np.uint8), cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
-            largest_in = np.argmax([cv2.contourArea(c) for c in contours_in])
-            largest_out = np.argmax([cv2.contourArea(c) for c in contours_out])
-            ellipse_in = cv2.fitEllipse(contours_in[largest_in])
-            box_in = cv2.boundingRect(contours_in[largest_in])
-            ellipse_out = cv2.fitEllipse(contours_out[largest_out])
-            box_out = cv2.boundingRect(contours_out[largest_out])
-            rows[idx] = pd.DataFrame({
-                'frame': idx,
-                't': idx / self.frameRate,
-                #'ellipse_full': (ellipse_in, ellipse_out),
-                #'box_full': (box_in, box_out),
-                'x_in': ellipse_in[0][0],
-                'x_out': ellipse_out[0][0],
-                'y_in': ellipse_in[0][1],
-                'y_out': ellipse_out[0][1],
-                'height_in': box_in[3],
-                'height_out': box_out[3],
-                'width_in': box_in[2],
-                'width_out': box_out[2],
-            }, index=[idx])
+            try:
+                contours_in, _ = cv2.findContours(np.array(mask[idx, 0]*255, dtype=np.uint8), cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
+                largest_in = np.argmax([cv2.contourArea(c) for c in contours_in])
+                ellipse_in = cv2.fitEllipse(contours_in[largest_in])
+                box_in = cv2.boundingRect(contours_in[largest_in])
+                contours_out, _ = cv2.findContours(np.array(mask[idx, 1]*255, dtype=np.uint8), cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
+                largest_out = np.argmax([cv2.contourArea(c) for c in contours_out])
+                ellipse_out = cv2.fitEllipse(contours_out[largest_out])
+                box_out = cv2.boundingRect(contours_out[largest_out])
+                
+                rows[idx] = pd.DataFrame({
+                    'frame': idx,
+                    't': idx / self.frameRate,
+                    'x_in': ellipse_in[0][0],
+                    'x_out': ellipse_out[0][0],
+                    'y_in': ellipse_in[0][1],
+                    'y_out': ellipse_out[0][1],
+                    'height_in': box_in[3],
+                    'height_out': box_out[3],
+                    'width_in': box_in[2],
+                    'width_out': box_out[2],
+                }, index=[idx])
+            except:
+                print('Error on frame {}'.format(idx))
+                rows[idx] = pd.DataFrame({
+                    'frame': idx,
+                    't': idx / self.frameRate
+                }, index=[idx])
+                
+            
         fits = pd.concat(rows)
         
         # interpolate to standard time resolution
-        td = 0.025
         tn = np.arange(0, self.videoLength, td)
         
         t = fits['t'].to_numpy()
         pos = fits.iloc[:, 2:].to_numpy()
         
-        splinefn = interpolate.make_interp_spline(t, pos, axis=0, k=3)
+        splinefn = interpolate.make_interp_spline(t, pos, axis=0, k=3, check_finite=False)
         splinedFit = pd.DataFrame(splinefn(tn), columns=fits.columns[2:])
         
         heightScale = 0.450/splinedFit[['height_in', 'height_out']].mean(axis=1).quantile(0.5)
@@ -181,16 +198,5 @@ def plot_trajectory(track: Track, out_fp = 'out.png', style = 'seaborn-whitegrid
         
     plt.savefig(out_fp, transparent=False, dpi = 300, bbox_inches='tight', facecolor='white')
     plt.close()
-    
-    
-    
-if __name__ == '__main__':
-    # test
-    import time
-    start = time.time()
-    track = Track(video_fp = 'dev/test/test_input2.mp4')
-    plot_trajectory(track, out_fp = '.test.png')
-    end = time.time()
-    print(end - start, 's elapsed')
-    print(((end-start)/track.frameCount)*1000, 'ms/frame')
+
     
