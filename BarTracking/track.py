@@ -199,8 +199,8 @@ def plot_trajectory(track: Track, out_fp = 'out.png', style = 'seaborn-whitegrid
         
     plt.savefig(out_fp, transparent=False, dpi = 300, bbox_inches='tight', facecolor='white')
     plt.close()
-
-def test_full():
+    
+if __name__ == '__main__':
     import time
     start = time.time()
     track = Track(video_fp = 'dev/test/test_input2.mp4')
@@ -210,6 +210,3 @@ def test_full():
     print(end - start, 's elapsed')
     print(((end-start)/track.frameCount)*1000, 'ms/frame\n')
     print(track.get_splinedFit())
-    
-if __name__ == '__main__':
-    test_full()
