@@ -1,16 +1,13 @@
-from concurrent.futures import thread
 import onnxruntime as ort
 import numpy as np
 import pandas as pd
 import cv2
 import os
 import multiprocessing
-
 from scipy import interpolate, signal
 
 base_path = os.path.dirname(__file__)
 model_names = [fn for fn in os.listdir(os.path.dirname(__file__)) if fn.endswith('.onnx')]
-
 
 class Track():
     def __init__(self, video_fp = None, model_name = 'timm-regnetx_002_model_simplified.onnx', threads = multiprocessing.cpu_count()) -> None:
@@ -136,6 +133,7 @@ class Track():
         heightScale = 0.450/splinedFit[['height_in', 'height_out']].mean(axis=1).quantile(0.5)
         widthScale = 0.450/splinedFit[['width_in', 'width_out']].mean(axis=1).quantile(0.5)
         
+        # scale to meters
         splinedFit[['height_in', 'height_out', 'y_in', 'y_out']] *= heightScale
         splinedFit[['width_in', 'width_out', 'x_in', 'x_out']] *= widthScale
         
