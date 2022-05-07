@@ -1,5 +1,5 @@
 # bar_tracking
-WIP AI barbell tracking, using pytorch and a CNN
+WIP Python Deep Learning Barbell Tracking  
 
 To install:
 ```
