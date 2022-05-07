@@ -3,7 +3,7 @@ import setuptools
 if __name__ == "__main__":
     setuptools.setup(
         name = 'BarTracking',
-        version = 0.5,
+        version = 0.6,
         author = 'cluffa',
         author_email = 'alexcluff16@gmail.com',
         url = 'https://github.com/cluffa/bar_tracking',
