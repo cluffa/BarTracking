@@ -113,10 +113,11 @@ class Track():
                 }, index=[idx])
             except:
                 print('Error on frame {}'.format(idx))
-                rows[idx] = pd.DataFrame({
-                    'frame': idx,
-                    't': idx / self.frameRate
-                }, index=[idx])
+                if idx > 0:
+                    newrow = rows[idx-1].copy()
+                    newrow['frame'] = idx
+                    newrow['t'] = idx / self.frameRate
+                    rows[idx] = newrow
                 
             
         fits = pd.concat(rows)
@@ -128,32 +129,36 @@ class Track():
         pos = fits.iloc[:, 2:].to_numpy()
         
         splinefn = interpolate.make_interp_spline(t, pos, axis=0, k=3, check_finite=False)
-        splinedFit = pd.DataFrame(splinefn(tn), columns=fits.columns[2:])
+        self.splinedFit = pd.DataFrame(splinefn(tn), columns=fits.columns[2:])
         
-        heightScale = 0.450/splinedFit[['height_in', 'height_out']].mean(axis=1).quantile(0.5)
-        widthScale = 0.450/splinedFit[['width_in', 'width_out']].mean(axis=1).quantile(0.5)
+        heightScale = 0.450/self.splinedFit[['height_in', 'height_out']].mean(axis=1).quantile(0.5)
+        widthScale = 0.450/self.splinedFit[['width_in', 'width_out']].mean(axis=1).quantile(0.5)
         
         # scale to meters
-        splinedFit[['height_in', 'height_out', 'y_in', 'y_out']] *= heightScale
-        splinedFit[['width_in', 'width_out', 'x_in', 'x_out']] *= widthScale
+        self.splinedFit[['height_in', 'height_out', 'y_in', 'y_out']] *= heightScale
+        self.splinedFit[['width_in', 'width_out', 'x_in', 'x_out']] *= widthScale
         
         # apply savgol filter to each column
-        for col in splinedFit.columns:
-            splinedFit[col] = signal.savgol_filter(splinedFit[col].to_numpy(), 25, 3)
+        for col in self.splinedFit.columns:
+            self.splinedFit[col] = signal.savgol_filter(self.splinedFit[col].to_numpy(), 25, 3)
         
-        splinedFit.insert(0, 't', tn)
+        self.splinedFit.insert(0, 't', tn)
         
-        splinedFit['x'] = (splinedFit['x_in'] + splinedFit['x_out']) / 2
-        splinedFit['y'] = (splinedFit['y_in'] + splinedFit['y_out']) / 2
-        splinedFit['x'] = splinedFit['x'] - splinedFit['x'].min()
-        splinedFit['y'] = splinedFit['y'].max() - splinedFit['y']
-        splinedFit['vx'] = np.diff(splinedFit['x'], append=np.nan) / td
-        splinedFit['vy'] = np.diff(splinedFit['y'], append=np.nan) / td
-        splinedFit['ax'] = np.diff(splinedFit['vx'], append=np.nan) / td
-        splinedFit['ay'] = np.diff(splinedFit['vy'], append=np.nan) / td
+        self.splinedFit['x'] = (self.splinedFit['x_in'] + self.splinedFit['x_out']) / 2
+        self.splinedFit['y'] = (self.splinedFit['y_in'] + self.splinedFit['y_out']) / 2
+
+        self.splinedFit['x'] = self.splinedFit['x'] - self.splinedFit['x'].min()
+        self.splinedFit['x_in'] = self.splinedFit['x_in'] - self.splinedFit['x'].min()
+        self.splinedFit['x_out'] = self.splinedFit['x_out'] - self.splinedFit['x'].min()
+        self.splinedFit['y'] = self.splinedFit['y'].max() - self.splinedFit['y']
+        self.splinedFit['y_in'] = self.splinedFit['y_in'].max() - self.splinedFit['y']
+        self.splinedFit['y_out'] = self.splinedFit['y_out'].max() - self.splinedFit['y']
+        self.splinedFit['vx'] = np.diff(self.splinedFit['x'], append=np.nan) / td
+        self.splinedFit['vy'] = np.diff(self.splinedFit['y'], append=np.nan) / td
+        self.splinedFit['ax'] = np.diff(self.splinedFit['vx'], append=np.nan) / td
+        self.splinedFit['ay'] = np.diff(self.splinedFit['vy'], append=np.nan) / td
         
-        self.splinedFit = splinedFit
-        return splinedFit
+        return self.splinedFit
     
 def plot_trajectory(track: Track, out_fp = 'out.png', style = 'seaborn-whitegrid'):
     import matplotlib.pyplot as plt
@@ -210,8 +215,8 @@ def plot_trajectory(track: Track, out_fp = 'out.png', style = 'seaborn-whitegrid
 if __name__ == '__main__':
     import time
     start = time.time()
-    track = Track(video_fp = 'dev/test/test_input2.mp4')
-    track.process_video(0, 2, units = 'seconds')
+    track = Track(video_fp = 'tests/test.mp4')
+    track.process_video(0, 431)
     plot_trajectory(track, out_fp = '.test.png')
     end = time.time()
     print(end - start, 's elapsed')
