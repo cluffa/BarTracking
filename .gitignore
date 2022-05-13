@@ -8,11 +8,13 @@ test_input3.mp4
 .eggs
 *Zone.Identifier
 
-dev/train/train_data/athlete_masks
-dev/train/train_data/masks
+dev/train/train_data
+dev/train/*.pth
+dev/train/*.onnx
+dev/test/test_gifs
+dev/test/videos
 train_data.npz
-
-dev
+test_input*.mp4
 dist
 *.egg-info
 .pytest_cache
