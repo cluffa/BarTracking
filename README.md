@@ -1,4 +1,4 @@
-# bar_tracking
+# BarTracking
 WIP Python Deep Learning Barbell Tracking  
 
 To install:
