@@ -6,7 +6,7 @@ import cv2
 
 class PlateDataset:
 
-    def __init__(self, res = 320, train = True, npz_path = 'dev/train/train_data.npz', multiply = 1):
+    def __init__(self, res = 120, train = True, npz_path = 'dev/train/train_data.npz', multiply = 1):
         self.res = res
         self.train = train
         self.multiply = multiply
