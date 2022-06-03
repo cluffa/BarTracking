@@ -1,0 +1,9 @@
+[deps]
+Augmentor = "02898b10-1f73-11ea-317c-6393d7073e15"
+BSON = "fbb218c0-5317-5bc6-957e-2ee96dd4b1f0"
+BenchmarkTools = "6e4b80f9-dd63-53aa-95a3-0cdb28fa8baf"
+Flux = "587475ba-b771-5e3f-ad9e-33799f191a9c"
+NPZ = "15e1cf62-19b3-5cfa-8e77-841668bca605"
+Plots = "91a5bcdd-55d7-5caf-9e0b-520d859cae80"
+Tracker = "9f7883ad-71c0-57eb-9f7f-b5c9e6d3789c"
+UnicodePlots = "b8865327-cd53-5732-bb35-84acbb429228"
