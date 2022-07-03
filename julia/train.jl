@@ -1,55 +1,56 @@
-using Flux, CUDA, UnicodePlots, Statistics
-using Flux: @epochs, params, throttle, DataLoader
-using BSON: @save, @load
+using FastAI, Metalhead
+#using FastAI.DataAugmentation: Image
+#using FastAI.Vision: Mask
+import CairoMakie; CairoMakie.activate!(type="png")
 
-include("DataUtils.jl")
-using .DataUtils
+classes = readlines(open("data/codes.txt"))
 
-imgs = gpu(DataUtils.imgs);
-masks = gpu(DataUtils.masks);
+#data, blocks = Datasets.loadrecipe(FastAI.Vision.ImageSegmentationFolders(), "data/")
 
-include("Model.jl")
-using .Model: NewModel
+images = Datasets.loadfolderdata(
+    "data/images",
+    filterfn=isimagefile,
+    loadfn=loadfile)
 
-model = NewModel(3, 2) |> gpu;
+masks = Datasets.loadfolderdata(
+    "data/labels",
+    filterfn=isimagefile,
+    loadfn=f -> loadmask(f, classes))
 
-rand(300, 300, 3, 10) |> gpu |> model |> size
+data = (images, masks)
 
-loss(x, y) = Flux.Losses.dice_coeff_loss(model(x), y)
+image, mask = sample = getobs(data, 1);
 
-nobs = size(imgs, 4)
+view(image, 50:55, 50:55)
 
-function plot_rand()
-    r = rand(1:nobs);
-    #img = imgs[:, :, :, r];
-    pred = model(imgs[:, :, :, r:r]) |> cpu;
-    inside = pred[:, :, 1]
-    outside = pred[:, :, 2]
-    UnicodePlots.heatmap(inside + outside, width = 60, height = 60)
-end
+task = BlockTask(
+    (Image{2}(), Mask{2}(classes)),
+    (
+        ProjectiveTransforms((128, 128), augmentations=augs_projection()),
+        ImagePreprocessing(),
+        OneHot()
+    )
+)
 
-function progress()
-    r = rand(1:nobs, 10)
-    train_loss = loss(imgs[:, :, :, r], masks[:, :, :, r])
-    @show train_loss
-end
+#checkblock(task.blocks, sample)
 
-progress()
+xs, ys = FastAI.makebatch(task, data, 100:102)
+showbatch(task, (xs, ys))
 
-data = DataLoader((imgs, masks), batchsize=8, shuffle=true);
+describetask(task)
 
-@epochs 25 Flux.train!(loss, params(model), data, ADAM(0.005), cb = throttle(progress, 10))
-@epochs 100 Flux.train!(loss, params(model), data, ADAM(0.001), cb = throttle(progress, 10))
-@epochs 50 Flux.train!(loss, params(model), data, ADAM(0.0001), cb = throttle(progress, 10))
+backbone = Models.xresnet18()
+model = taskmodel(task, backbone);
 
+lossfn = tasklossfn(task)
 
-@save "model.bson" model
+traindl, validdl = taskdataloaders(data, task, 16)
+optimizer = FastAI.Flux.ADAM()
 
-@load "model.bson" model
+learner = Learner(model, (traindl, validdl), optimizer, lossfn, ToGPU())
 
-model |> gpu;
+fitonecycle!(learner, 25, 0.0001)
 
-for i in 1:10
-    print(plot_rand(), "\n")
-end
+showoutputs(task, learner; n = 4)
 
+savetaskmodel("resnet18-backbone.jld2", task, learner.model, force = true)

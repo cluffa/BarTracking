@@ -8,6 +8,8 @@ test_input3.mp4
 .eggs
 *Zone.Identifier
 
+data.bson
+
 dev/train/train_data
 dev/train/*.pth
 dev/train/*.onnx
