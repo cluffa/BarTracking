@@ -1,6 +1,4 @@
 using FastAI, Metalhead
-#using FastAI.DataAugmentation: Image
-#using FastAI.Vision: Mask
 import CairoMakie; CairoMakie.activate!(type="png")
 
 classes = readlines(open("data/codes.txt"))
