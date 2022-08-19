@@ -1,5 +1,7 @@
 # BarTracking
-WIP Python Deep Learning Barbell Tracking  
+### WIP Python Deep Learning Barbell Tracking
+#### Models Are Very Biased
+#### Only Works Well With Competition Videos
 
 To install:
 ```
